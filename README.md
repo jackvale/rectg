@@ -278,3 +278,10 @@
 | [GIF出处查询机器人](https://t.me/TumblrAce_bot)         |
 | [词云机器人](https://t.me/iWordCloudBot)                |
 
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=alexbei/telegram-groups&type=Date)](https://star-history.com/#alexbei/telegram-groups&Date)
+
+
