@@ -279,6 +279,12 @@
 
 
 
+## 风险提示
+
+Telegram 上的频道/群/机器人中的内容，有很多是难以辨别的假信息。很多群里面的提供软件要谨慎下载！！！发布链接要谨慎点击！！！以防遭受损失！！！
+
+
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=alexbei/telegram-groups&type=Date)](https://star-history.com/#alexbei/telegram-groups&Date)
