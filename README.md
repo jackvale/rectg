@@ -52,7 +52,6 @@
 | [8度科技破解频道](https://t.me/pjrjzy)                       | 8度资源                                                      |
 | [风向旗参考快讯](https://t.me/xhqcankao)                     | 互联网科技新闻快讯                                           |
 | [颜值即正义](https://t.me/yzjzy)                             | 颜值即正义                                                   |
-| [ios鸡神-专注分享破解](https://t.me/gjwj6)                   | 短信Js规则破解脚本捷径vpnipa逆向教程                         |
 | [足控天堂](https://t.me/sizukon)                             | 原创美腿丝袜，黑丝、肉丝、蕾丝、足控、高跟鞋、高清美女写真   |
 | [你不知道的内幕消息](https://t.me/inside1024)                | 最新行业资讯、以及大公司的负面新闻、财经观点信息、好物       |
 | [浥轻尘の资源分享](https://t.me/yqc_123)                     | 专注于iOS破解、规则、脚本、补丁、插件、软件、逆向、越狱、开源、内测、限免、证书、教程、福利等资源分享 |
@@ -283,5 +282,4 @@
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=alexbei/telegram-groups&type=Date)](https://star-history.com/#alexbei/telegram-groups&Date)
-
 
