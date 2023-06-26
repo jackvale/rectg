@@ -59,7 +59,6 @@
 | [宝藏女孩·爱酱](https://t.me/BaoZang)                        | 阅天下之美人，品世间之甜美。此乃人间正道，亦是高寿秘诀       |
 | [阿里云盘发布频道](https://t.me/Aliyundrive_Share_Channel)   | 和谐、友爱的阿里云盘分享交流频道，每个人在这里都可以分享自己想分享的资源 |
 | [阿里云盘4K影视](https://t.me/Aliyun_4K_Movies)              | 影巢&4K影视冢新人必看。更新4K电影更新纪录片更新电视剧更新动画片 |
-| [中国数字时代](https://t.me/cdtchinesefeed)                  | 中国数字时代                                                 |
 | [亞洲美女頻道](https://t.me/asiangirlsss)                    | 每日免費推薦大量亞洲美女                                     |
 | [豆瓣精选](https://t.me/douban_read)                         | 豆瓣精选。豆瓣书影音，以及相关讨论                           |
 | [Solidot](https://t.me/solidot)                              | solidot.org非官方RSS推送频道                                 |
