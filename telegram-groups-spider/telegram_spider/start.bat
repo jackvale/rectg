@@ -1,0 +1,12 @@
+scrapy crawl tgnav
+scrapy crawl dianbao
+scrapy crawl telgram
+scrapy crawl smsgou
+scrapy crawl tgdriver
+scrapy crawl itgoyo
+scrapy crawl iyideng
+scrapy crawl jichangtuijian
+scrapy crawl justmysocks
+scrapy crawl pandavpnpro
+scrapy crawl qianghub
+scrapy crawl telegramlist
