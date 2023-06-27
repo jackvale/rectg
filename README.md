@@ -7,7 +7,7 @@
 [项目的背景故事](https://www.tgqun.xyz/background-story)
 
 
-## 频道
+## 频道 Channel
 
 
 > 公开的高质量 TG 频道推荐，可以根据自己喜好选择订阅
@@ -116,7 +116,84 @@
 
 
 
-## 群组
+| 编程类频道                                                   | 订阅人数 | 简介                                                         |
+| ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
+| [PythonResources](https://t.me/pythonres)                    | 167321   | Python programming language resources managed by             |
+| [Python/django](https://t.me/pythonl)                        | 27884    | admin                                                        |
+| [DataScience](https://t.me/datascienceiot)                   | 21073    | Data Science.                                                |
+| [KMSToolsbyRatiborus](https://t.me/RatiborusKMSTools)        | 19579    | http://forum.ru-board.com/topic.cgi?forum=2&topic=5901       |
+| [PythonBooks](https://t.me/pythonlbooks)                     | 15020    | Python библиотека                                            |
+| [python-telegram-bot](https://t.me/pythontelegrambotchannel) | 8025     | The official channel                                         |
+| [Pythonetc](https://t.me/pythonetc)                          | 6311     | Regular tips about Python and programming in general         |
+| [大虾的编程资源库/码农/程序员资源](https://t.me/programmingsrchub) | 6221     | 简介：大虾本职工作为程序员，本频道持续分享大虾的编程资源库/码农/程序员资源。 |
+| [pythonista3脚本通知频道](https://t.me/pythonista3jiaoben)   | 1836     | 群：t.me/Pythonista3jiaoliuqun                               |
+| [南国微雪\|一切，都很美丽。](https://t.me/TinySnow4Yi)       | 1565     | The idiot's channel. Updating depends on mood.               |
+| [PythonHub](https://t.me/PythonHub)                          | 1251     | News & links about Python programming.                       |
+
+
+
+| 币圈类频道                                                   | 订阅人数 | 简介                                               |
+| ------------------------------------------------------------ | -------- | -------------------------------------------------- |
+| [TeloNews简体中文-加密货币｜DeFi｜Web3](https://t.me/telonews_cn) | 99230    | 最新的加密货币新闻，观点和数据分析，洞见市场发展。 |
+| [币安公告](https://t.me/binance_cn)                          | 11944    | 关注币安的中文公告频道，可以及时把握币安动态！     |
+| [币世界快讯【区块链】](https://t.me/NewsCoinSpace)           | 7165     | 区块链币世界快讯                                   |
+| [币克社快讯](https://t.me/BI_KE1)                            | 5461     | https://t.me/joinchat/8aSLbodK3go2NzNl             |
+| [Web3汇总-币价/NFT/空投](https://t.me/newsforbitcoin)        | 1537     | Web3讨论群————https://t.me/smartmoney0x369Dao      |
+| [币圈快讯](https://t.me/btcnewsdaily)                        | 1163     | 币圈快讯，掌握币圈动态                             |
+
+
+
+| 合租类频道                                                   | 订阅人数 | 简介                                                         |
+| ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
+| [合租通知等音乐影视聊天机场电影盒子](https://t.me/hezu2)     | 85374    | 好物、街拍、软件、Apple、EXE、合租、软路由                   |
+| [4KRemux](https://t.me/Remux_2160P)                          | 32453    | 4K影视资源分享;流媒体合租-https://ihezu.work/PsfRfz;流媒体合租-https://ihz.plus/?sid=2rqPaT |
+| [Telegram合租频道](https://t.me/netflix_bus)                 | 23917    | 合租官网：https://ihz.run/q                                  |
+| [jcnf-那坨\|将合租进行到底](https://t.me/mffjc)              | 21567    | 奈飞账号：https://jcnf.xyz/nf                                |
+| [DigitalImmigrants\丨WantWantChannel](https://t.me/Licensesss) | 11195    | 合租群组：https://t.me/wantwantgroup                         |
+| [LWD频道-合租Netflix](https://t.me/lwdhezu)                  | 8013     | Disney+，Hulu，Netflix，Spotify，HBO，Office等流媒体会员合租 |
+| [奈飞Pro-频道](https://t.me/naifei_pro)                      | 4016     | Netflix/Spotify/YouTube/Disney+/HBO/TV+                      |
+
+
+
+
+| 电子书类频道                                             | 订阅人数 | 简介                                                         |
+| -------------------------------------------------------- | -------- | ------------------------------------------------------------ |
+| [[好读]ReadFine电子书屋](https://t.me/Readfine)          | 41412    | 好读提供电子书一站式体验，包括评分                           |
+| [Legado｜开源阅读｜频道](https://t.me/Legado_Channels)   | 32493    | 建于2020/10/15                                               |
+| [小声读书](https://t.me/weekly_books)                    | 28625    | 小声读书是一个探索数字阅读可能性和未来的开放项目，致力于打破信息茧房，挖掘价值信息。 |
+| [好书分享频道](https://t.me/Bookworm_Bibliophile)        | 27034    | 读书，找到更美的世界与生活。不定期分享收集的好书好资料。     |
+| [ZBook,电子书频道](https://t.me/ziyuanfeng59)            | 25375    | 欢迎加入频道👏👏👏👏👏                                            |
+| [电子书](https://t.me/dianzhishu)                        | 24369    | 🔥电子书🔥资源收集自网络。                                     |
+| [计算机类书籍](https://t.me/bookusefor3)                 | 21281    | 收集偏计算机专业化的书籍                                     |
+| [外滩读书会](https://t.me/readingclubus)                 | 19141    | 以英文为主的报纸、杂志、电子书及财经报告分享，比如华尔街日报、金融时报、经济学人、哈佛商业评论、福布斯杂志、彭博商业评论、巴伦周刊等等更多资源分享。 |
+| [书屋电子书📚𝑻𝑮𝒆𝑩𝒐𝒐𝒌](https://t.me/TGeBook)               | 18084    | 书屋电子书                                                   |
+| [计算机与部分其他种类书籍资源](https://t.me/bookusefor2) | 17689    | 收集一些与互联网相关或自己觉得有价值的书籍                   |
+| [PDF图书联盟\|电子书\|ebook📖](https://t.me/PDFtushuguan) | 16998    | 无规律无方向的持续分享一些书目，以及资源和有趣的内容，请各位秉承友好、善意的心态进行交流。 |
+| [PDF资料](https://t.me/pdf_001)                          | 16216    | 读秀/超星/全国图书馆咨询联盟/百度文库                        |
+| [文杏馆（藏书分享）](https://t.me/BooksThatMakeYouThink) | 15793    | 本频道书单来源于网络、翻墙用户求书口碑和好友荐书共识，频道将不定期更新符合“普世价值”和“公共知识”主题的内容，感谢大家的支持与关注 |
+| [ReadHub｜读库](https://t.me/Read_Hub)                   | 14564    | ReadHub                                                      |
+| [普通休闲书籍资源](https://t.me/bookusefor4)             | 13237    | 书籍的资源堆积，可能有你需要的书                             |
+| [zread(推)-什么书值得读📚](https://t.me/zreadpush)        | 12718    | 或许你正在寻觅，                                             |
+| [飛蛾書庫](https://t.me/MothLib)                         | 11153    | 想象、思考、怀疑、批判                                       |
+| [📖Telegram数字图书馆](https://t.me/TG_book_data)         | 10282    | 电子书/免费/资源/书库/漫画/资料/文献                         |
+| [☁云上报刊亭](https://t.me/magazinesclub)                | 9277     | 英文报刊杂志，电子书，报纸，外文杂志精选🅥Newspaper,magazinesande-bookcollections |
+| [英文学习桌](https://t.me/english_learning_discuss)      | 8760     | 学习英语，了解世界。分享学习资料，原版书籍，报纸新闻。       |
+| [Kindle特价书](https://t.me/KindleBookDeals)             | 1577     | Kindle特价书推送Channel。正在不断完善中。目前会自动发布当日的特价书，偶尔会有人工推荐其他特价图书。 |
+| [Kindle电子书精品降价](https://t.me/kindlePrice)         | 1530     | 本频道专注于分享kindle电子书降价信息。                       |
+
+
+
+
+| 搞笑类频道                                       | 订阅人数 | 简介                              |
+| ------------------------------------------------ | -------- | --------------------------------- |
+| [吃瓜群众🍉](https://t.me/chigua2022)             | 201615   | 吃瓜搞笑                          |
+| [DLK搞笑趣闻情报站](https://t.me/dlkqingbaozhan) | 5261     | 本频道是dlk奔放交流时间的子频道！ |
+| [糗事百科](https://t.me/qiushibaike)             | 2798     | 糗事百科                          |
+| [搞笑研究所️🔥](https://t.me/gaoxiaoshu)           | 1287     | 有笑点，且高级                    |
+
+
+
+## 群组 Group
 
 > 公共电报群组推荐，加入群组时建议查看置顶内容和群规，避免违规被拉黑
 
@@ -224,7 +301,64 @@
 | [Telegram 中文社群](https://t.me/tgcnx)                      | Telegram 中文/汉化/知识/教程, 科技, 机场                     |
 
 
-## 机器人
+
+| 编程类群组                                                  | 会员人数 | 简介                                                         |
+| ----------------------------------------------------------- | -------- | ------------------------------------------------------------ |
+| [Python](https://t.me/Python)                               | 121781   | Youwillbemuteduntilyoureadtherules.Readthem!                 |
+| [Python中文交流](https://t.me/pythonzh)                     | 29692    | 分享心得，共同进步                                           |
+| [Java编程语言](https://t.me/Javaer)                         | 10918    | Java一种物件导向程式设计编程语言，不是JAV群（SFW）           |
+| [Selenium](https://t.me/SeleniumPython)                     | 10688    | PythonSeleniumGroup.ThisisnotaJobboardgroup,asking/offeringforjobswillbewarned. |
+| [C++中文交流](https://t.me/cpluspluszh)                     | 9200     | 欢迎你来这里交流编程经验！                                   |
+| [CoderOfftopic中文群](https://t.me/coder_ot)                | 5392     | 在本群，你甚至可以讨论编程                                   |
+| [JavaScript中文交流](https://t.me/javascriptzh)             | 3406     | JavaScript，通常缩写为JS，是一种高级的，解释执行的编程语言   |
+| [python自学交流](https://t.me/P_Y_T_H_O_N)                  | 2802     | 学习、分享、成长                                             |
+| [大虾的编程资源交流群](https://t.me/programmingsrchubgroup) | 2060     | 大虾的编程资源库/码农/程序员资源高质量交流群                 |
+| [大数据杂谈](https://t.me/bigdatazh)                        | 1947     | 大数据架构与开发技术交流                                     |
+
+
+
+
+| 币圈类群组                                                   | 会员人数 | 简介                                                         |
+| ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
+| [币安官方中文群](https://t.me/BinanceChinese)                | 143373   | 币安官方中文TG群，谨防假冒！                                 |
+| [币安官方中文群](https://t.me/binancechinese)                | 143366   | 币安官方中文TG群，谨防假冒！                                 |
+| [发掘潜力币](https://t.me/buybuybuybi)                       | 42170    | 🇨🇳Acrypto investmentteamfocusedondevelopingChinaandinternationalmarke! |
+| [Python中文交流](https://t.me/pythonzh)                      | 29692    | 分享心得，共同进步                                           |
+| [加密货币爱好者](https://t.me/twittercryptofans)             | 3493     | 加入条件：价值投资，长线，不加杠杆不做合约，所在地合规平台交易 |
+| [加密货币与区块链讨论群](https://t.me/onBlockchain)          | 2363     | 加密货币与区块链频道：                                       |
+| [比特币交流群](https://t.me/talk_btc)                        | 1911     | 比特币交流群，欢迎吹水讨论。                                 |
+| [KYC交易所各类账号实名认证（禁广告）](https://t.me/kycpnml666) | 1639     | 认证，解封，混币，代收回U                                    |
+| [比特币中文讨论BitcoinBTCCN](https://t.me/Bitcoin_cn)        | 1180     | @CryptoCN                                                    |
+| [全球比特币交流群](https://t.me/btc11)                       | 1157     | 全球比特币交流群来！                                         |
+
+
+
+
+| 合租类群组                                                   | 会员人数 | 简介                                                         |
+| ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
+| [合租社群Netflix](https://t.me/hezu1)                        | 65227    | 合租指南:https://hezu.wiki;敬请关注通知频道;@hezu2;📣聊天群规如下： |
+| [[合租]YouTubeSpotifyHBONetflix](https://t.me/SpotifyYouTubeHBO) | 4616     | 本合租群为无审核合租群，只是提供一个场所给有需要合租的朋友…  |
+| [清风阁\|讨论组](https://t.me/OwO_G)                         | 3910     | 禁止NSFW、键政。                                             |
+| [吾爱奈飞-Netflix/YouTube/Spotify/Disney+/HBO流媒体合租服务](https://t.me/netflix_52naifeitop) | 1707     | 智能合租Netflix/Spotify/YouTubePremium                       |
+
+
+
+
+| 电子书类群组                                                 | 会员人数 | 简介                                                         |
+| ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
+| [📖西西书屋精校电子书🔥](https://t.me/xixishuwu)               | 37565    | 📖西西书屋-精品电子书搜索服务🔥                                |
+| [GoogleDrive无限容量](https://t.me/google_drive)             | 30922    | 本群提供无限容量GoogleDrive申请方法、大电影小电影电子书无损音乐等资源。 |
+| [小声读书](https://t.me/what_youread)                        | 12714    | 小声读书是一个探索数字阅读可能性和未来的开放项目             |
+| [ZBook,电子书📚，小说，漫画资源分享](https://t.me/ziyuanfengxiang59) | 11145    | 欢迎加入本群👏👏👏👏                                             |
+| [读舍-享受阅读时光](https://t.me/shufm)                      | 9864     | 读舍Channel：                                                |
+| [读书分享](https://t.me/dushufenxiang_chat)                  | 5109     | 读书分享                                                     |
+| [zread读书会📚](https://t.me/zread)                           | 3779     | ❤️欢迎书友们                                                  |
+| [[好读]ReadFine交流总群](https://t.me/ReadfineChat)          | 2675     | 频道                                                         |
+| [🍌读者·争鸣🍌](https://t.me/duzhe)                            | 2441     | 优质的读书生活交流群。                                       |
+
+
+
+## 机器人 Bot
 
 > 好用和好玩的电报机器人推荐
 
