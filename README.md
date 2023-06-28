@@ -377,7 +377,7 @@
 | [OpenWRT\*LEDE](https://t.me/OpenWRT_Routers)               |   4006   | 这是关于路由器和无线设备的讨论组                             |
 | [PriceTagFriends](https://t.me/pricetagapp)                 |   3841   | 这是一个买买买应用推荐                                       |
 | [爱奇艺腾讯优酷VIP会员](https://t.me/share_video_vip)       |   3526   | 收集共享各种VIP会员账号                                      |
-| [加密货币爱好者](https://t.me/twittercryptofans)            |   3493   | 加入条件：价值投资，长线，不加杠杆不做合约，所在地合规平台交易 |
+| [加密货币爱好者](https://t.me/twittercryptofans)            |   3493   | 价值投资，长线，不加杠杆不做合约，所在地合规平台交易         |
 | [JavaScript中文交流](https://t.me/javascriptzh)             |   3406   | JavaScript，通常缩写为JS，是一种高级的，解释执行的编程语言   |
 | [AndroidDev](https://t.me/AndroidDevCn)                     |   2953   | 仅限Android开发话题                                          |
 | [FaangbbsAPP北美程序员大群](https://t.me/faangbbs)          |   2893   | telegram北美程序员大群                                       |
