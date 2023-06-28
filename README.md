@@ -28,7 +28,6 @@
 | [竹新社](https://t.me/tnews365)                              |  78411   | 7×24不定时编译国内外媒体的即时新闻报道                       |
 | [Duyao](https://t.me/DuyaoSS)                                |  69680   | 测速不代表推荐，经过长期测速，多次测速，可以慢慢筛选出一些更好的 |
 | [GoogleDrive资源](https://t.me/gdsharing)                    |  66991   | 各种GoogleDrive资源                                          |
-| [黑科技软件资源分享](https://t.me/kkaifenxiang)              |  63105   | 分享免费实用高效率网络资源、黑科技软件、实用黑技巧           |
 | [每日沙雕墙](https://t.me/woshadiao)                         |  57633   | 每日沙雕墙                                                   |
 | [PIXIV站每日](https://t.me/pixiv_top50)                      |  56136   | 搬運PIXIV每天綜合排行榜前50圖片資源                          |
 | [快乐星球](https://t.me/botmzt)                              |  53230   | 美女 妹子 精选 全网 中文 快乐星球                            |
