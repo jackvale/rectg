@@ -273,7 +273,7 @@
 | [搞笑研究所️](https://t.me/gaoxiaoshu)                        |   1287   | 有笑点，且高级;每日笑点放送//趣味研究;\|沙雕\|神评\|搞笑\|吐槽\|梗图\| |
 | [MtalkRes媒说资源](https://t.me/mtalk)                       |   1232   | 收录软件、趣味等资讯等;交流群;@mtalk\_group;服务生;@mtalk\_pmBot |
 | [币圈快讯](https://t.me/btcnewsdaily)                        |   1163   | 币圈快讯，掌握币圈动态                                       |
-| [有声故事🔊🔊🔊](https://t.me/youshenggushi)                    |   1137   | 有声故事;包括但不限于午夜电台，小说，故事，评书，相声;资源来源于网络;没有任何广告，纯净的有声故事 |
+| [有声故事](https://t.me/youshenggushi)                       |   1137   | 有声故事;包括但不限于午夜电台，小说，故事，评书，相声;资源来源于网络;没有任何广告，纯净的有声故事 |
 | [共享资源站点频道](https://t.me/gxzyzd)                      |   1136   | 致力于分享开源&免费软件，iOS固件更新、越狱新闻、软件更新提醒 |
 | [ClassicalMusic](https://t.me/exploreclassical)              |   1125   | 一起来听古典音乐吧                                           |
 | [主机情报优惠补货测评](https://t.me/hostcab)                 |   1109   | 推送主机/服务器优惠、测评和补货信息                          |
@@ -480,7 +480,7 @@
 | [一起搜电影](https://t.me/Cctv365bot)                     | TG必备影视搜索神器，找到您喜欢的电影、电视剧                 |
 | [图片劣化](https://t.me/JPEGreenBot)                      | 图片劣化                                                     |
 | [频道助手](https://t.me/septs_autoclean_bot)              | 频道助手                                                     |
-| [🎧好音乐搜索](https://t.me/haoyybot)                      | 歌曲音乐搜索机器人，输入歌曲名或者歌手名，把TG变成音乐播放器 |
+| [好音乐搜索](https://t.me/haoyybot)                       | 歌曲音乐搜索机器人，输入歌曲名或者歌手名，把TG变成音乐播放器 |
 | [解除频道消息在群组的置顶](https://t.me/areply_bot)       | 自动解除频道消息在群组的同步置顶，附带群组日常维护常用小功能 |
 | [中英翻譯](https://t.me/en_to_tw_bot)                     | 這個可以在超級群中用 自動翻譯英                              |
 | [Telegram权限管理机器人](https://t.me/autopm_bot)         | 权限管理机器人                                               |
