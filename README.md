@@ -38,7 +38,6 @@
 | [ReadFine电子书屋](https://t.me/Readfine)                    |  41412   | 好读提供电子书一站式体验，包括评分\|简介\|封面，一键下载，享受读趣。 |
 | [阿里云盘发布频道](https://t.me/Aliyundrive_Share_Channel)   |  40817   | 和谐、友爱的阿里云盘分享交流频道                             |
 | [阿里云盘4K影视](https://t.me/Aliyun_4K_Movies)              |  40699   | 4K影视冢                                                     |
-| [宝藏女孩](https://t.me/BaoZang)                             |  40458   | 宝藏女孩                                                     |
 | [开源社区](https://t.me/opencfdchannel)                      |  33802   | Android/Linux/Windows/MacOS/iOS 科技人文资讯                 |
 | [每天趣事](https://t.me/Meitian)                             |  33690   | 多样沙雕冷笑话，津津乐道稀奇事                               |
 | [老毛子Padavan固件发布](https://t.me/pdcn1)                  |  32550   | 老毛子Padavan固件自助交流群                                  |
