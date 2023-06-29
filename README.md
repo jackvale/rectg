@@ -485,7 +485,6 @@
 | [这个我知道-关键词机器人](https://t.me/keyword_reply_bot) | 根据关键词和正则规则进行回复和群管操作，需要管理员权限       |
 | [GIF出处查询机器人](https://t.me/TumblrAce_bot)           | 本机器人可以帮助您查找GIF动图的出处                          |
 | [词云机器人](https://t.me/iWordCloudBot)                  | 受API限制，授予管理员后，机器人才能接收到聊天文本，为了安全，您可以将所有权限关闭 |
-| [X.cat](https://t.me/XcatBot)                             | 视频音频图片GIF下载，YouTube/Tumblr/推特/ins/微信/快手/抖音/QQ音乐等 |
 | [流媒体解锁测试](https://t.me/stairunlock_test_bot)       | 流媒体解锁测试                                               |
 | [PremiumCounterBot](https://t.me/PremiumCounterBot)       | 一个计算群内TelegramPremium用户占比的机器人                  |
 | [UserMetaBot](https://t.me/UserMeta_Bot)                  | 统计群内每天活跃成员，需要添加机器人为群管理员。             |
