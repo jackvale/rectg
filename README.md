@@ -479,7 +479,7 @@
 | [Telegram权限管理机器人](https://t.me/autopm_bot)         | 权限管理机器人                                               |
 | [NoAdBot](https://t.me/keyworddel_bot)                    | 本机器人基于人工智能、机器学习和深度学习,自动删除群组"推广/广告"等消息 |
 | [GIF出处查询机器人](https://t.me/TumblrAce_bot)           | 本机器人可以帮助您查找GIF动图的出处                          |
-| [词云机器人](https://t.me/iWordCloudBot)                  | 受API限制，授予管理员后，机器人才能接收到聊天文本，为了安全，您可以将所有权限关闭 |
+| [词云机器人](https://t.me/iiWordCloudBot)                  | 受API限制，授予管理员后，机器人才能接收到聊天文本，为了安全，您可以将所有权限关闭 |
 | [流媒体解锁测试](https://t.me/stairunlock_test_bot)       | 流媒体解锁测试                                               |
 | [PremiumCounterBot](https://t.me/PremiumCounterBot)       | 一个计算群内TelegramPremium用户占比的机器人                  |
 | [UserMetaBot](https://t.me/UserMeta_Bot)                  | 统计群内每天活跃成员，需要添加机器人为群管理员。             |
