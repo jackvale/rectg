@@ -471,18 +471,13 @@
 | [抽奖助手](https://t.me/LotteryHelperBot)                 | 抽奖机器人                                                   |
 | [RSSchina\_bot](https://t.me/RSSchina_bot)                | rss订阅机器人                                                |
 | [RSSBot](https://t.me/RustRssBot)                         | 中文TelegramRSS机器人                                        |
-| [LotteryBotV2](https://t.me/tgLotteryBot)                 | Telegram中文公平抽奖机器人                                   |
 | [Bing词典](https://t.me/bingdict_bot)                     | 基于Bing的词典、翻译功能                                     |
 | [网易云音乐ncm转换器](https://t.me/netease_ncm_bot)       | 把网易云音乐的NCM文件转换为普通的mp3或者flac文件             |
 | [一起搜电影](https://t.me/Cctv365bot)                     | TG必备影视搜索神器，找到您喜欢的电影、电视剧                 |
-| [图片劣化](https://t.me/JPEGreenBot)                      | 图片劣化                                                     |
-| [频道助手](https://t.me/septs_autoclean_bot)              | 频道助手                                                     |
 | [好音乐搜索](https://t.me/haoyybot)                       | 歌曲音乐搜索机器人，输入歌曲名或者歌手名，把TG变成音乐播放器 |
 | [解除频道消息在群组的置顶](https://t.me/areply_bot)       | 自动解除频道消息在群组的同步置顶，附带群组日常维护常用小功能 |
-| [中英翻譯](https://t.me/en_to_tw_bot)                     | 這個可以在超級群中用 自動翻譯英                              |
 | [Telegram权限管理机器人](https://t.me/autopm_bot)         | 权限管理机器人                                               |
 | [NoAdBot](https://t.me/keyworddel_bot)                    | 本机器人基于人工智能、机器学习和深度学习,自动删除群组"推广/广告"等消息 |
-| [这个我知道-关键词机器人](https://t.me/keyword_reply_bot) | 根据关键词和正则规则进行回复和群管操作，需要管理员权限       |
 | [GIF出处查询机器人](https://t.me/TumblrAce_bot)           | 本机器人可以帮助您查找GIF动图的出处                          |
 | [词云机器人](https://t.me/iWordCloudBot)                  | 受API限制，授予管理员后，机器人才能接收到聊天文本，为了安全，您可以将所有权限关闭 |
 | [流媒体解锁测试](https://t.me/stairunlock_test_bot)       | 流媒体解锁测试                                               |
