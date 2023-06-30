@@ -10,7 +10,7 @@
 
 [项目的背景故事：《解决Telegram中文资源分享难题的Python爬虫项目》](https://www.tgqun.xyz/%E8%A7%A3%E5%86%B3Telegram%E4%B8%AD%E6%96%87%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB%E9%9A%BE%E9%A2%98%E7%9A%84Python%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE)
 
-[关于如何做好开源项目的一些反思：《如何4天内获得一个1.5k+ Star的Github项目 - 策略与反思》](https://www.tgqun.xyz/%E5%A6%82%E4%BD%95%E5%9C%A84%E5%A4%A9%E5%86%85%E8%8E%B7%E5%BE%97%E4%B8%80%E4%B8%AA1.5k+%20Star%E7%9A%84Github%E9%A1%B9%E7%9B%AE%20-%20%E7%AD%96%E7%95%A5%E4%B8%8E%E5%8F%8D%E6%80%9D)
+[关于如何做好开源项目的一些反思：《如何在4天内获得一个1.5k+ Star的Github项目 - 策略与反思》](https://www.tgqun.xyz/%E5%A6%82%E4%BD%95%E5%9C%A84%E5%A4%A9%E5%86%85%E8%8E%B7%E5%BE%97%E4%B8%80%E4%B8%AA1.5k+%20Star%E7%9A%84Github%E9%A1%B9%E7%9B%AE%20-%20%E7%AD%96%E7%95%A5%E4%B8%8E%E5%8F%8D%E6%80%9D)
 
 
 ## 频道 Channel
