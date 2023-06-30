@@ -1,6 +1,10 @@
 # 解决Telegram中文资源分享难题的Python爬虫项目
 
+
+
 > GitHub 项目直达：[telegram-groups](https://github.com/alexbei/telegram-groups)
+
+
 
 **背景**：使用 Telegram 的时候，为了能找到一些有意思的、好玩的、纯粹资源分享的群和频道，总是很困难，尽管有些网站推荐了不少的群/频道/机器人，但是往往其中很多都已经过期了，甚至很多都注销了，也有一些变成了涩涩群、机场群，一个一个筛选起来很麻烦，所以决定用 Python 爬虫来解决这一问题。
 

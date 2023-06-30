@@ -5,10 +5,10 @@
 > 如果大家有发现存在敏感内容的群组、频道和机器人欢迎在issue中提交，会在第一时间处理。
 
 
-[GitHub项目直达](https://github.com/alexbei/telegram-groups)
+> GitHub 项目直达：[telegram-groups](https://github.com/alexbei/telegram-groups)
 
-[项目背景故事：《解决Telegram中文资源分享难题的Python爬虫项目》](https://www.tgqun.xyz/background-story)
-
+[项目的背景故事：《解决Telegram中文资源分享难题的Python爬虫项目》](https://www.tgqun.xyz/%E8%A7%A3%E5%86%B3Telegram%E4%B8%AD%E6%96%87%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB%E9%9A%BE%E9%A2%98%E7%9A%84Python%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE)
+[如何做好开源项目的反思：《如何4天内获得一个1.5k+ Star的Github项目 - 策略与反思》](https://www.tgqun.xyz/%E5%A6%82%E4%BD%954%E5%A4%A9%E5%86%85%E8%8E%B7%E5%BE%97%E4%B8%80%E4%B8%AA1.5k+%20Star%E7%9A%84Github%E9%A1%B9%E7%9B%AE%20-%20%E7%AD%96%E7%95%A5%E4%B8%8E%E5%8F%8D%E6%80%9D)
 
 
 ## 频道 Channel
