@@ -7,7 +7,7 @@
 
 [GitHub项目直达](https://github.com/alexbei/telegram-groups)
 
-[项目的背景故事](https://www.tgqun.xyz/background-story)
+[项目背景故事 >>> 解决Telegram中文资源分享难题的Python爬虫项目](https://www.tgqun.xyz/background-story)
 
 
 
