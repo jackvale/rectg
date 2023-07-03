@@ -476,7 +476,6 @@
 | [RSSBot](https://t.me/RustRssBot)                         | 中文TelegramRSS机器人                                        |
 | [Bing词典](https://t.me/bingdict_bot)                     | 基于Bing的词典、翻译功能                                     |
 | [网易云音乐ncm转换器](https://t.me/netease_ncm_bot)       | 把网易云音乐的NCM文件转换为普通的mp3或者flac文件             |
-| [一起搜电影](https://t.me/Cctv365bot)                     | TG必备影视搜索神器，找到您喜欢的电影、电视剧                 |
 | [好音乐搜索](https://t.me/haoyybot)                       | 歌曲音乐搜索机器人，输入歌曲名或者歌手名，把TG变成音乐播放器 |
 | [解除频道消息在群组的置顶](https://t.me/areply_bot)       | 自动解除频道消息在群组的同步置顶，附带群组日常维护常用小功能 |
 | [Telegram权限管理机器人](https://t.me/autopm_bot)         | 权限管理机器人                                               |
