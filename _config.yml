@@ -1,11 +1,3 @@
-lsi: false
-safe: true
-source: [your repo's top level directory]
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  input: GFM
-  math_engine: mathjax
-  syntax_highlighter: rouge
+analytics:
+  google: G-B0ZMCMBE0S
+markdown: GFM
