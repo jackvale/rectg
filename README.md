@@ -486,4 +486,4 @@
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=alexbei/telegram-groups&type=Date)](https://star-history.com/#alexbei/telegram-groups&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=jackhawks/telegram-groups&type=Date)](https://star-history.com/#jackhawks/telegram-groups&Date)
