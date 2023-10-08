@@ -6,6 +6,8 @@
 > **Warning**
 > 如果大家有发现存在敏感内容的群组、频道和机器人欢迎在 issues 中提交，会在第一时间处理。
 
+> GitHub 项目地址直达
+> https://github.com/jackhawks/telegram-groups
 
 ## 频道 Channel
 
