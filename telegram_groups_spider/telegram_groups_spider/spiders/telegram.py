@@ -1,7 +1,7 @@
 import scrapy
-from telegram_spider.items import TelegramSpiderItem
 from datetime import datetime
 from bs4 import BeautifulSoup
+from telegram_groups_spider.items import TelegramSpiderItem
 
 
 class BaseSpider(scrapy.Spider):
