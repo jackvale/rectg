@@ -13,7 +13,7 @@
 
 
 > GitHub 项目地址直达
-> [https://github.com/jackhawks/telegram-groups](https://github.com/jackhawks/rectg)
+> [https://github.com/jackhawks/rectg](https://github.com/jackhawks/rectg)
 
 
 
