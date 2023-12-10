@@ -13,7 +13,7 @@
 
 
 > GitHub 项目地址直达
-> [https://github.com/jackhawks/telegram-groups](https://github.com/jackhawks/telegram-groups)
+> [https://github.com/jackhawks/telegram-groups](https://github.com/jackhawks/rectg)
 
 
 
@@ -461,4 +461,4 @@
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=jackhawks/telegram-groups&type=Date)](https://star-history.com/#jackhawks/telegram-groups&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=jackhawks/rectg&type=Date)](https://star-history.com/#jackhawks/rectg&Date)
