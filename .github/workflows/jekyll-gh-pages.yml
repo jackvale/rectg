@@ -34,7 +34,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
-          exclude: 'template.md'
+          exclude: "template.md"
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
