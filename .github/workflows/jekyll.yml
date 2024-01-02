@@ -44,12 +44,11 @@ jobs:
           ruby-version: '3.1' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
+          source: ./
+          exclude: template.md
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-        with:
-          source: ./
-          exclude: template.md
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
