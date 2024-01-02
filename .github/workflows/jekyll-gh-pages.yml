@@ -5,6 +5,11 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    paths-ignore:
+      - 'template.md'
+      - 'LICENSE'
+      - 'create_markdown.py'
+      - 'assets/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
