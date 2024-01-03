@@ -3,7 +3,7 @@ import posixpath
 import re
 from itertools import chain
 from urllib.parse import urljoin
-
+import random
 import requests
 from jinja2 import Template
 from lxml import etree
@@ -49,9 +49,6 @@ class CreateMarkdown:
 
             tg_me_page_url = url
 
-            tg_me_page_photo = dict(enumerate(html.xpath(
-                "//div[contains(@class,'tgme_page')]//div[contains(@class,'tgme_page_photo')]//img/@src"))).get(0)
-
             try:
                 tg_me_page_title_raw = dict(enumerate(html.xpath(
                     "//div[contains(@class,'tgme_page')]//div[contains(@class,'tgme_page_title')]//span/text()"))).get(
@@ -92,7 +89,6 @@ class CreateMarkdown:
 
             yield {
                 'tg_me_page_url': tg_me_page_url,
-                'tg_me_page_photo': tg_me_page_photo,
                 'tg_me_page_title': tg_me_page_title,
                 'tg_me_audience': tg_me_audience,
                 'tg_me_page_description': tg_me_page_description,
@@ -103,16 +99,22 @@ class CreateMarkdown:
         with open('_template.md', 'r', encoding='utf-8') as file:
             template = Template(file.read(), trim_blocks=True)
             rendered_file = template.render(repo=repo)
-            # output the file
             output_file = codecs.open("README.md", "w", "utf-8")
             output_file.write(rendered_file)
             output_file.close()
+
+    def shuffle(self, generator):
+        lst = list(generator)
+        lst = list(set(lst))
+        random.shuffle(lst)
+        return (y for y in lst)
 
     def start(self):
         issues = self.issues_handler()
         readme = self.readme_handler()
         urls = self.url_join(issues, readme)
-        info = self.get_info(urls)
+        suf = self.shuffle(urls)
+        info = self.get_info(suf)
         self.create_md(info)
 
 

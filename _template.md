@@ -9,17 +9,11 @@
 > GitHub 项目地址直达
 > [https://github.com/jackhawks/rectg](https://github.com/jackhawks/rectg)
 
-{# 头像宏 #}
-{% macro avatar(link, alt, img) -%}
-<a href="{{ link }}"><img alt="{{ alt }}" src="{{ img }}" height="auto" width="60px" style="border-radius:50%"></a>
-{%- endmacro %}
-
-|                             头像                             | 名称 | 简介 | 人数 | 类型 |
-| :----------------------------------------------------------: | :--: | :--: | :--: | :--: |
+| 名称 | 简介 | 人数 | 类型 |
+| :--: | :--: | :--: | :--: |
 {% for item in repo %}
-| {{avatar(item.tg_me_page_url, item.tg_me_page_title, item.tg_me_page_photo)}} | [{{item.tg_me_page_title}}]({{item.tg_me_page_url}}) | {{item.tg_me_page_description}} | {{item.tg_me_audience}} | {{item.tg_me_category}} |
+| [{{item.tg_me_page_title}}]({{item.tg_me_page_url}}) | {{item.tg_me_page_description}} | {{item.tg_me_audience}} | {{item.tg_me_category}} |
 {% endfor %}
-
 
 ## 免责声明
 
