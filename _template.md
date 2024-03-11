@@ -10,7 +10,7 @@
 > [https://github.com/jackhawks/rectg](https://github.com/jackhawks/rectg)
 
 | 名称 | 简介 | 人数 | 类型 |
-| :--: | :--: | :--: | :--: |
+| :--: | :-- | :--: | :--: |
 {% for item in repo %}
 | [{{item.tg_me_page_title}}]({{item.tg_me_page_url}}) | {{item.tg_me_page_description}} | {{item.tg_me_audience}} | {{item.tg_me_category}} |
 {% endfor %}
