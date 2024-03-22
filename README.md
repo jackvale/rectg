@@ -463,7 +463,7 @@
 ##### Special thanks to JetBrains for their support of this project.
 
 
-<div style="text-align: center;">
+<div align="center">
     <a href="https://www.jetbrains.com">
         <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="JetBrains Logo (Main) logo." width="300px" height="300px">
     </a>
