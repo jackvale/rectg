@@ -454,6 +454,23 @@
 
 本项目的所有内容均来源于网络，仅供学习和研究使用。项目中列出的频道/群组/机器人等可能包含部分敏感内容。请您自觉遵守当地的法律法规。本项目不对使用者的行为承担任何责任。使用者应自行承担使用本项目所产生的一切后果。如有内容侵犯了您的权益，请联系我们删除相关内容。
 
+
+
+## Special Thanks
+
+
+
+##### Special thanks to JetBrains for their support of this project.
+
+
+<div style="text-align: center;">
+    <a href="https://www.jetbrains.com">
+        <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="JetBrains Logo (Main) logo." width="300px" height="300px">
+    </a>
+</div>
+
+
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=jackhawks/rectg&type=Date)](https://star-history.com/#jackhawks/rectg&Date)
