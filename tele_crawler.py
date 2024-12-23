@@ -182,7 +182,7 @@ class CreateMarkdown:
             | 名称 | 链接 | 人数 | 简介 |
             | :--: | :--: | :--: | ---- |
             {% for item in items %}
-            | {{ item.tg_me_page_title or '无名称' }} | [点击访问]({{ item.tg_me_page_url }}) | {{ item.tg_me_audience or '未知' }} | {{ item.tg_me_page_description or '无简介' }} |
+            | {{ item.tg_me_page_title or '无名称' }} | [Go]({{ item.tg_me_page_url }}) | {{ item.tg_me_audience or '未知' }} | {{ item.tg_me_page_description or '无简介' }} |
             {% endfor %}
 
             {% endif %}
