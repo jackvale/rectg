@@ -129,3 +129,7 @@
 | 视频解析中心 | [Go](https://t.me/ParsehubBot) | 未知 | 支持的平台:抖音视频图文、哔哩哔哩视频动态、YouTube、YouTube Music、TikTok视频图文、小红书视频图文、Twitter视频图文、百度贴吧图文视频、niconico视频、Facebook视频、微博视频图文 |
 
 > **注**: 以上信息为自动提取，可能存在数据不准确之处，请自行验证。
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jackhawks/rectg&type=Date)](https://star-history.com/#jackhawks/rectg&Date)
