@@ -1,11 +1,5 @@
 
-# 【精选推荐】5000+ 高质量 Telegram 群组、频道和机器人 - 精选资源一站汇总，快速找到您需要的内容！
-
-> **免责声明**  
-> 本项目旨在为用户提供精选的 Telegram 群组、频道和机器人资源，所有内容均来自公开网络，仅供学习交流与技术研究使用。请您在访问和使用这些 Telegram 资源时，遵守当地的法律法规。  
-> 若您发现任何不适或敏感内容，欢迎在 GitHub 的 issues 中提交反馈，我们将及时处理，确保资源的质量和安全。  
-
-> **请注意**：本项目不对使用者的行为承担任何责任，使用者需自行承担使用本项目产生的所有后果。如有内容侵犯您的权益，请联系我们删除相关内容。
+# 【精选推荐】从全网搜集超 100,000 个 Telegram 群组、频道和机器人，并筛选出优质且持续更新的资源，为 数据分析、研究与学习 提供支持。所有数据均来源于互联网，仅用于研究分析，不涉及商业或违法用途，使用者需自行承担风险。
 
 > **项目地址**  
 > [点击访问 GitHub 项目，获取优质 Telegram 群组、频道和机器人资源](https://github.com/jackhawks/rectg)
@@ -146,8 +140,6 @@
 | 方丈机器人 | [Go](https://t.me/fangzhang_bot) | 未知 | 方丈群管理机器人已实现的功能有：新人进群验证、新人进群欢迎词、垃圾信息拦截、自动回复、定时发送、强制订阅、消息统计、群成员管理等，欢迎使用。 |
 | 视频解析中心 | [Go](https://t.me/ParsehubBot) | 未知 | 支持的平台:抖音视频图文、哔哩哔哩视频动态、YouTube、YouTube Music、TikTok视频图文、小红书视频图文、Twitter视频图文、百度贴吧图文视频、niconico视频、Facebook视频、微博视频图文 |
 
-> **注**: 以上信息为自动提取，可能存在数据不准确之处，请自行验证。
-
 ### Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=jackhawks/rectg&type=Date)](https://star-history.com/#jackhawks/rectg&Date)
+[![Star History](https://starchart.cc/jackhawks/rectg.svg?variant=adaptive)](https://starchart.cc/jackhawks/rectg)
