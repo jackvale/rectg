@@ -1,8 +1,22 @@
+<p align="center">
+    <img src="./logo.png" alt="logo" style="height: 150px; width:150px;"/>
+</p>
 
-# 从全网搜集超 100,000 个 Telegram 群组、频道和机器人，并筛选出优质且持续更新的资源，为数据分析、研究与学习提供数据支持。
+<h1 align="center">Telegram 每日推荐</h1>
 
-> **项目地址**  
-> [点击访问 GitHub 项目，获取优质 Telegram 群组、频道和机器人资源](https://github.com/jackhawks/rectg)
+<div align="center">
+
+![GitHub repo size](https://img.shields.io/github/repo-size/jackhawks/rectg)
+![GitHub license](https://img.shields.io/github/license/jackhawks/rectg)
+![GitHub stars](https://img.shields.io/github/stars/jackhawks/rectg?style=social)
+![GitHub forks](https://img.shields.io/github/forks/jackhawks/rectg?style=social)
+![GitHub issues](https://img.shields.io/github/issues/jackhawks/rectg)
+
+</div>
+
+从全网搜集超 100,000 个 Telegram 群组、频道和机器人，并筛选出优质且持续更新的资源，为 数据分析、研究与学习 提供支持。所有数据均来源于互联网，仅用于研究分析，不涉及商业或违法用途，使用者需自行承担风险。
+
+> [GitHub 项目地址](https://github.com/jackhawks/rectg)
 
 ---
 
