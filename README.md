@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./logo.png" alt="logo" style="height: 150px; width:150px;"/>
+    <img src="./.assets/logo.svg" alt="logo" style="height: 150px; width:150px;"/>
 </p>
 
 <h1 align="center">Telegram 每日推荐</h1>
