@@ -6,7 +6,6 @@
 
 <div align="center">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/jackhawks/rectg)
 ![GitHub license](https://img.shields.io/github/license/jackhawks/rectg)
 ![GitHub stars](https://img.shields.io/github/stars/jackhawks/rectg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/jackhawks/rectg?style=social)
