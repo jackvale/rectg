@@ -1,5 +1,48 @@
+# macOS 系统文件
 .DS_Store
-.idea
-.vscode
-.venv
-__pycache__
+.AppleDouble
+.LSOverride
+
+# Python 虚拟环境
+venv/
+.env/
+__pycache__/
+*.py[cod]
+
+# Scrapy 相关
+.scrapy/
+*.log
+*.db
+*.sqlite3
+
+# 配置文件
+.env
+config.json
+settings_local.py
+
+# 缓存 & 临时文件
+*.swp
+*.swo
+
+# pip & dependency 管理
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# VS Code / PyCharm IDE 相关
+.vscode/
+.idea/
+*.iml
+
+# Git 相关
+.git/
+.gitignore
+
+# 压缩包 / 数据文件
+*.tar.gz
+*.zip
+*.csv
+*.json
+*.xml

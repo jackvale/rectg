@@ -1,34 +1,3 @@
-<p align="center">
-    <img src="./.assets/logo.svg" alt="logo" style="height: 150px; width:150px;"/>
-</p>
-
-<h1 align="center">Telegram 每日推荐</h1>
-
-<div align="center">
-
-![GitHub license](https://img.shields.io/github/license/jackhawks/rectg)
-![GitHub stars](https://img.shields.io/github/stars/jackhawks/rectg?style=social)
-![GitHub forks](https://img.shields.io/github/forks/jackhawks/rectg?style=social)
-![GitHub issues](https://img.shields.io/github/issues/jackhawks/rectg)
-
-</div>
-
-从全网搜集超 100,000 个 Telegram 群组、频道和机器人，并筛选出优质且持续更新的资源，为 数据分析、研究与学习 提供支持。所有数据均来源于互联网，仅用于研究分析，不涉及商业或违法用途，使用者需自行承担风险。
-
-> [GitHub 项目地址](https://github.com/jackhawks/rectg)
-
-## 频道推荐
-
-|    频道名称    |             链接              | 简介 |
-| :------------: | :---------------------------: | --- |
-| Telegram 每日推荐 | [https://t.me/sharetgs](https://t.me/sharetgs) | 欢迎加入我们的频道！这里每天为您精心挑选并推荐一些高质量的频道、群组和机器人，覆盖 🚀 技术编程、💻 学习成长、🎮 兴趣娱乐、✨ 创意生活等多个领域。 |
-
-## 群组推荐
-
-|    群组名称    |             链接             | 简介                |
-| :------------: |:--------------------------:|-------------------|
-| Telegram 每日推荐 \| 讨论组💬 |   [https://t.me/sharetgsg](https://t.me/sharetgsg)   |  Telegram 每日推荐的讨论组！这里是与主频道互补的群组，专为热爱优质内容的朋友打造。您可以自由讨论和分享关于频道、群组、机器人的话题，涵盖 🚀 技术编程、💻 学习成长、🎮 兴趣娱乐、✨ 创意生活、📰 资讯动态、💰 金融财经、🏋️ 体育健身、🍜 旅游美食等等。 |
-
 ## 频道
 - `Telegram 每日推荐`: https://t.me/sharetgs
 - `GitHubDailys （GitHub每日热门榜）`: https://t.me/GitHubDailys
@@ -91,6 +60,7 @@
 - `Tg Links`: https://t.me/TgDict
 - `电报指南 & 精品排行榜`: https://t.me/TgTrillion
 - `Wallpapers`: https://t.me/joinchat/AAAAAEp0gD9_Q7lrKDfb3Q
+- `性教育视频`: https://t.me/+J9fFyhKNVPxjMjBh
 - `电子书/听书/期刊/课程资源`: https://t.me/sharebooks4you/5698
 - `Ukraine NOW [French]`: https://t.me/UkraineNowFrench
 - `纽约时报双语新闻`: https://t.me/nyt_bilingual
@@ -804,7 +774,6 @@
 - `缤纷世界的彩色冒险`: https://t.me/bunte_Welt
 - `🔥🔥ZBook,|电子书📚| 小说|漫画资源||禁书分|享|交流频道|🔥🔥🅰电子书`: https://t.me/ziyuanfeng59
 - `逆风社`: https://t.me/nifengpress
-
 ## 群组
 - `Telegram 每日推荐｜讨论组💬`: https://t.me/sharetgsg
 - `树莓派 Raspberry Pi`: https://t.me/raspicn
@@ -1257,7 +1226,6 @@
 - `Language: Chinese (Simplified, zhcncc)`: https://t.me/translation_zhcncc
 - `ZOE Group`: https://t.me/ZOEAPP
 - `博物志听众群`: https://t.me/museelogue
-
 ## 机器人
 - `EventsAggregator`: https://t.me/EventsAggregatorBot
 - `Ll. Muhamad Sofyan Hadi`: https://t.me/llmsh
@@ -1526,7 +1494,3 @@
 - `Searchee Bot`: https://t.me/SearcheeBot
 - `Cleaning Toolbox`: https://t.me/CleaningToolboxBot/
 - `PronunciationBot`: https://t.me/PronunciationBot
-
-### Star History
-
-[![Star History](https://starchart.cc/jackhawks/rectg.svg?variant=adaptive)](https://starchart.cc/jackhawks/rectg)
