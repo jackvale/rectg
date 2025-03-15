@@ -7,9 +7,15 @@
 <div align="center">
 
 ![GitHub license](https://img.shields.io/github/license/jackhawks/rectg)
+![Maintenance](https://img.shields.io/maintenance/yes/2025)
 ![GitHub stars](https://img.shields.io/github/stars/jackhawks/rectg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/jackhawks/rectg?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/jackhawks/rectg)
+![GitHub contributors](https://img.shields.io/github/contributors/jackhawks/rectg)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+![Requirements](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)
 
 </div>
 
