@@ -21,13 +21,13 @@
 
 |    频道名称    |             链接              | 简介 |
 | :------------: | :---------------------------: | --- |
-| Telegram 每日推荐 | [https://t.me/sharetgs](https://t.me/sharetgs) | 欢迎加入我们的频道！这里每天为您精心挑选并推荐一些高质量的频道、群组和机器人，覆盖 🚀 技术编程、💻 学习成长、🎮 兴趣娱乐、✨ 创意生活等多个领域。 |
+| Telegram 每日推荐 | [https://t.me/sharetgs](https://t.me/sharetgs) | Telegram 每日推荐频道 |
 
 ## 群组推荐
 
 |    群组名称    |             链接             | 简介                |
 | :------------: |:--------------------------:|-------------------|
-| Telegram 每日推荐 \| 讨论组💬 |   [https://t.me/sharetgsg](https://t.me/sharetgsg)   |  Telegram 每日推荐的讨论组！这里是与主频道互补的群组，专为热爱优质内容的朋友打造。您可以自由讨论和分享关于频道、群组、机器人的话题，涵盖 🚀 技术编程、💻 学习成长、🎮 兴趣娱乐、✨ 创意生活、📰 资讯动态、💰 金融财经、🏋️ 体育健身、🍜 旅游美食等等。 |
+| Telegram 每日推荐讨论组 |   [https://t.me/sharetgsg](https://t.me/sharetgsg)   |  Telegram 每日推荐讨论组  |
 
 ## 频道
 - `Telegram 每日推荐`: https://t.me/sharetgs
