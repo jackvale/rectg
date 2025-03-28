@@ -37,7 +37,7 @@
 
 ## 频道
 - `Telegram 每日推荐`: [https://t.me/sharetgs](https://t.me/sharetgs)
-- `AAA喵喵分享`: [https://t.me/AAACatShare](https://t.me/AAACatShare)
+- `硬核科技资讯`: [https://t.me/AAACatShare](https://t.me/AAACatShare)
 - `GitHubDailys （GitHub每日热门榜）`: [https://t.me/GitHubDailys](https://t.me/GitHubDailys)
 - `📊 Polls Channel`: [https://t.me/polls_channel](https://t.me/polls_channel)
 - `Duyao｜SpeedTest｜科技生活｜资讯转发`: [https://t.me/DuyaoSS](https://t.me/DuyaoSS)
