@@ -1,0 +1,50 @@
+services:
+  app:
+    stdin_open: true
+    tty: true
+    image: container-ztcymvy
+    build:
+      context: ./src
+    ports:
+      - "5000:5000"
+    volumes:
+      - type: bind
+        source: ./src/web
+        target: /usr/src/app
+    environment:
+      ALLOWED_HOSTS: "127.0.0.1,localhost"
+      DATABASE_URL: mysql2=//app_user=password@db=3306/app_database?pool=5&useUnicode=true&characterEncoding=UTF-8
+      DB_ENGINE: django.db.backends.mysql
+      DB_HOST: db
+      DB_NAME: app_database
+      DB_PASSWORD: password
+      DB_PORT: 3306
+      DB_USER: app_user
+      DEBUG: "True"
+      SECRET_KEY: local_development
+
+
+  db:
+    # This database service is used only for local development
+    # Note: It may be preferable to use an online database service
+    # https://db.anotherwebservice.com/
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: app_database
+
+  phpmyadmin:
+    # To view the database during local development
+    # Visit http://127.0.0.1:8080/
+    # Server is: db
+    # Username is same as MYSQL_USER
+    # Password is same as MYSQL_PASSWORD
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_ARBITRARY: "1"
