@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "git-tag",
+    "all-contributors",
+    "first-time-contributor",
+    "released"
+  ],
+  "owner": "jackhawks",
+  "repo": "rectg",
+  "name": "jackhawks",
+  "email": "83709912+jackhawks@users.noreply.github.com",
+}
