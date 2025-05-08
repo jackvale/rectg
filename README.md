@@ -2,16 +2,15 @@
 
 > [GitHub 项目地址](https://github.com/jackhawks/rectg)
 
-## 频道推荐
-
 |    频道名称    |             链接              | 简介 |
 | :------------: | :---------------------------: | --- |
 | Telegram 每日推荐 | [https://t.me/sharetgs](https://t.me/sharetgs) | Telegram 每日推荐频道 |
 
 ## 频道
-- `Telegram 每日推荐`: [https://t.me/sharetgs](https://t.me/sharetgs)
+- `GitHub Trending Daily `: [https://t.me/GitHubDailys](https://t.me/GitHubDailys)
 - `硬核科技资讯`: [https://t.me/AAACatShare](https://t.me/AAACatShare)
-- `GitHubDailys （GitHub每日热门榜）`: [https://t.me/GitHubDailys](https://t.me/GitHubDailys)
+- `下饭时间`: [https://t.me/xqsranimegif](https://t.me/xqsranimegif)
+- `V2EX Feed 新贴`: [https://t.me/v2exfeed](https://t.me/v2exfeed)
 - `📊 Polls Channel`: [https://t.me/polls_channel](https://t.me/polls_channel)
 - `Duyao｜SpeedTest｜科技生活｜资讯转发`: [https://t.me/DuyaoSS](https://t.me/DuyaoSS)
 - `完美弧度`: [https://t.me/wanmeihudu](https://t.me/wanmeihudu)
