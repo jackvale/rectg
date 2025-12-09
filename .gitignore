@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+vendor/
+node_modules/
+.vscode/
+.idea/
+Thumbs.db
