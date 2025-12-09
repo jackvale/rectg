@@ -1,10 +1,10 @@
 {
   "name": "rectg",
   "version": "1.0.0",
-  "description": "Render README.md to static HTML for deployment.",
+  "description": "Render README.md to styled static HTML for deployment.",
   "private": true,
   "scripts": {
-    "build": "mkdir -p public && npx marked -o public/index.html README.md"
+    "build": "node scripts/build.js"
   },
   "devDependencies": {
     "marked": "^12.0.2"
