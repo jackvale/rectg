@@ -97,6 +97,8 @@ const html = `<!doctype html>
       td::before { content: attr(data-label); display: block; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
     }
   </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
   <main>
