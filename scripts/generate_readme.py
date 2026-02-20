@@ -135,8 +135,9 @@ def generate_readme(conn: sqlite3.Connection) -> str:
                 if desc:
                     lines.append(f"  - {desc}")
                 
-                # 在每个独立的项目块之间增加一个空行，拉开视觉间距
-                lines.append("")
+                # 使用 <br> 作为列表的分隔符，这不仅能在视觉上创造出“蓝色的空行”，
+                # 还能阻止 Markdown 解析器把整个列表变成带有很多多余空隙的 "loose list"（红色的空行）
+                lines.append("<br>")
                 
             lines.append("")
 
