@@ -1,4 +1,6 @@
 {
-    "buildCommand": "pip install -r requirements.txt && python scripts/build_html.py",
-    "outputDirectory": "public"
+    "version": 2,
+    "buildCommand": "cd web && npm install && npm run build",
+    "outputDirectory": "web/dist",
+    "framework": "vite"
 }
