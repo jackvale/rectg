@@ -131,13 +131,13 @@ def generate_readme(conn: sqlite3.Connection) -> str:
                 lines.append(f"- {title}")
                 lines.append(f"  - {type_label}")
                 lines.append(f"  - [{url}]({url})")
-                lines.append(f"  - {count}")
-                if desc:
-                    lines.append(f"  - {desc}")
                 
-                # 使用 <br> 作为列表的分隔符，这不仅能在视觉上创造出“蓝色的空行”，
-                # 还能阻止 Markdown 解析器把整个列表变成带有很多多余空隙的 "loose list"（红色的空行）
-                lines.append("<br>")
+                if desc:
+                    lines.append(f"  - {count}")
+                    # 将 <br> 直接写在最后一行的末尾，不打断 Markdown 列表结构
+                    lines.append(f"  - {desc}<br>")
+                else:
+                    lines.append(f"  - {count}<br>")
                 
             lines.append("")
 
