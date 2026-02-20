@@ -135,6 +135,9 @@ def generate_readme(conn: sqlite3.Connection) -> str:
                 if desc:
                     lines.append(f"  - {desc}")
                 
+                # 在每个独立的项目块之间增加一个空行，拉开视觉间距
+                lines.append("")
+                
             lines.append("")
 
     # Star History 保持在底部
