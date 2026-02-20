@@ -123,6 +123,15 @@ function main() {
     const sitemapPath = path.resolve(OUT_DIR, 'sitemap.xml');
     fs.writeFileSync(sitemapPath, sitemapContent, 'utf-8');
     console.log(`✅ Generated sitemap.xml at ${sitemapPath}`);
+
+    // Generate Robots.txt
+    const robotsContent = `User-agent: *
+Allow: /
+
+Sitemap: https://www.rectg.com/sitemap.xml`;
+    const robotsPath = path.resolve(OUT_DIR, 'robots.txt');
+    fs.writeFileSync(robotsPath, robotsContent, 'utf-8');
+    console.log(`✅ Generated robots.txt at ${robotsPath}`);
 }
 
 main();
