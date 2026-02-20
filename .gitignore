@@ -46,3 +46,4 @@ venv.bak/
 # Keep the sqlite DB, but ignore json crawled backups
 data/*.json
 data/*.bak
+data/*.log
