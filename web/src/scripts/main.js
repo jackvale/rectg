@@ -89,14 +89,19 @@ function initSidebar() {
     });
 }
 
-// Search Handling (DOM node filtering)
+function highlightPinyin(text, matchPositions) {
+    if (!matchPositions || !Array.isArray(matchPositions)) return text;
+    const start = matchPositions[0];
+    const end = matchPositions[1];
+    return text.substring(0, start) + '<mark>' + text.substring(start, end + 1) + '</mark>' + text.substring(end + 1);
+}
+
+// Search Handling (DOM node filtering & highlighting)
 function initSearch() {
-    const cards = document.querySelectorAll('.card');
     const sections = document.querySelectorAll('.category-section');
 
     searchInput?.addEventListener('input', (e) => {
         const query = (e.target.value || "").trim().toLowerCase();
-
         let hasVisibleCards = false;
 
         sections.forEach(section => {
@@ -109,9 +114,15 @@ function initSearch() {
                 const url = card.getAttribute('data-url') || '';
                 const category = card.getAttribute('data-category') || '';
 
+                const titleEl = card.querySelector('.card-title');
+                const descEl = card.querySelector('.card-desc');
+
                 if (!query) {
                     card.style.display = '';
                     visibleCount++;
+                    // Reset HTML
+                    if (titleEl) titleEl.textContent = title;
+                    if (descEl) descEl.textContent = desc;
                 } else {
                     const matchTitle = PinyinMatch.match(title, query);
                     const matchDesc = PinyinMatch.match(desc, query);
@@ -121,6 +132,14 @@ function initSearch() {
                     if (matchTitle || matchDesc || matchUrl || matchCat) {
                         card.style.display = '';
                         visibleCount++;
+
+                        // Apply highlights
+                        if (titleEl) {
+                            titleEl.innerHTML = Array.isArray(matchTitle) ? highlightPinyin(title, matchTitle) : title;
+                        }
+                        if (descEl) {
+                            descEl.innerHTML = Array.isArray(matchDesc) ? highlightPinyin(desc, matchDesc) : desc;
+                        }
                     } else {
                         card.style.display = 'none';
                     }
