@@ -619,3 +619,34 @@ body.dark .card::before {
     display: block;
   }
 }
+
+/* Footer */
+.site-footer {
+  margin-top: 60px;
+  padding: 40px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.footer-content p {
+  margin-bottom: 12px;
+}
+
+.footer-content strong {
+  color: var(--text-main);
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
