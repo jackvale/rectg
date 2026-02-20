@@ -1,0 +1,4 @@
+{
+    "buildCommand": "pip install -r requirements.txt && python scripts/build_html.py",
+    "outputDirectory": "public"
+}
