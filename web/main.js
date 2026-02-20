@@ -10,9 +10,38 @@ const categoryNav = document.getElementById('category-nav');
 const contentContainer = document.getElementById('content-container');
 const searchInput = document.getElementById('search-input');
 const bulletinText = document.getElementById('bulletin-text');
+const toast = document.getElementById('toast');
+const backToTopBtn = document.getElementById('back-to-top');
 
 let appData = null;
 let currentSearch = '';
+
+// Utilities
+function getHashColor(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return Math.abs(hash) % 6; // Matching .avatar-color-X in CSS
+}
+
+function highlightText(text, search) {
+    if (!search) return text;
+    const escapedSearch = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedSearch})`, 'gi');
+    return text.replace(regex, '<span class="highlight">$1</span>');
+}
+
+let toastTimeout;
+function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
 
 // Theme Handling
 function initTheme() {
@@ -60,6 +89,26 @@ function initSidebar() {
 
 // Data Fetching
 async function loadData() {
+    // Show skeleton screen
+    contentContainer.innerHTML = `
+        <div class="skeleton-wrapper">
+            ${Array.from({ length: 12 }).map(() => `
+                <div class="skeleton-card">
+                    <div class="skeleton-header">
+                        <div class="skeleton skeleton-avatar"></div>
+                        <div class="skeleton-title-wrap">
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-meta"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton skeleton-line"></div>
+                    <div class="skeleton skeleton-line"></div>
+                    <div class="skeleton skeleton-line"></div>
+                </div>
+            `).join('')}
+        </div>
+    `;
+
     try {
         const res = await fetch('/data.json');
         appData = await res.json();
@@ -183,31 +232,52 @@ function renderContent() {
 
             const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
             const firstLetter = item.title ? item.title.substring(0, 1).toUpperCase() : '?';
+            const colorClass = `avatar-color-${getHashColor(firstLetter)}`;
+
+            const displayTitle = highlightText(item.title, currentSearch);
+            const displayDesc = highlightText(item.desc || '没有描述', currentSearch);
 
             return `
                     <div class="card">
                         <a href="${item.url}" target="_blank" rel="noopener" class="card-link"></a>
+                        <button class="card-copy-btn" aria-label="复制链接" data-url="${item.url}">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </button>
                         <div class="card-header">
-                            <div class="card-icon">
+                            <div class="card-icon ${colorClass}">
                                 ${avatarUrl ?
-                    `<img src="${avatarUrl}" alt="${username}" onerror="this.onerror=null; this.parentNode.innerHTML='${firstLetter}';" />`
+                    `<img src="${avatarUrl}" loading="lazy" alt="${username}" onerror="this.onerror=null; this.parentNode.innerHTML='${firstLetter}';" />`
                     : firstLetter}
                             </div>
                             <div class="card-title-wrap">
-                                <div class="card-title" title="${item.title}">${item.title}</div>
+                                <div class="card-title" title="${item.title}">${displayTitle}</div>
                                 <div class="card-meta">
                                     <span class="tag">${item.typeName || '频道'}</span>
                                     <span>${item.countStr ? '👥 ' + item.countStr : ''}</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-desc" title="${item.desc}">${item.desc || '没有描述'}</div>
+                        <div class="card-desc" title="${item.desc}">${displayDesc}</div>
                     </div>
                     `;
         }).join('')}
             </div>
         `;
         contentContainer.appendChild(section);
+    });
+
+    // Setup copy button event listeners
+    document.querySelectorAll('.card-copy-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const url = btn.getAttribute('data-url');
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(() => showToast('已复制链接')).catch(() => showToast('复制失败'));
+            } else {
+                showToast('当前环境不支持快捷复制');
+            }
+        });
     });
 
     if (!hasResults) {
@@ -258,11 +328,31 @@ function initScrollSpy() {
     });
 }
 
+// Back to top logic
+function initBackToTop() {
+    if (!backToTopBtn) return;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // Init
 function init() {
     initTheme();
     initSidebar();
     initSearch();
+    initBackToTop();
     loadData().then(() => {
         initScrollSpy();
     });

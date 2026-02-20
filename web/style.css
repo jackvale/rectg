@@ -650,3 +650,247 @@ body.dark .card::before {
   font-size: 0.75rem;
   opacity: 0.7;
 }
+
+/* --- UX & Performance Optimizations --- */
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+body.dark .back-to-top {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Search Highlight */
+.highlight {
+  background-color: rgba(255, 235, 59, 0.4);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+body.dark .highlight {
+  background-color: rgba(255, 213, 79, 0.3);
+}
+
+/* Skeleton Loading Screen */
+.skeleton-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.skeleton-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-hover) 25%, var(--border-color) 50%, var(--bg-hover) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 15px;
+}
+
+.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.skeleton-title-wrap {
+  flex: 1;
+}
+
+.skeleton-title {
+  height: 18px;
+  width: 70%;
+  margin-bottom: 8px;
+}
+
+.skeleton-meta {
+  height: 14px;
+  width: 40%;
+}
+
+.skeleton-line {
+  height: 14px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.skeleton-line:last-child {
+  width: 80%;
+}
+
+/* Avatar Dynamic Colors */
+.avatar-color-0 {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.avatar-color-1 {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.avatar-color-2 {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.avatar-color-3 {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.avatar-color-4 {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.avatar-color-5 {
+  background: #e0f7fa;
+  color: #0097a7;
+}
+
+body.dark .avatar-color-0 {
+  background: rgba(25, 118, 210, 0.2);
+  color: #90caf9;
+}
+
+body.dark .avatar-color-1 {
+  background: rgba(194, 24, 91, 0.2);
+  color: #f48fb1;
+}
+
+body.dark .avatar-color-2 {
+  background: rgba(56, 142, 60, 0.2);
+  color: #a5d6a7;
+}
+
+body.dark .avatar-color-3 {
+  background: rgba(245, 124, 0, 0.2);
+  color: #ffcc80;
+}
+
+body.dark .avatar-color-4 {
+  background: rgba(123, 31, 162, 0.2);
+  color: #ce93d8;
+}
+
+body.dark .avatar-color-5 {
+  background: rgba(0, 151, 167, 0.2);
+  color: #80deea;
+}
+
+/* Copy Link Button */
+.card-copy-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-hover);
+  border: none;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 15;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s;
+}
+
+.card:hover .card-copy-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-copy-btn:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
