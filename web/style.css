@@ -951,3 +951,29 @@ body.dark .card:hover:has(.avatar-color-5) {
   box-shadow: 0 0 20px rgba(128, 222, 234, 0.15), inset 0 0 10px rgba(128, 222, 234, 0.05);
   border-color: rgba(128, 222, 234, 0.3);
 }
+
+/* Card Ripple Effect */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background-color: rgba(41, 151, 255, 0.15);
+  pointer-events: none;
+}
+
+body.dark .card .ripple {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

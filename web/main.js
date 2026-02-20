@@ -1,5 +1,8 @@
 import './style.css';
 import PinyinMatch from 'pinyin-match';
+import { inject } from '@vercel/analytics';
+
+inject();
 
 // DOM Elements
 const sidebar = document.getElementById('sidebar');
@@ -269,6 +272,37 @@ function renderContent() {
             </div>
         `;
         contentContainer.appendChild(section);
+    });
+
+    // Add ripple effect listeners
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mousedown', function (event) {
+            // Check if clicking copy button, don't ripple main card
+            if (event.target.closest('.card-copy-btn')) return;
+
+            const circle = document.createElement('span');
+            const diameter = Math.max(card.clientWidth, card.clientHeight);
+            const radius = diameter / 2;
+
+            const rect = card.getBoundingClientRect();
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - rect.left - radius}px`;
+            circle.style.top = `${event.clientY - rect.top - radius}px`;
+            circle.classList.add('ripple');
+
+            const existingRipple = card.querySelector('.ripple');
+            if (existingRipple) {
+                existingRipple.remove();
+            }
+
+            card.appendChild(circle);
+
+            // Auto remove after animation ends to clean up DOM
+            setTimeout(() => {
+                const r = card.querySelector('.ripple');
+                if (r) r.remove();
+            }, 600);
+        });
     });
 
     // Setup copy button event listeners

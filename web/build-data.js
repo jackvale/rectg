@@ -109,6 +109,20 @@ function main() {
     }
     fs.writeFileSync(OUT_FILE, JSON.stringify(data, null, 2));
     console.log(`✅ Generated data.json with ${data.categories.length} categories.`);
+
+    // Generate Sitemap
+    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.rectg.com/</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>`;
+    const sitemapPath = path.resolve(OUT_DIR, 'sitemap.xml');
+    fs.writeFileSync(sitemapPath, sitemapContent, 'utf-8');
+    console.log(`✅ Generated sitemap.xml at ${sitemapPath}`);
 }
 
 main();
