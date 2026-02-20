@@ -2,7 +2,6 @@ const CACHE_NAME = 'rectg-cache-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/style.css',
     '/data.json',
     '/manifest.json',
     '/og-image.png'
