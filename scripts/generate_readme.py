@@ -131,13 +131,11 @@ def generate_readme(conn: sqlite3.Connection) -> str:
                 lines.append(f"- {title}")
                 lines.append(f"  - {type_label}")
                 lines.append(f"  - [{url}]({url})")
-                
+                lines.append(f"  - {count}")
                 if desc:
-                    lines.append(f"  - {count}")
-                    # 将 <br> 直接写在最后一行的末尾，不打断 Markdown 列表结构
-                    lines.append(f"  - {desc}<br>")
-                else:
-                    lines.append(f"  - {count}<br>")
+                    lines.append(f"  - {desc}")
+                
+                lines.append("")
                 
             lines.append("")
 
