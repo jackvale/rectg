@@ -15,7 +15,7 @@ npm-debug.log*
 .vscode/
 .idea/
 
-data/
+data/*.json
 __pycache__/
 *.pyc
 .venv/
