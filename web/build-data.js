@@ -26,6 +26,12 @@ function main() {
     const categoriesList = [];
     const typeMap = {};
 
+    const seoKeywords = {
+        "新闻快讯": "吃瓜播报 一手资讯 热点追踪 国际新闻",
+        "加密货币": "薅羊毛 币圈发财 搞钱 投资交流 量化交易",
+        "影视剧集": "找影视在线看 免费追剧 短剧大全"
+    };
+
     for (const rawLine of lines) {
         if (!rawLine.trim()) {
             if (currentItem && currentType && currentCategory) {
@@ -52,14 +58,16 @@ function main() {
                 // Use a simpler regex that splits by the first whitespace to safely handle compound ZWJ emojis
                 const match = fullCat.match(/^(\S+)\s+(.*)$/);
                 if (match) {
+                    const catName = match[2];
                     categoriesList.push({
                         icon: match[1],
-                        name: match[2],
+                        name: catName,
                         fullName: fullCat,
-                        id: match[2].toLowerCase()
+                        keywords: seoKeywords[catName] || "",
+                        id: catName.toLowerCase()
                     });
                 } else {
-                    categoriesList.push({ icon: '📌', name: fullCat, fullName: fullCat, id: fullCat });
+                    categoriesList.push({ icon: '📌', name: fullCat, fullName: fullCat, keywords: seoKeywords[fullCat] || "", id: fullCat });
                 }
             }
             currentItem = null;

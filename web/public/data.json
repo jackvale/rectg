@@ -4,132 +4,154 @@
       "icon": "📰",
       "name": "新闻快讯",
       "fullName": "📰 新闻快讯",
+      "keywords": "吃瓜播报 一手资讯 热点追踪 国际新闻",
       "id": "新闻快讯"
     },
     {
       "icon": "💻",
       "name": "数码科技",
       "fullName": "💻 数码科技",
+      "keywords": "",
       "id": "数码科技"
     },
     {
       "icon": "👨‍💻",
       "name": "开发运维",
       "fullName": "👨‍💻 开发运维",
+      "keywords": "",
       "id": "开发运维"
     },
     {
       "icon": "🔒",
       "name": "信息安全",
       "fullName": "🔒 信息安全",
+      "keywords": "",
       "id": "信息安全"
     },
     {
       "icon": "🧰",
       "name": "软件工具",
       "fullName": "🧰 软件工具",
+      "keywords": "",
       "id": "软件工具"
     },
     {
       "icon": "☁️",
       "name": "网盘资源",
       "fullName": "☁️ 网盘资源",
+      "keywords": "",
       "id": "网盘资源"
     },
     {
       "icon": "🎬",
       "name": "影视剧集",
       "fullName": "🎬 影视剧集",
+      "keywords": "找影视在线看 免费追剧 短剧大全",
       "id": "影视剧集"
     },
     {
       "icon": "🎵",
       "name": "音乐音频",
       "fullName": "🎵 音乐音频",
+      "keywords": "",
       "id": "音乐音频"
     },
     {
       "icon": "🎐",
       "name": "动漫次元",
       "fullName": "🎐 动漫次元",
+      "keywords": "",
       "id": "动漫次元"
     },
     {
       "icon": "🎮",
       "name": "游戏娱乐",
       "fullName": "🎮 游戏娱乐",
+      "keywords": "",
       "id": "游戏娱乐"
     },
     {
       "icon": "✈️",
       "name": "科学上网",
       "fullName": "✈️ 科学上网",
+      "keywords": "",
       "id": "科学上网"
     },
     {
       "icon": "🪙",
       "name": "加密货币",
       "fullName": "🪙 加密货币",
+      "keywords": "薅羊毛 币圈发财 搞钱 投资交流 量化交易",
       "id": "加密货币"
     },
     {
       "icon": "📚",
       "name": "学习阅读",
       "fullName": "📚 学习阅读",
+      "keywords": "",
       "id": "学习阅读"
     },
     {
       "icon": "🎨",
       "name": "创意设计",
       "fullName": "🎨 创意设计",
+      "keywords": "",
       "id": "创意设计"
     },
     {
       "icon": "📡",
       "name": "社媒搬运",
       "fullName": "📡 社媒搬运",
+      "keywords": "",
       "id": "社媒搬运"
     },
     {
       "icon": "👗",
       "name": "生活消费",
       "fullName": "👗 生活消费",
+      "keywords": "",
       "id": "生活消费"
     },
     {
       "icon": "🌍",
       "name": "地区社群",
       "fullName": "🌍 地区社群",
+      "keywords": "",
       "id": "地区社群"
     },
     {
       "icon": "💬",
       "name": "闲聊交友",
       "fullName": "💬 闲聊交友",
+      "keywords": "",
       "id": "闲聊交友"
     },
     {
       "icon": "🔞",
       "name": "福利吃瓜",
       "fullName": "🔞 福利吃瓜",
+      "keywords": "",
       "id": "福利吃瓜"
     },
     {
       "icon": "🗂️",
       "name": "综合导航",
       "fullName": "🗂️ 综合导航",
+      "keywords": "",
       "id": "综合导航"
     },
     {
       "icon": "🌐",
       "name": "综合其他",
       "fullName": "🌐 综合其他",
+      "keywords": "",
       "id": "综合其他"
     },
     {
       "icon": "🏀",
       "name": "体育运动",
       "fullName": "🏀 体育运动",
+      "keywords": "",
       "id": "体育运动"
     }
   ],
