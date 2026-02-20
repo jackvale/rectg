@@ -1,4 +1,5 @@
 import './style.css';
+import PinyinMatch from 'pinyin-match';
 
 // DOM Elements
 const sidebar = document.getElementById('sidebar');
@@ -12,6 +13,7 @@ const searchInput = document.getElementById('search-input');
 const bulletinText = document.getElementById('bulletin-text');
 const toast = document.getElementById('toast');
 const backToTopBtn = document.getElementById('back-to-top');
+const progressBar = document.getElementById('progress-bar');
 
 let appData = null;
 let currentSearch = '';
@@ -194,10 +196,13 @@ function renderContent() {
     Object.values(categoryGroups).forEach(group => {
         const filteredItems = group.items.filter(item => {
             if (!currentSearch) return true;
-            const s = currentSearch.toLowerCase();
-            return (item.title && item.title.toLowerCase().includes(s)) ||
-                (item.desc && item.desc.toLowerCase().includes(s)) ||
-                (item.url && item.url.toLowerCase().includes(s));
+
+            // Fuzzy match using pinyin
+            const matchTitle = PinyinMatch.match(item.title, currentSearch);
+            const matchDesc = item.desc ? PinyinMatch.match(item.desc, currentSearch) : false;
+            const matchUrl = item.url ? item.url.toLowerCase().includes(currentSearch.toLowerCase()) : false;
+
+            return matchTitle || matchDesc || matchUrl;
         });
 
         if (filteredItems.length === 0) return;
@@ -328,23 +333,35 @@ function initScrollSpy() {
     });
 }
 
-// Back to top logic
-function initBackToTop() {
-    if (!backToTopBtn) return;
+// Back to top & Progress Bar logic
+function initScrollFeatures() {
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
+        // Back to top
+        if (backToTopBtn) {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        }
+
+        // Progress Bar
+        if (progressBar) {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
         }
     });
 
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 }
 
 // Init
@@ -352,7 +369,7 @@ function init() {
     initTheme();
     initSidebar();
     initSearch();
-    initBackToTop();
+    initScrollFeatures();
     loadData().then(() => {
         initScrollSpy();
     });

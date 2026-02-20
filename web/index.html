@@ -29,6 +29,7 @@
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
   <meta name="theme-color" content="#ffffff" id="theme-color-meta">
+  <link rel="manifest" href="/manifest.json">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -136,6 +137,11 @@
         </div>
       </header>
 
+      <!-- Reading Progress Bar -->
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
       <div class="hero">
         <h1 class="hero-title">rectg – Telegram 精选导航</h1>
         <p class="hero-subtitle">1000+ 优质中文频道与群组推荐，持续更新</p>
@@ -174,6 +180,17 @@
   </footer>
 
   <script type="module" src="/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          console.log('SW registered: ', registration);
+        }).catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>

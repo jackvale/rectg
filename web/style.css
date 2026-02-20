@@ -894,3 +894,60 @@ body.dark .avatar-color-5 {
   background: var(--accent-light);
   color: var(--accent);
 }
+
+/* Reading Progress Bar */
+#progress-container {
+  position: sticky;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 49;
+}
+
+#progress-bar {
+  height: 100%;
+  background: var(--accent-color, #2997ff);
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
+/* Dark Mode Neon Glow Hover */
+body.dark .card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark .card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark .card:hover:has(.avatar-color-0) {
+  box-shadow: 0 0 20px rgba(144, 202, 249, 0.15), inset 0 0 10px rgba(144, 202, 249, 0.05);
+  border-color: rgba(144, 202, 249, 0.3);
+}
+
+body.dark .card:hover:has(.avatar-color-1) {
+  box-shadow: 0 0 20px rgba(244, 143, 177, 0.15), inset 0 0 10px rgba(244, 143, 177, 0.05);
+  border-color: rgba(244, 143, 177, 0.3);
+}
+
+body.dark .card:hover:has(.avatar-color-2) {
+  box-shadow: 0 0 20px rgba(165, 214, 167, 0.15), inset 0 0 10px rgba(165, 214, 167, 0.05);
+  border-color: rgba(165, 214, 167, 0.3);
+}
+
+body.dark .card:hover:has(.avatar-color-3) {
+  box-shadow: 0 0 20px rgba(255, 204, 128, 0.15), inset 0 0 10px rgba(255, 204, 128, 0.05);
+  border-color: rgba(255, 204, 128, 0.3);
+}
+
+body.dark .card:hover:has(.avatar-color-4) {
+  box-shadow: 0 0 20px rgba(206, 147, 216, 0.15), inset 0 0 10px rgba(206, 147, 216, 0.05);
+  border-color: rgba(206, 147, 216, 0.3);
+}
+
+body.dark .card:hover:has(.avatar-color-5) {
+  box-shadow: 0 0 20px rgba(128, 222, 234, 0.15), inset 0 0 10px rgba(128, 222, 234, 0.05);
+  border-color: rgba(128, 222, 234, 0.3);
+}

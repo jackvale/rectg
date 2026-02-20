@@ -10,5 +10,8 @@
     },
     "devDependencies": {
         "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "pinyin-match": "^1.2.10"
     }
 }
