@@ -1,22 +1,48 @@
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-_site/
-.jekyll-cache/
-.sass-cache/
-.bundle/
-vendor/
-
-node_modules/
-public/
-.vercel/
-npm-debug.log*
-
+# IDEs and Editors
 .vscode/
 .idea/
+*.swp
+*.swo
 
-data/*.json
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
 .venv/
 venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Project Data
+# Keep the sqlite DB, but ignore json crawled backups
+data/*.json
+data/*.bak
