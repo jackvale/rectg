@@ -1,0 +1,64 @@
+---
+/**
+ * Card.astro
+ * Represents a single Telegram channel/group card.
+ */
+export interface Props {
+    title: string;
+    desc: string;
+    url: string;
+    typeName: string;
+    countStr: string;
+}
+
+const { title, desc, url, typeName, countStr } = Astro.props;
+
+// Extract Telegram username for avatar
+let username = '';
+if (url && url.includes('t.me/')) {
+    const parts = url.split('t.me/');
+    if (parts.length > 1) {
+        username = parts[1].split('/')[0].split('?')[0];
+    }
+}
+
+const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
+const firstLetter = title ? title.substring(0, 1).toUpperCase() : '?';
+
+function getHashColor(str: string) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return Math.abs(hash) % 6;
+}
+
+const colorClass = `avatar-color-${getHashColor(firstLetter)}`;
+---
+
+<div class="card" data-title={title} data-desc={desc} data-url={url}>
+    <a href={url} target="_blank" rel="noopener" class="card-link"></a>
+    <button class="card-copy-btn" aria-label="复制链接" data-url={url}>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+    </button>
+    <div class="card-header">
+        <div class={`card-icon ${colorClass}`}>
+            {avatarUrl ? (
+                <img src={avatarUrl} loading="lazy" alt={username} onerror={`this.onerror=null; this.parentNode.innerHTML='${firstLetter}';`} />
+            ) : (
+                firstLetter
+            )}
+        </div>
+        <div class="card-title-wrap">
+            <div class="card-title" title={title}>{title}</div>
+            <div class="card-meta">
+                <span class="tag">{typeName || '频道'}</span>
+                {countStr && <span>👥 {countStr}</span>}
+            </div>
+        </div>
+    </div>
+    <div class="card-desc" title={desc}>{desc || '没有描述'}</div>
+</div>
