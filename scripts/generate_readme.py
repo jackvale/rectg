@@ -116,16 +116,11 @@ def generate_readme(conn: sqlite3.Connection) -> str:
                 
             lines.append("### " + cat)
             lines.append("")
-            lines.append("| 名称 | 链接 | 分类 | 人数 | 简介 |")
-            lines.append("| --- | --- | --- | --- | --- |")
             
             for item in items:
-                # 优先使用 cleaned 数据
-                raw_title = item.get("clean_title") or item.get("title") or ""
-                title = escape_pipe(raw_title)
-                
-                raw_desc = item.get("clean_desc") or item.get("description") or ""
-                desc = escape_pipe(raw_desc)
+                # 优先使用 cleaned 数据，无需 escape_pipe 因为不再是表格
+                title = item.get("clean_title") or item.get("title") or ""
+                desc = item.get("clean_desc") or item.get("description") or ""
                 
                 url = item.get("url", "")
                 count = format_count(item.get("count"))
@@ -133,9 +128,13 @@ def generate_readme(conn: sqlite3.Connection) -> str:
                 type_id = item.get("type")
                 type_label = next((t["name"] for t in TYPE_ORDER if t["id"] == type_id), "未知")
                 
-                lines.append(f"| {title} | [{url}]({url}) | {type_label} | {count} | {desc} |")
+                lines.append(f"- {title}")
+                lines.append(f"  - {type_label}")
+                lines.append(f"  - [{url}]({url})")
+                lines.append(f"  - {count}")
+                if desc:
+                    lines.append(f"  - {desc}")
                 
-            lines.append("")
             lines.append("")
 
     # Star History 保持在底部
