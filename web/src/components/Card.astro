@@ -9,9 +9,10 @@ export interface Props {
     url: string;
     typeName: string;
     countStr: string;
+    category: string;
 }
 
-const { title, desc, url, typeName, countStr } = Astro.props;
+const { title, desc, url, typeName, countStr, category } = Astro.props;
 
 // Extract Telegram username for avatar
 let username = '';
@@ -36,7 +37,7 @@ function getHashColor(str: string) {
 const colorClass = `avatar-color-${getHashColor(firstLetter)}`;
 ---
 
-<div class="card" data-title={title} data-desc={desc} data-url={url}>
+<div class="card" data-title={title} data-desc={desc} data-url={url} data-category={category}>
     <a href={url} target="_blank" rel="noopener" class="card-link"></a>
     <button class="card-copy-btn" aria-label="复制链接" data-url={url}>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

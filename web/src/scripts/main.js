@@ -107,6 +107,7 @@ function initSearch() {
                 const title = card.getAttribute('data-title') || '';
                 const desc = card.getAttribute('data-desc') || '';
                 const url = card.getAttribute('data-url') || '';
+                const category = card.getAttribute('data-category') || '';
 
                 if (!query) {
                     card.style.display = '';
@@ -114,9 +115,10 @@ function initSearch() {
                 } else {
                     const matchTitle = PinyinMatch.match(title, query);
                     const matchDesc = PinyinMatch.match(desc, query);
+                    const matchCat = category.toLowerCase().includes(query);
                     const matchUrl = url.toLowerCase().includes(query);
 
-                    if (matchTitle || matchDesc || matchUrl) {
+                    if (matchTitle || matchDesc || matchUrl || matchCat) {
                         card.style.display = '';
                         visibleCount++;
                     } else {
