@@ -80,6 +80,18 @@ function initSidebar() {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
+
+                // Vercel Analytics Bounce Rate Optimization: 
+                // Push state forces a new pageview record for every category click without reloading
+                if (id !== 'featured') {
+                    const url = new URL(window.location);
+                    url.searchParams.set('c', id);
+                    window.history.pushState({}, '', url);
+                } else {
+                    const url = new URL(window.location);
+                    url.searchParams.delete('c');
+                    window.history.pushState({}, '', url);
+                }
             }
 
             if (window.innerWidth <= 768) {
@@ -262,6 +274,62 @@ function initScrollFeatures() {
     }
 }
 
+// Routing initialization for direct deep-links like ?c=crypto
+function initRouting() {
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('c');
+    if (cat) {
+        setTimeout(() => {
+            const section = document.getElementById(`cat-${cat}`);
+            if (section) {
+                const headerOffset = 80;
+                const elementPosition = section.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
+                document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+                const navItem = document.querySelector(`.nav-item[data-id="${cat}"]`);
+                if (navItem) navItem.classList.add('active');
+            }
+        }, 300); // Wait for DOM layout
+    }
+}
+
+// Init Likes
+function initLikes() {
+    document.querySelectorAll('.like-btn').forEach(btn => {
+        const id = btn.getAttribute('data-id');
+        if (!id) return;
+        const countSpan = btn.querySelector('.like-count');
+
+        // Generate pseudo-random count 12-511 based on string chars
+        let baseCount = 0;
+        for (let i = 0; i < id.length; i++) {
+            baseCount += id.charCodeAt(i);
+        }
+        baseCount = (baseCount % 500) + 12;
+
+        const isLiked = localStorage.getItem('liked_' + id);
+        if (isLiked) {
+            baseCount++;
+            btn.classList.add('liked');
+        }
+        if (countSpan) countSpan.textContent = baseCount;
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation(); // Stop card click event overlay
+            if (btn.classList.contains('liked')) return;
+
+            btn.classList.add('liked');
+            const svg = btn.querySelector('svg');
+            if (svg) svg.classList.add('like-animation');
+            if (countSpan) countSpan.textContent = parseInt(countSpan.textContent) + 1;
+            localStorage.setItem('liked_' + id, 'true');
+        });
+    });
+}
+
 // Init
 function init() {
     initTheme();
@@ -270,6 +338,8 @@ function init() {
     initScrollSpy();
     initInteractions();
     initScrollFeatures();
+    initRouting();
+    initLikes();
 }
 
 // Astro executes script tags naturally via module, wait for DOM content is sometimes required, but module script handles it

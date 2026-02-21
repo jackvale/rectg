@@ -517,6 +517,7 @@ body.dark .card::before {
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   flex: 1;
@@ -975,5 +976,77 @@ body.dark .card .ripple {
   to {
     transform: scale(4);
     opacity: 0;
+  }
+}
+
+/* 提交按钮 */
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(41, 151, 255, 0.3);
+}
+
+.sidebar-footer .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(41, 151, 255, 0.4);
+  opacity: 0.95;
+  color: white;
+}
+
+/* 点赞按钮 */
+.like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  margin-left: auto;
+  /* Push it to the right */
+}
+
+.like-btn:hover {
+  background: var(--bg-hover);
+  color: #ef4444;
+}
+
+.like-btn.liked {
+  color: #ef4444;
+}
+
+.like-btn.liked svg {
+  fill: #ef4444;
+  stroke: #ef4444;
+}
+
+.like-animation {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

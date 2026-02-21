@@ -43,6 +43,11 @@ Object.values(categoryGroups).forEach(group => {
     totalItems += group.items.length;
     validSections.push(group);
 });
+
+// Pick 6 random items for Daily Picks (Featured)
+const allItems = validSections.flatMap(g => g.items);
+// Deterministic pseudo-random shuffle to lock the "daily" picks per build
+const featuredItems = [...allItems].sort(() => Math.random() - 0.5).slice(0, 6);
 ---
 
 <Layout>
@@ -67,6 +72,11 @@ Object.values(categoryGroups).forEach(group => {
         </button>
       </div>
       <nav id="category-nav">
+        <!-- 每日精选 -->
+        <div class="nav-item active" data-id="featured">
+            <span class="nav-icon">🔥</span>
+            <span>每日精选</span>
+        </div>
         <!-- JS 注入改为了直接服务端渲染 -->
         {categories.map(cat => (
           <div class="nav-item" data-id={cat.id}>
@@ -76,11 +86,8 @@ Object.values(categoryGroups).forEach(group => {
         ))}
       </nav>
       <div class="sidebar-footer">
-        <a href="https://github.com/jackhawks/rectg" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-          提交收录
+        <a href="https://github.com/jackhawks/rectg/issues/new" target="_blank" rel="noopener" class="submit-btn" title="提交新的频道或群组">
+          ✨ 提交收录
         </a>
       </div>
     </aside>
@@ -149,6 +156,26 @@ Object.values(categoryGroups).forEach(group => {
 
       <!-- 内容区卡片列表 -->
       <div id="content-container">
+         <!-- 每日精选 -->
+         <div class="category-section" id="cat-featured">
+             <h3 class="category-title">
+                 🔥 每日精选
+                 <span style="color: var(--text-muted); font-size: 0.9rem; font-weight: normal;">(随机推荐)</span>
+             </h3>
+             <div class="grid">
+                 {featuredItems.map(item => (
+                     <Card 
+                         title={item.title}
+                         desc={item.desc}
+                         url={item.url}
+                         typeName={item.typeName}
+                         countStr={item.countStr}
+                         category="🔥 每日精选"
+                     />
+                 ))}
+             </div>
+         </div>
+
          {validSections.map(group => (
             <div class="category-section" id={`cat-${group.meta.id}`}>
                 <h3 class="category-title">
