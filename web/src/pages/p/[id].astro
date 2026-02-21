@@ -57,33 +57,43 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
     <!-- Breadcrumb -->
     <nav class="breadcrumb">
       <a href="/">首页</a> 
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-      <span>{categoryName}</span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
       <span class="current">{item.title}</span>
     </nav>
 
     <main class="detail-card">
         <header class="detail-header">
-            {avatarUrl ? (
-                <img src={avatarUrl} alt={item.title} class="detail-avatar" loading="eager" onerror="this.style.display='none'" />
-            ) : (
-                <div class="detail-avatar-fallback">
-                    {item.title.substring(0, 1).toUpperCase()}
-                </div>
-            )}
-            <div class="detail-meta">
+            <div class="avatar-wrapper">
+                {avatarUrl ? (
+                    <img src={avatarUrl} alt={item.title} class="detail-avatar" loading="eager" onerror="this.style.display='none'" />
+                ) : (
+                    <div class="detail-avatar-fallback">
+                        {item.title.substring(0, 1).toUpperCase()}
+                    </div>
+                )}
+            </div>
+            
+            <div class="header-info">
                 <h1 class="detail-title">{item.title}</h1>
+                <div class="divider-line"></div>
                 <div class="detail-tags">
                     <span class="tag">{typeName}</span>
-                    <span class="tag cat-tag">{categoryFullName}</span>
-                    {item.countStr && <span class="tag count-tag">👥 {item.countStr} 订阅</span>}
+                    <span class="tag"><span class="tag-icon">📰</span> {categoryName}</span>
                 </div>
             </div>
         </header>
 
+        <div class="stats-row">
+            <span class="stat-pill count">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+                {item.countStr || '0'} 订阅
+            </span>
+        </div>
+
         <section class="detail-body">
-            <h2>简介</h2>
+            <h3>简介</h3>
             <div class="detail-desc">
                 {item.desc ? (
                     <p>{item.desc}</p>
@@ -95,46 +105,50 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
 
         <footer class="detail-actions">
             <a href={item.url} target="_blank" rel="noopener noreferrer" class="join-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="tg-icon">
-                    <path d="M21.5 2L2 9.5L8.5 12L21.5 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                    <path d="M8.5 12L12 21L14.5 14.5L21.5 2L8.5 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
                 前往 Telegram 添加
             </a>
-            <button class="card-copy-btn btn-secondary" aria-label="复制链接" data-url={item.url}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                复制直达链接
-            </button>
         </footer>
     </main>
   </div>
 </Layout>
 
 <style>
+  html {
+     background-color: #f7f9fb;
+     background-image: 
+        radial-gradient(#e2e6ec 1px, transparent 1px);
+     background-size: 20px 20px;
+  }
+
+  body.dark html, body.dark {
+      background-color: #121212;
+      background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+  }
+
   .detail-container {
-    max-width: 800px;
+    max-width: 580px;
     margin: 0 auto;
-    padding: 40px 24px;
+    padding: 60px 20px;
     min-height: calc(100vh - var(--header-height));
   }
 
   .breadcrumb {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: var(--text-secondary);
+    gap: 10px;
+    color: #0066cc;
     font-size: 0.95rem;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
   .breadcrumb a {
-    color: var(--accent);
-    transition: color 0.2s;
+    color: #0066cc;
+    transition: opacity 0.2s;
   }
   .breadcrumb a:hover {
-    color: #4facfe;
+    opacity: 0.8;
   }
   .breadcrumb .current {
     font-weight: 500;
@@ -143,29 +157,38 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
 
   .detail-card {
     background-color: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 24px;
+    border-radius: 20px;
     padding: 40px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  body.dark .detail-card {
+      border: 1px solid rgba(255,255,255,0.05);
   }
 
   .detail-header {
     display: flex;
     align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 32px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid var(--border);
+    gap: 20px;
+    margin-bottom: 0px;
+    position: relative;
+  }
+
+  .avatar-wrapper {
+      position: relative;
+      margin-top: -15px; /* Deeper overlap effect */
   }
 
   .detail-avatar, .detail-avatar-fallback {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 20px;
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  }
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+
   .detail-avatar-fallback {
     background: linear-gradient(135deg, var(--accent), #8b5cf6);
     color: white;
@@ -176,53 +199,130 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
     font-weight: 700;
   }
 
-  .detail-meta {
-    flex: 1;
+  .header-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 10px;
+      margin-left: 5px;
   }
 
   .detail-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
-    margin-bottom: 12px;
     color: var(--text-main);
-    line-height: 1.2;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    margin: 0 0 4px 0;
+    word-break: break-word;
+  }
+
+  .divider-line {
+      height: 1px;
+      background-color: var(--border);
+      width: 100%;
+      margin: 4px 0 2px 0;
   }
 
   .detail-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    align-items: center;
   }
 
   .tag {
-    background-color: var(--bg-hover);
-    padding: 6px 14px;
+    background-color: #f0f2f5;
+    padding: 5px 14px;
     border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-secondary);
+    font-size: 0.8rem;
+    color: #4b5563;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
   }
-  .tag.count-tag {
-    color: var(--accent);
-    background-color: var(--accent-light);
+
+  body.dark .tag {
+      background-color: rgba(255,255,255,0.05);
+      color: #9ca3af;
+  }
+
+  .tag-icon {
+      opacity: 0.7;
+      font-size: 0.9em;
+  }
+
+  .stats-row {
+      display: flex;
+      margin-top: 15px;
+      margin-bottom: 30px;
+  }
+
+  .stat-pill {
+      background-color: #ebf5ff;
+      color: #0066cc;
+      padding: 6px 16px;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+  }
+  
+  body.dark .stat-pill {
+      background-color: rgba(41, 151, 255, 0.15);
+      color: #60a5fa;
   }
 
   .detail-body {
     margin-bottom: 40px;
   }
 
-  .detail-body h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
+  .stats-row {
+      display: flex;
+      margin-top: 15px;
+      margin-bottom: 30px;
+  }
+
+  .stat-pill {
+      background-color: #eef5ff;
+      color: #2563eb;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+  }
+  
+  body.dark .stat-pill {
+      background-color: rgba(37, 99, 235, 0.15);
+      color: #60a5fa;
+  }
+
+  .detail-body {
+    margin-bottom: 40px;
+  }
+
+  .detail-body h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
     margin-bottom: 16px;
     color: var(--text-main);
   }
 
   .detail-desc {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
-    color: var(--text-secondary);
+    color: #6b7280;
     white-space: pre-wrap;
+  }
+  
+  body.dark .detail-desc {
+      color: #9ca3af;
   }
   .empty-desc {
     font-style: italic;
@@ -230,68 +330,52 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
   }
 
   .detail-actions {
-    display: flex;
-    gap: 16px;
+    margin-top: 20px;
   }
 
   .join-btn {
-    flex: 2;
-    background: linear-gradient(135deg, var(--accent), #3b82f6);
+    width: 100%;
+    background: #2563eb;
     color: white;
     padding: 16px 24px;
-    border-radius: 16px;
+    border-radius: 12px;
     font-size: 1.1rem;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
-  }
-  .join-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
-    opacity: 0.95;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
   }
 
-  .btn-secondary {
-    flex: 1;
-    background: var(--bg-hover);
-    color: var(--text-main);
-    border: none;
-    padding: 16px 24px;
-    border-radius: 16px;
-    font-size: 1rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .btn-secondary:hover {
-    background: var(--border);
+  .join-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
   }
 
   @media (max-width: 600px) {
     .detail-container {
-        padding: 24px 16px;
+        padding: 30px 16px;
     }
     .detail-card {
         padding: 24px;
     }
     .detail-header {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .avatar-wrapper {
+        margin-top: 0;
+    }
+    .header-info {
+        border-bottom: none;
+        padding-bottom: 0;
     }
     .detail-tags {
-        justify-content: center;
-    }
-    .detail-actions {
-        flex-direction: column;
+        margin-bottom: 0;
     }
   }
 </style>
