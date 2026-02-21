@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rectg-cache-v1';
+const CACHE_NAME = 'rectg-cache-v2';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -17,30 +17,36 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
+    // Skip cross-origin requests
+    if (!event.request.url.startsWith(self.location.origin)) return;
+
     event.respondWith(
-        caches.match(event.request)
+        fetch(event.request)
             .then(response => {
-                // Cache hit - return response
-                if (response) {
-                    return response;
+                // If we got a valid response, clone it and cache it
+                if (response && response.status === 200 && response.type === 'basic') {
+                    const responseToCache = response.clone();
+                    caches.open(CACHE_NAME).then(cache => {
+                        cache.put(event.request, responseToCache);
+                    });
                 }
-                return fetch(event.request).then(
-                    function (response) {
-                        // Check if we received a valid response
-                        if (!response || response.status !== 200 || response.type !== 'basic') {
-                            return response;
-                        }
-                        // Clone the response
-                        var responseToCache = response.clone();
-
-                        caches.open(CACHE_NAME)
-                            .then(function (cache) {
-                                cache.put(event.request, responseToCache);
-                            });
-
-                        return response;
-                    }
-                );
+                return response;
             })
+            .catch(() => {
+                // If network fails (offline), fall back to cache
+                return caches.match(event.request);
+            })
+    );
+});
+
+// Clean up old caches immediately
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.filter(cacheName => cacheName !== CACHE_NAME)
+                    .map(cacheName => caches.delete(cacheName))
+            );
+        })
     );
 });

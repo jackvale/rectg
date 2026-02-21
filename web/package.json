@@ -1,7 +1,7 @@
 {
   "name": "web",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "dev": "node build-data.js && astro dev",
     "build": "node build-data.js && astro build",
