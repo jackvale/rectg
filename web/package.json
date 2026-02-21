@@ -11,7 +11,6 @@
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
     "astro": "^5.17.1",
-    "pinyin-match": "^1.2.10",
-    "posthog-js": "^1.352.0"
+    "pinyin-match": "^1.2.10"
   }
 }
