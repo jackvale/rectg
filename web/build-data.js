@@ -77,6 +77,7 @@ function main() {
             }
             const title = rawLine.substring(2).trim();
             currentItem = { title, desc: '' };
+            currentItem.id = title.replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g, '').toLowerCase(); // Fallback ID
             currentItemProps = [];
         } else if (rawLine.startsWith('  - ') && currentItem) {
             currentItemProps.push(rawLine.substring(4).trim());
@@ -85,6 +86,13 @@ function main() {
             } else if (currentItemProps.length === 2) {
                 const urlMatch = currentItemProps[1].match(/\[.*?\]\((.*?)\)/);
                 currentItem.url = urlMatch ? urlMatch[1] : '';
+                if (currentItem.url.includes('t.me/')) {
+                    const parts = currentItem.url.split('t.me/');
+                    if (parts.length > 1) {
+                        let rawId = parts[1].replace('joinchat/', '').split('?')[0].replace(/[^a-zA-Z0-9_\-]/g, '').toLowerCase();
+                        if (rawId) currentItem.id = rawId;
+                    }
+                }
             } else if (currentItemProps.length === 3) {
                 currentItem.countStr = currentItemProps[2];
             } else if (currentItemProps.length === 4) {
@@ -119,14 +127,31 @@ function main() {
     console.log(`✅ Generated data.json with ${data.categories.length} categories.`);
 
     // Generate Sitemap
-    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
+    let sitemapUrls = `  <url>
     <loc>https://www.rectg.com/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
+  </url>`;
+
+    // Add detail pages to sitemap
+    data.types.forEach(t => {
+        t.categories.forEach(c => {
+            c.items.forEach(item => {
+                if (item.id) {
+                    sitemapUrls += `\n  <url>
+    <loc>https://www.rectg.com/p/${item.id}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+                }
+            });
+        });
+    });
+
+    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls}
 </urlset>`;
     const sitemapPath = path.resolve(OUT_DIR, 'sitemap.xml');
     fs.writeFileSync(sitemapPath, sitemapContent, 'utf-8');

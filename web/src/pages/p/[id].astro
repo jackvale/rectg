@@ -1,0 +1,297 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+    const dataPath = path.resolve(process.cwd(), 'public/data.json');
+    const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+    
+    let allItems = [];
+    data.types.forEach(t => {
+        t.categories.forEach(c => {
+            c.items.forEach(item => {
+                if (item.id) {
+                    allItems.push({
+                        params: { id: item.id },
+                        props: { 
+                            item, 
+                            categoryName: c.name, 
+                            categoryFullName: c.fullName,
+                            typeName: t.name
+                        }
+                    });
+                }
+            });
+        });
+    });
+    
+    // Deduplicate in case multiple categories contain the same item
+    const uniqueIds = new Set();
+    const finalPaths = [];
+    for (const p of allItems) {
+        if (!uniqueIds.has(p.params.id)) {
+            uniqueIds.add(p.params.id);
+            finalPaths.push(p);
+        }
+    }
+
+    return finalPaths;
+}
+
+const { item, categoryName, categoryFullName, typeName } = Astro.props;
+
+// Extract Telegram username for avatar
+let username = '';
+if (item.url && item.url.includes('t.me/')) {
+    const parts = item.url.split('t.me/');
+    if (parts.length > 1) {
+        username = parts[1].split('/')[0].split('?')[0];
+    }
+}
+const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
+---
+
+<Layout>
+  <div class="detail-container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="/">首页</a> 
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <span>{categoryName}</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <span class="current">{item.title}</span>
+    </nav>
+
+    <main class="detail-card">
+        <header class="detail-header">
+            {avatarUrl ? (
+                <img src={avatarUrl} alt={item.title} class="detail-avatar" loading="eager" onerror="this.style.display='none'" />
+            ) : (
+                <div class="detail-avatar-fallback">
+                    {item.title.substring(0, 1).toUpperCase()}
+                </div>
+            )}
+            <div class="detail-meta">
+                <h1 class="detail-title">{item.title}</h1>
+                <div class="detail-tags">
+                    <span class="tag">{typeName}</span>
+                    <span class="tag cat-tag">{categoryFullName}</span>
+                    {item.countStr && <span class="tag count-tag">👥 {item.countStr} 订阅</span>}
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-body">
+            <h2>简介</h2>
+            <div class="detail-desc">
+                {item.desc ? (
+                    <p>{item.desc}</p>
+                ) : (
+                    <p class="empty-desc">该频道暂无详细描述信息。</p>
+                )}
+            </div>
+        </section>
+
+        <footer class="detail-actions">
+            <a href={item.url} target="_blank" rel="noopener noreferrer" class="join-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="tg-icon">
+                    <path d="M21.5 2L2 9.5L8.5 12L21.5 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M8.5 12L12 21L14.5 14.5L21.5 2L8.5 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                前往 Telegram 添加
+            </a>
+            <button class="card-copy-btn btn-secondary" aria-label="复制链接" data-url={item.url}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                复制直达链接
+            </button>
+        </footer>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    min-height: calc(100vh - var(--header-height));
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+  .breadcrumb a {
+    color: var(--accent);
+    transition: color 0.2s;
+  }
+  .breadcrumb a:hover {
+    color: #4facfe;
+  }
+  .breadcrumb .current {
+    font-weight: 500;
+    color: var(--text-main);
+  }
+
+  .detail-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+  }
+
+  .detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .detail-avatar, .detail-avatar-fallback {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .detail-avatar-fallback {
+    background: linear-gradient(135deg, var(--accent), #8b5cf6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .detail-meta {
+    flex: 1;
+  }
+
+  .detail-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-main);
+    line-height: 1.2;
+  }
+
+  .detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tag {
+    background-color: var(--bg-hover);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+  .tag.count-tag {
+    color: var(--accent);
+    background-color: var(--accent-light);
+  }
+
+  .detail-body {
+    margin-bottom: 40px;
+  }
+
+  .detail-body h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-main);
+  }
+
+  .detail-desc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    white-space: pre-wrap;
+  }
+  .empty-desc {
+    font-style: italic;
+    opacity: 0.6;
+  }
+
+  .detail-actions {
+    display: flex;
+    gap: 16px;
+  }
+
+  .join-btn {
+    flex: 2;
+    background: linear-gradient(135deg, var(--accent), #3b82f6);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+  }
+  .join-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+    opacity: 0.95;
+  }
+
+  .btn-secondary {
+    flex: 1;
+    background: var(--bg-hover);
+    color: var(--text-main);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .btn-secondary:hover {
+    background: var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .detail-container {
+        padding: 24px 16px;
+    }
+    .detail-card {
+        padding: 24px;
+    }
+    .detail-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .detail-tags {
+        justify-content: center;
+    }
+    .detail-actions {
+        flex-direction: column;
+    }
+  }
+</style>
