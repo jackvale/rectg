@@ -165,6 +165,7 @@ const featuredItems = [...allItems].sort(() => Math.random() - 0.5).slice(0, 6);
              <div class="grid">
                  {featuredItems.map(item => (
                      <Card 
+                         id={item.id}
                          title={item.title}
                          desc={item.desc}
                          url={item.url}
@@ -185,6 +186,7 @@ const featuredItems = [...allItems].sort(() => Math.random() - 0.5).slice(0, 6);
                 <div class="grid">
                     {group.items.map(item => (
                         <Card 
+                            id={item.id}
                             title={item.title}
                             desc={item.desc}
                             url={item.url}
