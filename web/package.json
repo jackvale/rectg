@@ -1,0 +1,16 @@
+{
+  "name": "web",
+  "type": "module",
+  "version": "0.0.4",
+  "scripts": {
+    "dev": "node build-data.js && astro dev",
+    "build": "node build-data.js && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1",
+    "astro": "^5.17.1",
+    "pinyin-match": "^1.2.10"
+  }
+}

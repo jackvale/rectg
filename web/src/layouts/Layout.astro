@@ -1,0 +1,92 @@
+---
+import '../styles/style.css';
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <!-- Primary Meta Tags -->
+  <title>rectg - 全网最优质的 Telegram 中文频道与群组精选导航</title>
+  <meta name="title" content="rectg - 全网最优质的 Telegram 中文频道与群组精选导航" />
+  <meta name="description" content="收录 1000+ 优质 Telegram 中文频道与群组。通过自动化脚本持续跟踪，严格过滤僵尸号、低质信息与停更节点，为您提供纯粹、高效的电报 TG 导航体验。" />
+  <meta name="keywords" content="Telegram, TG群组, TG频道, 电报群, 电报导航, telegram中文, telegram频道推荐, telegram群组大全, 电报机器人, 科学上网器" />
+  <meta name="author" content="rectg" />
+  <link rel="canonical" href="https://www.rectg.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rectg.com/" />
+  <meta property="og:title" content="rectg - Telegram 全网精选极客导航" />
+  <meta property="og:description" content="1000+ 优质 Telegram 中文频道与群组汇总，每日自动更新，拒绝过滤与死链。" />
+  <meta property="og:image" content="https://www.rectg.com/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.rectg.com/" />
+  <meta property="twitter:title" content="rectg - Telegram 全网精选极客导航" />
+  <meta property="twitter:description" content="1000+ 优质 Telegram 中文频道与群组汇总，每日自动更新，拒绝过滤与死链。" />
+  <meta property="twitter:image" content="https://www.rectg.com/og-image.png" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="theme-color" content="#ffffff" id="theme-color-meta" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "rectg",
+    "url": "https://github.com/jackvale/rectg",
+    "description": "全网最优质的 Telegram 中文频道与群组精选导航",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://github.com/jackvale/rectg?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+</head>
+<body>
+  <script is:inline>
+    // Prevent FOUC (Flash of Unstyled Content) by setting theme immediately
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.body.classList.add('dark');
+        } else {
+          document.body.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <noscript>
+    <div style="padding: 20px; text-align: center; background: #fff3cd; color: #856404;">
+      <strong>提示：</strong>您的浏览器禁用了 JavaScript，因此网页可能缺少某些交互功能。rectg 导航是一个收录优质 Telegram 中文频道与群组的聚合站，启用 JavaScript 可获得最佳的浏览、搜索与复制链接体验。
+    </div>
+  </noscript>
+  <slot />
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          console.log('SW registered: ', registration);
+        }).catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

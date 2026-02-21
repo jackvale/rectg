@@ -1,0 +1,850 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+    const dataPath = path.resolve(process.cwd(), 'public/data.json');
+    const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+
+    let allItems = [];
+    data.types.forEach(t => {
+        t.categories.forEach(c => {
+            c.items.forEach(item => {
+                if (item.id) {
+                    allItems.push({
+                        params: { id: item.id },
+                        props: {
+                            item,
+                            categoryName: c.name || c.fullName || '未分类',
+                            categoryFullName: c.fullName || c.name || '未分类',
+                            typeName: t.name
+                        }
+                    });
+                }
+            });
+        });
+    });
+
+    // Deduplicate in case multiple categories contain the same item
+    const uniqueIds = new Set();
+    const finalPaths = [];
+    for (const p of allItems) {
+        if (!uniqueIds.has(p.params.id)) {
+            uniqueIds.add(p.params.id);
+            finalPaths.push(p);
+        }
+    }
+
+    return finalPaths;
+}
+
+const { item, categoryName, categoryFullName, typeName } = Astro.props;
+
+let username = '';
+if (item.url && item.url.includes('t.me/')) {
+    const parts = item.url.split('t.me/');
+    if (parts.length > 1) {
+        username = parts[1].split('/')[0].split('?')[0];
+    }
+}
+
+const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
+const firstLetter = item.title ? item.title.substring(0, 1).toUpperCase() : '?';
+const subscriberCount = item.countStr || '0';
+const pickText = (...values) =>
+  values
+    .map(value => (typeof value === 'string' ? value.trim() : ''))
+    .find(Boolean) || '未分类';
+const resolvedCategoryName = pickText(categoryName, categoryFullName, '未分类');
+const resolvedCategoryFullName = pickText(categoryFullName, categoryName, '未分类');
+
+function getHashColor(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return Math.abs(hash) % 6;
+}
+const colorClass = `avatar-color-${getHashColor(firstLetter)}`;
+---
+
+<Layout>
+  <!-- Background Ambient Glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <div id="detail-app" class="detail-page animate-fade-in">
+    <div class="detail-container">
+      <nav class="breadcrumb glass-panel" aria-label="面包屑">
+        <a href="/">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          首页
+        </a>
+        <svg class="separator" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+        <span class="current" title={item.title}>{item.title}</span>
+      </nav>
+
+      <article class="detail-card glass-panel">
+        <header class="detail-header">
+          <div class="avatar-ring">
+            <div class="avatar-wrapper" aria-hidden="true">
+              <div class={`detail-avatar-fallback ${colorClass}`}>{firstLetter}</div>
+              {avatarUrl && (
+                <img
+                  src={avatarUrl}
+                  alt={item.title}
+                  class="detail-avatar"
+                  loading="eager"
+                  decoding="async"
+                  onerror="this.style.display='none'"
+                />
+              )}
+            </div>
+          </div>
+
+          <div class="header-info">
+            <h1 class="detail-title">{item.title}</h1>
+            <div class="header-badges">
+              <span class="badge badge-type">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                {typeName}
+              </span>
+              <span class="badge badge-category" title={resolvedCategoryFullName}>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                {resolvedCategoryName}
+              </span>
+              {username && (
+                <span class="badge badge-username">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  @{username}
+                </span>
+              )}
+            </div>
+          </div>
+        </header>
+
+        <section class="meta-grid" aria-label="资源信息">
+          <div class="meta-card">
+            <div class="meta-icon subscribe-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="meta-content">
+              <div class="meta-label">订阅数</div>
+              <div class="meta-value">{subscriberCount}</div>
+            </div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-icon type-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+            </div>
+            <div class="meta-content">
+              <div class="meta-label">资源类型</div>
+              <div class="meta-value">{typeName}</div>
+            </div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-icon category-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            </div>
+            <div class="meta-content">
+              <div class="meta-label">细分项</div>
+              <div class="meta-value" title={resolvedCategoryFullName}>{resolvedCategoryName}</div>
+            </div>
+          </div>
+          <div class="meta-card link-card">
+            <div class="meta-icon link-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </div>
+            <div class="meta-content meta-link-content">
+              <div class="meta-label">原始链接</div>
+              <a class="meta-value meta-link truncate" href={item.url} target="_blank" rel="noopener noreferrer" title={item.url}>{item.url}</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-body">
+          <h2 class="section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            简介详情
+          </h2>
+          <div class="detail-desc">
+            {item.desc ? (
+              <p>{item.desc}</p>
+            ) : (
+              <div class="empty-desc">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                <p>该频道暂无详细描述信息。</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <footer class="detail-actions">
+          <a href={item.url} target="_blank" rel="noopener noreferrer" class="action-btn join-btn">
+            <span class="btn-bg"></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span>前往 Telegram</span>
+          </a>
+          <button type="button" class="action-btn copy-btn" data-copy-url={item.url}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>复制链接</span>
+          </button>
+          <a href="/" class="action-btn back-home-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>返回首页</span>
+          </a>
+        </footer>
+      </article>
+    </div>
+
+    <div id="copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <span>链接已复制</span>
+    </div>
+  </div>
+
+  <script is:inline>
+    // Ripple effect for action buttons
+    document.querySelectorAll('.action-btn').forEach(btn => {
+      btn.addEventListener('mousedown', function (e) {
+        const circle = document.createElement('span');
+        const diameter = Math.max(btn.clientWidth, btn.clientHeight);
+        const radius = diameter / 2;
+        const rect = btn.getBoundingClientRect();
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${e.clientX - rect.left - radius}px`;
+        circle.style.top = `${e.clientY - rect.top - radius}px`;
+        circle.classList.add('ripple');
+        
+        const existingRipple = btn.querySelector('.ripple');
+        if (existingRipple) existingRipple.remove();
+        btn.appendChild(circle);
+        
+        setTimeout(() => {
+          const r = btn.querySelector('.ripple');
+          if (r) r.remove();
+        }, 600);
+      });
+    });
+
+    const copyBtn = document.querySelector('.copy-btn');
+    const copyToast = document.getElementById('copy-toast');
+    let copyTimer;
+
+    function showCopyToast(message, isError = false) {
+      if (!copyToast) return;
+      
+      const span = copyToast.querySelector('span');
+      if (span) span.textContent = message;
+      
+      if (isError) {
+        copyToast.classList.add('error');
+      } else {
+        copyToast.classList.remove('error');
+      }
+      
+      copyToast.classList.add('show');
+      clearTimeout(copyTimer);
+      copyTimer = setTimeout(() => copyToast.classList.remove('show'), 2000);
+    }
+
+    async function copyText(value) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(value);
+        return;
+      }
+      const input = document.createElement('textarea');
+      input.value = value;
+      input.style.position = 'fixed';
+      input.style.opacity = '0';
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        const url = copyBtn.getAttribute('data-copy-url') || '';
+        if (!url) {
+          showCopyToast('链接为空', true);
+          return;
+        }
+        try {
+          await copyText(url);
+          showCopyToast('链接已复制', false);
+        } catch {
+          showCopyToast('复制失败', true);
+        }
+      });
+    }
+  </script>
+
+  <script src="/scripts/main.js" is:inline></script>
+</Layout>
+
+<style>
+  /* Base Layout & Animations */
+  .detail-page {
+    position: relative;
+    min-height: 100vh;
+    padding: clamp(30px, 5vw, 60px) 20px 80px;
+    overflow-x: hidden;
+  }
+
+  .animate-fade-in {
+    animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes slideUpFade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Ambient Glow Backgrounds */
+  .ambient-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.4;
+    pointer-events: none;
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+
+  body.dark .ambient-glow {
+    opacity: 0.15;
+  }
+
+  .glow-1 {
+    top: -100px;
+    left: -200px;
+    background: radial-gradient(circle, rgba(42,171,238,0.4) 0%, rgba(42,171,238,0) 70%);
+  }
+
+  .glow-2 {
+    bottom: 20%;
+    right: -200px;
+    background: radial-gradient(circle, rgba(139,92,246,0.3) 0%, rgba(139,92,246,0) 70%);
+    animation-delay: -10s;
+  }
+
+  @keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 30px) scale(1.1); }
+  }
+
+  .detail-container {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Glassmorphism Helpers */
+  .glass-panel {
+    background: color-mix(in srgb, var(--bg-card) 85%, transparent);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+    box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  body.dark .glass-panel {
+    background: color-mix(in srgb, var(--bg-card) 65%, transparent);
+    box-shadow: 0 4px 32px -8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 10px 18px;
+    border-radius: 999px;
+  }
+
+  .breadcrumb a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent);
+  }
+
+  .breadcrumb .separator {
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  .breadcrumb .current {
+    max-width: 280px;
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Detail Card */
+  .detail-card {
+    border-radius: 24px;
+    padding: clamp(24px, 5vw, 42px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2AABEE, #8b5cf6, #ec4899);
+    opacity: 0.8;
+  }
+
+  /* Header Section */
+  .detail-header {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 4vw, 32px);
+    margin-bottom: 36px;
+  }
+
+  .avatar-ring {
+    position: relative;
+    padding: 6px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(42,171,238,0.2) 0%, rgba(139,92,246,0.1) 100%);
+    flex-shrink: 0;
+  }
+
+  body.dark .avatar-ring {
+    background: linear-gradient(135deg, rgba(42,171,238,0.1) 0%, rgba(139,92,246,0.05) 100%);
+  }
+
+  .avatar-wrapper {
+    position: relative;
+    width: clamp(80px, 12vw, 100px);
+    height: clamp(80px, 12vw, 100px);
+    border-radius: 22px;
+    box-shadow: 0 8px 24px -6px rgba(0,0,0,0.12);
+    overflow: hidden;
+    background: var(--bg-card);
+  }
+
+  .detail-avatar,
+  .detail-avatar-fallback {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .detail-avatar-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .avatar-wrapper:hover .detail-avatar {
+    transform: scale(1.05);
+  }
+
+  .header-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .detail-title {
+    margin: 0;
+    color: var(--text-main);
+    font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    word-break: break-word;
+    text-wrap: balance;
+  }
+
+  .header-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+  }
+
+  .badge svg {
+    opacity: 0.7;
+  }
+
+  .badge-username {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+
+  /* Meta Grid */
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .meta-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 18px;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .meta-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px -6px rgba(0,0,0,0.08);
+    background: var(--bg-card);
+    border-color: color-mix(in srgb, var(--line) 40%, var(--accent));
+  }
+
+  body.dark .meta-card:hover {
+    box-shadow: 0 8px 20px -6px rgba(0,0,0,0.4);
+  }
+
+  .meta-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .subscribe-icon { background: color-mix(in srgb, #f59e0b 12%, transparent); color: #f59e0b; }
+  .type-icon { background: color-mix(in srgb, #10b981 12%, transparent); color: #10b981; }
+  .category-icon { background: color-mix(in srgb, #8b5cf6 12%, transparent); color: #8b5cf6; }
+  .link-icon { background: color-mix(in srgb, #2AABEE 12%, transparent); color: #2AABEE; }
+
+  .meta-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .meta-label {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .meta-value {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .truncate {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Description Body */
+  .detail-body {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .section-title svg {
+    color: var(--accent);
+  }
+
+  .detail-desc {
+    position: relative;
+    padding: 24px 28px;
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--bg-panel) 50%, transparent);
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+
+  .detail-desc::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--accent);
+    border-radius: 4px 0 0 4px;
+  }
+
+  .detail-desc p {
+    margin: 0;
+  }
+
+  .empty-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 0;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+  }
+
+  .empty-desc svg {
+    opacity: 0.5;
+  }
+
+  /* Actions */
+  .detail-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .action-btn {
+    position: relative;
+    height: 48px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0 20px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  }
+
+  .action-btn svg, .action-btn span:not(.ripple):not(.btn-bg) {
+    position: relative;
+    z-index: 10;
+  }
+
+  .join-btn {
+    flex: 2;
+    min-width: 180px;
+    background: #2AABEE;
+    color: #fff;
+    border: none;
+    box-shadow: 0 8px 20px -8px rgba(42, 171, 238, 0.6);
+  }
+
+  .join-btn .btn-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%);
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 0;
+  }
+
+  .join-btn:hover .btn-bg {
+    background: linear-gradient(135deg, #37b5f5 0%, #24a8e6 100%);
+  }
+
+  .join-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -8px rgba(42, 171, 238, 0.7);
+  }
+
+  .join-btn svg, .join-btn span:not(.btn-bg), .join-btn {
+    position: relative;
+    z-index: 1;
+  }
+
+  .copy-btn, .back-home-btn {
+    flex: 1;
+    min-width: 120px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+  }
+
+  .copy-btn:hover, .back-home-btn:hover {
+    background: var(--bg-panel);
+    color: var(--text-main);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.08);
+    border-color: color-mix(in srgb, var(--line) 50%, var(--accent));
+  }
+
+  .action-btn .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: btn-ripple 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.25);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .copy-btn .ripple, .back-home-btn .ripple {
+    background-color: var(--bg-hover);
+  }
+
+  @keyframes btn-ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  /* Toast Notification */
+  .copy-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%) translateY(16px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: rgba(16, 185, 129, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: white;
+    border-radius: 14px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);
+  }
+
+  .copy-toast.error {
+    background: rgba(239, 68, 68, 0.9);
+    border-color: rgba(239, 68, 68, 0.2);
+    box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.3);
+  }
+
+  .copy-toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .detail-page {
+      padding: 20px 14px 40px;
+    }
+
+    .detail-card {
+      padding: 24px 20px;
+      border-radius: 20px;
+    }
+
+    .detail-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .avatar-wrapper {
+      width: 86px;
+      height: 86px;
+    }
+
+    .header-badges {
+      justify-content: center;
+    }
+
+    .meta-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .detail-actions {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .action-btn {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .ambient-glow {
+      display: none; /* Disable expensive blurs on mobile */
+    }
+  }
+</style>
