@@ -1,7 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import data from '../../public/data.json';
+import fs from 'fs';
+import path from 'path';
+
+// Dynamically read data to avoid Astro static import caching during Vercel builds
+const dataPath = path.resolve(process.cwd(), 'public/data.json');
+const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
 // Process categories for sidebar
 const categories = data.categories;
@@ -158,7 +163,7 @@ Object.values(categoryGroups).forEach(group => {
                             url={item.url}
                             typeName={item.typeName}
                             countStr={item.countStr}
-                            category={group.meta.fullName}
+                            category={`${group.meta.fullName} ${group.meta.keywords || ''}`}
                         />
                     ))}
                 </div>
