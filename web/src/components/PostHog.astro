@@ -1,0 +1,22 @@
+---
+// PostHog.astro
+// Initializes PostHog analytics immediately on page load to capture page views
+---
+
+<script>
+  import posthog from 'posthog-js';
+
+  if (typeof window !== 'undefined') {
+    posthog.init('phc_ob55xQEmhpeWsfQoxc0HNmjSVqioMOHuPmgTxgH3nOF', {
+      api_host: 'https://us.i.posthog.com',
+      person_profiles: 'identified_only',
+      // Enable autocapture
+      autocapture: true,
+      capture_pageview: true, 
+      capture_pageleave: true
+    });
+    
+    // Attach to window so we can trigger custom events in vanilla JS
+    window.posthog = posthog;
+  }
+</script>

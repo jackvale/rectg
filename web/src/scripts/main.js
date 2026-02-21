@@ -99,9 +99,19 @@ function highlightPinyin(text, matchPositions) {
 // Search Handling (DOM node filtering & highlighting)
 function initSearch() {
     const sections = document.querySelectorAll('.category-section');
+    let searchTimeout;
 
     searchInput?.addEventListener('input', (e) => {
         const query = (e.target.value || "").trim().toLowerCase();
+
+        // PostHog analytics: wait 1 second after typing to capture the true search intent
+        clearTimeout(searchTimeout);
+        if (query.length > 0) {
+            searchTimeout = setTimeout(() => {
+                window.posthog?.capture('search_event', { search_query: query });
+            }, 1500);
+        }
+
         let hasVisibleCards = false;
 
         sections.forEach(section => {
@@ -223,6 +233,12 @@ function initInteractions() {
             e.preventDefault();
             e.stopPropagation();
             const url = btn.getAttribute('data-url');
+
+            // PostHog analytics: record which channel they copied
+            const card = btn.closest('.card');
+            const title = card ? card.getAttribute('data-title') : 'Unknown';
+            window.posthog?.capture('copy_channel_link', { channel_name: title, channel_url: url });
+
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(url).then(() => showToast('已复制链接')).catch(() => showToast('复制失败'));
             } else {
