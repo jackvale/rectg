@@ -53,15 +53,16 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
 ---
 
 <Layout>
-  <div class="detail-container">
-    <!-- Breadcrumb -->
+  <div id="detail-app">
+    <div class="detail-container">
+      <!-- Breadcrumb -->
     <nav class="breadcrumb">
       <a href="/">首页</a> 
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
       <span class="current">{item.title}</span>
     </nav>
 
-    <main class="detail-card">
+    <div class="detail-card">
         <header class="detail-header">
             <div class="avatar-wrapper">
                 {avatarUrl ? (
@@ -111,7 +112,8 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
                 前往 Telegram 添加
             </a>
         </footer>
-    </main>
+    </div>
+    </div>
   </div>
 </Layout>
 
@@ -129,6 +131,9 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
   }
 
   .detail-container {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
     max-width: 580px;
     margin: 0 auto;
     padding: 60px 20px;
@@ -170,10 +175,12 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
 
   .detail-header {
     display: flex;
+    flex-wrap: nowrap;
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 0px;
     position: relative;
+    width: 100%;
   }
 
   .avatar-wrapper {
@@ -188,6 +195,7 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
     object-fit: cover;
     flex-shrink: 0;
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
 
   .detail-avatar-fallback {
     background: linear-gradient(135deg, var(--accent), #8b5cf6);
@@ -200,7 +208,9 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
   }
 
   .header-info {
-      flex: 1;
+      flex: 1 1 auto;
+      min-width: 0; /* Prevents flexbox text collapsing */
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -230,6 +240,7 @@ const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
     flex-wrap: wrap;
     gap: 12px;
     align-items: center;
+    flex-shrink: 0;
   }
 
   .tag {
