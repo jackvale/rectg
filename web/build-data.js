@@ -58,7 +58,7 @@ function main() {
                 // Use a simpler regex that splits by the first whitespace to safely handle compound ZWJ emojis
                 const match = fullCat.match(/^(\S+)\s+(.*)$/);
                 if (match) {
-                    const catName = match[2];
+                    const catName = match[2].trim();
                     categoriesList.push({
                         icon: match[1],
                         name: catName,
@@ -67,7 +67,7 @@ function main() {
                         id: catName.toLowerCase()
                     });
                 } else {
-                    categoriesList.push({ icon: '📌', name: fullCat, fullName: fullCat, keywords: seoKeywords[fullCat] || "", id: fullCat });
+                    categoriesList.push({ icon: '📌', name: fullCat, fullName: fullCat, keywords: seoKeywords[fullCat.trim()] || "", id: fullCat.trim() });
                 }
             }
             currentItem = null;
