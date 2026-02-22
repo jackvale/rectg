@@ -25,6 +25,7 @@ TYPE_ORDER = [
 
 # 二级分类排序规则（按照这个顺序输出二级分类）
 CATEGORY_ORDER = [
+    "🆕 新发现频道",
     "📰 新闻快讯",
     "💻 数码科技",
     "👨‍💻 开发运维",
@@ -79,15 +80,48 @@ def generate_readme(conn: sqlite3.Connection) -> str:
     
     total_kept = len(rows)
 
+    # 手动注入的新频道，在这里记录它们的 URL，避免在后续重复添加
+    NEW_CHANNELS = [
+        {"title": "sidehustleus（副业）", "url": "https://t.me/sidehustleus", "description": "关注副业赚钱、搞钱经验和独立开发", "count": None},
+        {"title": "技术拾荒者", "url": "https://t.me/tech_scavenger", "description": "分享优质技术文章、开源项目与实用工具", "count": None},
+        {"title": "煎蛋日报", "url": "https://t.me/jandan_feed", "description": "新鲜事、无聊图、段子等有趣内容", "count": None},
+        {"title": "一个人的产品", "url": "https://t.me/solo_product", "description": "独立开发者、产品设计与运营经验", "count": None},
+        {"title": "深夜博客", "url": "https://t.me/late_night_blog", "description": "深夜阅读文章、个人随笔与精神角落", "count": None},
+        {"title": "什么值得看", "url": "https://t.me/worth_read", "description": "推荐值得一读的好文章与好书", "count": None},
+        {"title": "程序员日常", "url": "https://t.me/dev_everyday", "description": "程序员的日常工作、吐槽与经验分享", "count": None},
+        {"title": "小众软件", "url": "https://t.me/niche_software", "description": "发现与分享好用、新奇的小众软件", "count": None},
+        {"title": "酱酱の日报", "url": "https://t.me/jiangdaily", "description": "每天不只是新闻，更是酱酱的发现日常～ 精选有趣、有料、有灵魂的「热饭」", "count": 137},
+        {"title": "财经速报", "url": "https://t.me/econ_news_cn", "description": "最新最快的财经新闻与市场动态资讯", "count": None}
+    ]
+    custom_urls = {ch["url"] for ch in NEW_CHANNELS}
+
     for row in rows:
         t = row["type"]
         if t not in tree:
             continue
             
+        # 过滤掉自定义注入的频道，防止重复
+        if row["url"] in custom_urls:
+            continue
+
         cat = row["category"] or "🌐 综合其他"
         if cat not in tree[t]:
             tree[t][cat] = []
         tree[t][cat].append(dict(row))
+
+    # 注入新频道板块
+    tree["channel"]["🆕 新发现频道"] = [
+        {
+            "type": "channel",
+            "category": "🆕 新发现频道",
+            "clean_title": ch["title"],
+            "title": ch["title"],
+            "url": ch["url"],
+            "count": ch["count"],
+            "clean_desc": ch["description"],
+            "description": ch["description"]
+        } for ch in NEW_CHANNELS
+    ]
 
     lines = []
     lines.append("# Telegram 优质中文频道与群组精选")
