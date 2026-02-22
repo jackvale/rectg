@@ -8,7 +8,7 @@
 
 ### 🆕 新发现频道
 
-- sidehustleus（副业）
+- 副业
   - 频道
   - [https://t.me/sidehustleus](https://t.me/sidehustleus)
   - -
