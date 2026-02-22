@@ -185,7 +185,9 @@ const featuredItems = [...allItems].sort(() => Math.random() - 0.5).slice(0, 6);
             <div class="category-section" id={`cat-${group.meta.id}`}>
                 <h3 class="category-title">
                     {group.meta.fullName}
-                    <span class="category-title-meta">({group.items.length})</span>
+                    {group.meta.name !== "新发现频道" && (
+                        <span class="category-title-meta">({group.items.length})</span>
+                    )}
                 </h3>
                 <div class="grid">
                     {group.items.map(item => (
