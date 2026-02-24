@@ -186,14 +186,6 @@
               "countStr": "-"
             },
             {
-              "title": "煎蛋日报",
-              "desc": "新鲜事、无聊图、段子等有趣内容",
-              "id": "jandan_feed",
-              "typeLabel": "频道",
-              "url": "https://t.me/jandan_feed",
-              "countStr": "-"
-            },
-            {
               "title": "一个人的产品",
               "desc": "独立开发者、产品设计与运营经验",
               "id": "solo_product",

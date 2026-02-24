@@ -84,7 +84,6 @@ def generate_readme(conn: sqlite3.Connection) -> str:
     NEW_CHANNELS = [
         {"title": "副业", "url": "https://t.me/sidehustleus", "description": "关注副业赚钱、搞钱经验和独立开发", "count": None},
         {"title": "技术拾荒者", "url": "https://t.me/tech_scavenger", "description": "分享优质技术文章、开源项目与实用工具", "count": None},
-        {"title": "煎蛋日报", "url": "https://t.me/jandan_feed", "description": "新鲜事、无聊图、段子等有趣内容", "count": None},
         {"title": "一个人的产品", "url": "https://t.me/solo_product", "description": "独立开发者、产品设计与运营经验", "count": None},
         {"title": "深夜博客", "url": "https://t.me/late_night_blog", "description": "深夜阅读文章、个人随笔与精神角落", "count": None},
         {"title": "什么值得看", "url": "https://t.me/worth_read", "description": "推荐值得一读的好文章与好书", "count": None},

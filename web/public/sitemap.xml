@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.rectg.com/</loc>
-    <lastmod>2026-02-24T16:38:16.574Z</lastmod>
+    <lastmod>2026-02-24T20:11:02.203Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,11 +13,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/tech_scavenger</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/jandan_feed</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

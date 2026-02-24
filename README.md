@@ -20,12 +20,6 @@
   - -
   - 分享优质技术文章、开源项目与实用工具
 
-- 煎蛋日报
-  - 频道
-  - [https://t.me/jandan_feed](https://t.me/jandan_feed)
-  - -
-  - 新鲜事、无聊图、段子等有趣内容
-
 - 一个人的产品
   - 频道
   - [https://t.me/solo_product](https://t.me/solo_product)
