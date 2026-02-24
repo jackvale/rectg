@@ -1,12 +1,14 @@
 import PinyinMatchModule from 'pinyin-match';
 import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 const PinyinMatch = PinyinMatchModule?.default || PinyinMatchModule;
 
 try {
     inject();
+    injectSpeedInsights();
 } catch (error) {
-    console.warn('[rectg] analytics init failed:', error);
+    console.warn('[rectg] analytics/speed-insights init failed:', error);
 }
 
 function safeGetStorage(key) {
