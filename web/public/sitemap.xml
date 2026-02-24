@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.rectg.com/</loc>
-    <lastmod>2026-02-22T22:50:20.197Z</lastmod>
+    <lastmod>2026-02-24T16:38:16.574Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -78,11 +78,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/financenewsdaily</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/cdtchinesefeed</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1583,11 +1578,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/shortcuts_cn</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/cdtchinese</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

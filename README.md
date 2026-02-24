@@ -101,12 +101,6 @@
   - 48,462
   - 中国领先的金融信息平台，7×24 覆盖全球股市、外汇、债券、商品动态。 频道特色 • AI 自动解读：每条新闻实时生成投资参考 • 智能问答：使用 /ask 命令深入了解任意资讯 • 秒级推...
 
-- 中国数字时代
-  - 频道
-  - [https://t.me/cdtchinesefeed](https://t.me/cdtchinesefeed)
-  - 43,904
-  - 官方名片： 官方推特账号： 404文库频道： 视频频道： 本站现已开通匿名投稿Bot 404投给CDT～
-
 - Solidot
   - 频道
   - [https://t.me/solidot](https://t.me/solidot)
@@ -1968,12 +1962,6 @@
   - [https://t.me/shortcuts_cn](https://t.me/shortcuts_cn)
   - 3,545
   - 捷径社区官方群 捷径讨论｜科技新闻｜趣事分享｜友爱互助 官网 sharecuts.cn 捷径社区APP t.cn/EokAcig 关于我们 miidii.tech 微信关注公众号「Price...
-
-- 中国数字时代-讨论群
-  - 群组
-  - [https://t.me/cdtchinese](https://t.me/cdtchinese)
-  - 2,384
-  - 中国数字时代： 官方名片： 官方推特账号： 本站现已开通可匿名投稿Bot 404投给CDT～ 群内容规范
 
 - 天涯讨论组
   - 群组

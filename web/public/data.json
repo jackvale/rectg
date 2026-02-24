@@ -295,14 +295,6 @@
               "countStr": "48,462"
             },
             {
-              "title": "中国数字时代",
-              "desc": "官方名片： 官方推特账号： 404文库频道： 视频频道： 本站现已开通匿名投稿Bot 404投给CDT～",
-              "id": "cdtchinesefeed",
-              "typeLabel": "频道",
-              "url": "https://t.me/cdtchinesefeed",
-              "countStr": "43,904"
-            },
-            {
               "title": "Solidot",
               "desc": "solidot.org 非官方 RSS 推送频道。如有侵权，立即删除。 → Buy Ads:",
               "id": "solidot",
@@ -2806,14 +2798,6 @@
               "typeLabel": "群组",
               "url": "https://t.me/shortcuts_cn",
               "countStr": "3,545"
-            },
-            {
-              "title": "中国数字时代-讨论群",
-              "desc": "中国数字时代： 官方名片： 官方推特账号： 本站现已开通可匿名投稿Bot 404投给CDT～ 群内容规范",
-              "id": "cdtchinese",
-              "typeLabel": "群组",
-              "url": "https://t.me/cdtchinese",
-              "countStr": "2,384"
             },
             {
               "title": "天涯讨论组",
