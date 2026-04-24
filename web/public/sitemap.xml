@@ -81,6 +81,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/cdtchinesefeed</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/solidot</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -101,6 +106,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/speedcentre</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/fakeye</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -117,6 +127,11 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/wublock</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/steamsteam</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -156,22 +171,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/aboutrss</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/testflights</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/kt_database</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/breakingnews_t</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -221,22 +221,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/rss_channels</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/ru_rss</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/yuan_en</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/overdaily</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -287,11 +277,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/abc_rss</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/today_bean</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -351,7 +336,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/opencfdchannel</loc>
+    <loc>https://www.rectg.com/p/botmzt</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -381,11 +366,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/pdcn1</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/tggeek</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -401,17 +381,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/speedcentre</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/clashr_for_windows_channel</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/misakatech</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/limboprossr</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -441,16 +421,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/letitflyw</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/justreformation</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/macapp_channel</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -461,17 +431,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/ipoject</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/abcthoughts</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/nekosc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -486,17 +446,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/mokeyjay_channel</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/ijustseesee</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/legado_channels</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/opencfdchannel</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -526,11 +486,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/cool_scripts</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/orzmini</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -552,11 +507,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/programthinkbooks</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/cloudflare_cn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -617,6 +567,11 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/appinnfeed</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/baccanosoul</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -691,11 +646,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/alistshare</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/privatetrackernews</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -706,7 +656,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/w37fhy</loc>
+    <loc>https://www.rectg.com/p/cool_scripts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -796,17 +746,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/zuoluotvofficial</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/mytvseries</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/litterpanda</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/ai_pintura</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -871,17 +816,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/exploreclassical</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/popmusichistory</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/lightfantasy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -916,11 +851,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/baccanosoul</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/yeqingjie_gjg666</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -946,16 +876,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/pixivshare</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/ovov1234</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/moepic</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -967,11 +887,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/testflightx</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/steamsteam</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -991,22 +906,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/limitfree</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/vwyxrd</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/hostevaluate</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/lifeanatech</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1021,47 +926,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/buliang00</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/limboprossr</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/booksthatmakeyouthink</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/sharecentre</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/mrhxpjgg</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/autofreevpn</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/surgenews</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/flysocks</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/telonews_cn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1072,11 +942,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/biquan321</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/newsforbitcoin</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1156,16 +1021,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/tingtalk</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/jp_study</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/update4weekly</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1216,7 +1071,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/intheflux</loc>
+    <loc>https://www.rectg.com/p/tinysnow4yi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1261,6 +1116,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/meizitu3</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/bizhi123</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1296,6 +1156,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/acgwallpaper</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/free_group</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1316,12 +1181,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/dizhen</loc>
+    <loc>https://www.rectg.com/p/mokeyjay_channel</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/baisi</loc>
+    <loc>https://www.rectg.com/p/dizhen</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1332,16 +1197,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/shortcutscn</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/botmzt</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/meizitu3</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1371,26 +1226,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/peekfun</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/kanxiaojiejie</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/lumaoshe</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/finelygirls</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/polyhedron</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1406,17 +1241,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/today_bean</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/rachelblahblah</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/acgwallpaper</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/butnothinghappened</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1427,6 +1257,11 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/telebookstall</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/renjianzhinan_channel</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1496,62 +1331,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/zuoluotvofficial</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/tinysnow4yi</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/meetashare</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/arktochannel</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/snipaste</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/group_shouliumeiyizhifuyou</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/bpsheel</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/uselessideas</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/justfnew</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/renjianzhinan_channel</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/homelab520</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/jacobemk</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1566,12 +1351,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/woomaichannel</loc>
+    <loc>https://www.rectg.com/p/sousuoda</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/sousuoda</loc>
+    <loc>https://www.rectg.com/p/woicesu</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1586,6 +1371,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/wsbetszh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/cdtchinese</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/tianyarss</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1596,12 +1391,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/drc_info</loc>
+    <loc>https://www.rectg.com/p/creatorsdaily</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/pdcn0</loc>
+    <loc>https://www.rectg.com/p/drc_info</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1616,27 +1411,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/plus8889</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/zaihuachat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/tgzhcn</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/stickergroup</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/jianjiaoqun</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1652,6 +1432,11 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/gpt_user</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/googlevoice</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1681,11 +1466,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/chatssr</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/zh_gv</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1697,11 +1477,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/shadow_x_user_support</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/woicesu</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1806,6 +1581,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/air_universe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/mkplayerapp</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1857,11 +1637,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/infusepro6</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/hxisj8whsv</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1921,6 +1696,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/ubuntuzh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/coder_ot</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1936,22 +1716,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/netch_discuss_group</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/xdzzmb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/guboorg</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/cn_cloudflare</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1976,17 +1746,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/woaizyg</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/fluttercn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/hamibotchat</loc>
+    <loc>https://www.rectg.com/p/rubycn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1997,11 +1762,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/centoszh</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/air_universe</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2176,6 +1936,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/hezu1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/bigdongdonggroup</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2216,6 +1981,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/netflixchina</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/moviemarket_group</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2226,22 +1996,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/balancer166</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/balancer211</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/nyancaaaat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/balancer985</loc>
+    <loc>https://www.rectg.com/p/sphard</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2252,11 +2012,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/ipn_miechakucha</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/xiaomi6666</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2341,11 +2096,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/siwa9999</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/coolcomic404_fans</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2356,12 +2106,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/dongman999</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/cemiuiler</loc>
+    <loc>https://www.rectg.com/p/vpschat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2416,11 +2161,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/csgocn</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/yxbymm</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2437,11 +2177,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/loon0x00</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/gouwu</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2466,17 +2201,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/doubi</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/vultr_group</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/mrhxpj</loc>
+    <loc>https://www.rectg.com/p/chatssr</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2486,7 +2211,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/ubuntuzh</loc>
+    <loc>https://www.rectg.com/p/netch_discuss_group</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/airport_chat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2496,32 +2226,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/xddos0</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/freevray</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/adguard_cn</loc>
+    <loc>https://www.rectg.com/p/hxisj8whsv</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/binancechinese</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/cnderivatives</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/friendchcodelist</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2581,6 +2291,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/douban_discuss</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/readfinechat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2607,6 +2322,11 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/hardcoreng</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/technical_blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2642,11 +2362,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/cn_coupon</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/guangzhouit</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2687,6 +2402,11 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/shashinbu</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/beijingz</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2736,22 +2456,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/abc999222</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/lilydeyaa</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/bujidaochat</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/tokyoit</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2781,17 +2491,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/beijingz</loc>
+    <loc>https://www.rectg.com/p/glados_network</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/googlevoice</loc>
+    <loc>https://www.rectg.com/p/tgcnx</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/beijingxiuchea</loc>
+    <loc>https://www.rectg.com/p/tgzhcn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2811,22 +2521,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/haijiaosheque</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/tgtrillions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/devonthink</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/tgcnx</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/hezu1</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2856,17 +2561,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/cemiuiler</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/alyd_g</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/vpschat</loc>
+    <loc>https://www.rectg.com/p/balancer996</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/balancer996</loc>
+    <loc>https://www.rectg.com/p/doubi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2881,7 +2591,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.rectg.com/p/cnderivatives</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.rectg.com/p/china_irl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/friendchcodelist</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2891,12 +2611,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/wolfgang88</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/open_source_community</loc>
+    <loc>https://www.rectg.com/p/vultr_group</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2906,17 +2621,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/douban_discuss</loc>
+    <loc>https://www.rectg.com/p/tokyoit</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/immtelecom_chat</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/airport_chat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2932,21 +2642,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/hn_china</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/wsbetszh</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/haijiaosheque</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/netflixchina</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2976,11 +2671,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/rubycn</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/brahmanjg</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -2991,27 +2681,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/technical_blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/ssrspeedn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rectg.com/p/excloud</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/sphard</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/creatorsdaily</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3027,6 +2702,11 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/touzi8</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rectg.com/p/csgocn</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3071,7 +2751,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/glados_network</loc>
+    <loc>https://www.rectg.com/p/pdcn0</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
