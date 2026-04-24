@@ -76,7 +76,7 @@ function hashText(value: string): number {
   return hash >>> 0;
 }
 
-function getFeaturedItems(items: DirectoryItem[], size = 6): DirectoryItem[] {
+function getFeaturedItems(items: DirectoryItem[], size = 18): DirectoryItem[] {
   return [...items]
     .sort((a, b) => {
       const scoreA = hashText(`${a.id}:${a.title}:featured`);
