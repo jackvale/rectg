@@ -1,6 +1,6 @@
 <h1 align="center">rectg</h1>
 
-<p align="center">559 个 Telegram 中文资源 · 22 个主题分类</p>
+<p align="center">539 个 Telegram 中文资源 · 22 个主题分类</p>
 
 <p align="center">
   <a href="https://www.rectg.com/"><strong>在线浏览</strong></a>
@@ -12,10 +12,10 @@
 
 <table>
   <tr>
-    <td align="center"><strong>559</strong><br><sub>总收录 · 频道 / 群组 / 机器人</sub></td>
+    <td align="center"><strong>539</strong><br><sub>总收录 · 频道 / 群组 / 机器人</sub></td>
     <td align="center"><strong>22</strong><br><sub>分类 · 主题索引</sub></td>
-    <td align="center"><strong>275</strong><br><sub>频道 · Channel</sub></td>
-    <td align="center"><strong>284</strong><br><sub>群组 · Group</sub></td>
+    <td align="center"><strong>257</strong><br><sub>频道 · Channel</sub></td>
+    <td align="center"><strong>282</strong><br><sub>群组 · Group</sub></td>
   </tr>
 </table>
 
@@ -27,8 +27,8 @@
     <th>群组</th>
   </tr>
   <tr>
-    <td valign="top"><a href="#section-channel"><strong>频道</strong></a><br><a href="#section-channel-1">🆕 新发现频道</a> <sub>10</sub><br><a href="#section-channel-2">📰 新闻快讯</a> <sub>52</sub><br><a href="#section-channel-3">💻 数码科技</a> <sub>33</sub><br><a href="#section-channel-4">👨‍💻 开发运维</a> <sub>10</sub><br><a href="#section-channel-5">🔒 信息安全</a> <sub>3</sub><br><a href="#section-channel-6">🧰 软件工具</a> <sub>17</sub><br><a href="#section-channel-7">☁️ 网盘资源</a> <sub>7</sub><br><a href="#section-channel-8">🎬 影视剧集</a> <sub>20</sub><br><a href="#section-channel-9">🎵 音乐音频</a> <sub>17</sub><br><a href="#section-channel-10">🎐 动漫次元</a> <sub>13</sub><br><a href="#section-channel-11">🎮 游戏娱乐</a> <sub>7</sub><br><a href="#section-channel-12">✈️ 科学上网</a> <sub>3</sub><br><a href="#section-channel-13">🪙 加密货币</a> <sub>2</sub><br><a href="#section-channel-14">📚 学习阅读</a> <sub>22</sub><br><a href="#section-channel-15">🎨 创意设计</a> <sub>5</sub><br><a href="#section-channel-16">📡 社媒搬运</a> <sub>6</sub><br><a href="#section-channel-17">👗 生活消费</a> <sub>14</sub><br><a href="#section-channel-18">💬 闲聊交友</a> <sub>13</sub><br><a href="#section-channel-19">🗂️ 综合导航</a> <sub>2</sub><br><a href="#section-channel-20">🌐 综合其他</a> <sub>19</sub></td>
-    <td valign="top"><a href="#section-group"><strong>群组</strong></a><br><a href="#section-group-1">📰 新闻快讯</a> <sub>9</sub><br><a href="#section-group-2">💻 数码科技</a> <sub>51</sub><br><a href="#section-group-3">👨‍💻 开发运维</a> <sub>34</sub><br><a href="#section-group-4">🔒 信息安全</a> <sub>1</sub><br><a href="#section-group-5">🧰 软件工具</a> <sub>15</sub><br><a href="#section-group-6">☁️ 网盘资源</a> <sub>5</sub><br><a href="#section-group-7">🎬 影视剧集</a> <sub>13</sub><br><a href="#section-group-8">🎵 音乐音频</a> <sub>14</sub><br><a href="#section-group-9">🎐 动漫次元</a> <sub>7</sub><br><a href="#section-group-10">🎮 游戏娱乐</a> <sub>13</sub><br><a href="#section-group-11">✈️ 科学上网</a> <sub>12</sub><br><a href="#section-group-12">🪙 加密货币</a> <sub>6</sub><br><a href="#section-group-13">📚 学习阅读</a> <sub>16</sub><br><a href="#section-group-14">🎨 创意设计</a> <sub>1</sub><br><a href="#section-group-15">🏀 体育运动</a> <sub>1</sub><br><a href="#section-group-16">👗 生活消费</a> <sub>12</sub><br><a href="#section-group-17">🌍 地区社群</a> <sub>9</sub><br><a href="#section-group-18">💬 闲聊交友</a> <sub>11</sub><br><a href="#section-group-19">🗂️ 综合导航</a> <sub>8</sub><br><a href="#section-group-20">🌐 综合其他</a> <sub>46</sub></td>
+    <td valign="top"><a href="#section-channel"><strong>频道</strong></a><br><a href="#section-channel-1">🆕 新发现频道</a> <sub>10</sub><br><a href="#section-channel-2">📰 新闻快讯</a> <sub>40</sub><br><a href="#section-channel-3">💻 数码科技</a> <sub>33</sub><br><a href="#section-channel-4">👨‍💻 开发运维</a> <sub>10</sub><br><a href="#section-channel-5">🔒 信息安全</a> <sub>2</sub><br><a href="#section-channel-6">🧰 软件工具</a> <sub>17</sub><br><a href="#section-channel-7">☁️ 网盘资源</a> <sub>7</sub><br><a href="#section-channel-8">🎬 影视剧集</a> <sub>18</sub><br><a href="#section-channel-9">🎵 音乐音频</a> <sub>17</sub><br><a href="#section-channel-10">🎐 动漫次元</a> <sub>13</sub><br><a href="#section-channel-11">🎮 游戏娱乐</a> <sub>7</sub><br><a href="#section-channel-12">✈️ 科学上网</a> <sub>2</sub><br><a href="#section-channel-13">🪙 加密货币</a> <sub>2</sub><br><a href="#section-channel-14">📚 学习阅读</a> <sub>21</sub><br><a href="#section-channel-15">🎨 创意设计</a> <sub>5</sub><br><a href="#section-channel-16">📡 社媒搬运</a> <sub>6</sub><br><a href="#section-channel-17">👗 生活消费</a> <sub>14</sub><br><a href="#section-channel-18">💬 闲聊交友</a> <sub>13</sub><br><a href="#section-channel-19">🗂️ 综合导航</a> <sub>2</sub><br><a href="#section-channel-20">🌐 综合其他</a> <sub>18</sub></td>
+    <td valign="top"><a href="#section-group"><strong>群组</strong></a><br><a href="#section-group-1">📰 新闻快讯</a> <sub>9</sub><br><a href="#section-group-2">💻 数码科技</a> <sub>51</sub><br><a href="#section-group-3">👨‍💻 开发运维</a> <sub>34</sub><br><a href="#section-group-4">🔒 信息安全</a> <sub>1</sub><br><a href="#section-group-5">🧰 软件工具</a> <sub>15</sub><br><a href="#section-group-6">☁️ 网盘资源</a> <sub>5</sub><br><a href="#section-group-7">🎬 影视剧集</a> <sub>13</sub><br><a href="#section-group-8">🎵 音乐音频</a> <sub>14</sub><br><a href="#section-group-9">🎐 动漫次元</a> <sub>7</sub><br><a href="#section-group-10">🎮 游戏娱乐</a> <sub>13</sub><br><a href="#section-group-11">✈️ 科学上网</a> <sub>12</sub><br><a href="#section-group-12">🪙 加密货币</a> <sub>6</sub><br><a href="#section-group-13">📚 学习阅读</a> <sub>16</sub><br><a href="#section-group-14">🎨 创意设计</a> <sub>1</sub><br><a href="#section-group-15">🏀 体育运动</a> <sub>1</sub><br><a href="#section-group-16">👗 生活消费</a> <sub>12</sub><br><a href="#section-group-17">🌍 地区社群</a> <sub>9</sub><br><a href="#section-group-18">💬 闲聊交友</a> <sub>11</sub><br><a href="#section-group-19">🗂️ 综合导航</a> <sub>8</sub><br><a href="#section-group-20">🌐 综合其他</a> <sub>44</sub></td>
   </tr>
 </table>
 
@@ -60,17 +60,14 @@
 ### 📰 新闻快讯
 
 <details open>
-<summary><strong>52 个资源</strong> · <a href="https://www.rectg.com/?c=%E6%96%B0%E9%97%BB%E5%BF%AB%E8%AE%AF">站内查看</a></summary>
+<summary><strong>40 个资源</strong> · <a href="https://www.rectg.com/?c=%E6%96%B0%E9%97%BB%E5%BF%AB%E8%AE%AF">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
-| [竹新社](https://t.me/tnews365) | 153,760 | 7×24不定时编译国内外媒体的即时新闻报道。 查阅新闻资料，前往竹新资料室： 如有任何问题，联系竹新社小编： 注：本频道原创新闻按照CC BY 4.0协议发布 |
 | [风向旗参考快讯](https://t.me/xhqcankao) | 149,790 | 风闻奏事，遍查访知。提供互联网科技新闻快讯。发布VPS、网盘等有价值虚拟资产的新闻和交易信息。 本频道引用的所有文章皆旨在拓宽信息视野，不代表本频道观点。本频道。请以包容友好的... |
-| [你不知道的内幕消息🅥](https://t.me/inside1024) | 106,141 | 一些你不知道的内幕消息，最新资讯、大公司负面、时政财经、网友发布等高质量消息。 投稿/ 内容均来源社交媒体及公共平台，均不代表本频道观点，请酌情浏览 |
 | [电报时报](https://t.me/times001) | 85,600 | 投稿点频道左下角对话图标 |
 | [华尔街见闻 - 财经时讯 AI 实时互动](https://t.me/FinanceNewsDaily) | 51,410 | 中国领先的金融信息平台，7×24 覆盖全球股市、外汇、债券、商品动态。 频道特色 • AI 自动解读：每条新闻实时生成投资参考 • 智能问答：使用 /ask 命令深入了解任意资... |
 | [Solidot](https://t.me/solidot) | 43,434 | solidot.org 非官方 RSS 推送频道。如有侵权，立即删除。 → Buy Ads: |
-| [纽约时报 全文 实时推送](https://t.me/niuyueshibao_rss) | 34,224 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [zaobao.sg 早报](https://t.me/zaobaosg) | 32,551 | 以睿智亲和的内容，与你共谈天下事。 下载《联合早报》App： zaobao.com.sg/products |
 | [cnBeta.COM中文业界资讯站](https://t.me/cnbeta_com) | 27,412 | cnBeta.COM中文业界资讯站是一个提供IT相关新闻资讯、技术文章和评论的观点的中文网站，报导立场公正中立，网友讨论气氛浓厚，在业界拥有独特的影响力。本频道为非。... |
 | [𝚂𝚙𝚎𝚎𝚍𝙲𝚎𝚗𝚝𝚛𝚎](https://t.me/speedcentre) | 23,797 | 二手机场交易 欢迎各位关注 ！ 送测请私聊 这里是一个服务型的综合跨境服务提供商测试平台，为各大服务提供商提供包括国内大带宽家庭宽带测试，流媒体解锁情况测试，... |
@@ -83,9 +80,7 @@
 | [Steam快讯](https://t.me/steamsteam) | 15,616 | You can view and join right away. |
 | [看新闻 学英语 双语新闻](https://t.me/shuangyunews_rss) | 14,696 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [科技爱好者周刊](https://t.me/scitech_fans) | 14,248 | 记录每周值得分享的科技内容，周五发布。本频道有ruanyf授权，see weekly/issues/885 |
-| [美国之音 全文 实时推送](https://t.me/meiguozhiyin_rss) | 13,776 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [经济信息联播](https://t.me/eco_cn) | 11,074 | 独立，个性的财经、金融资讯早报，汇总美股、A股收市信息，以及提供具有重大影响力的研报 |
-| [纽约时报双语新闻](https://t.me/nyt_bilingual) | 10,820 | 《纽约时报》（英语：The New York Times，简写为NYT或NY Times），有时也被称为《时报》，是一份总部设在纽约的美国报纸，具有全球影响力和读者群。... |
 | [TestFlight News](https://t.me/testflights) | 10,076 | 收集分享IOS的TestFlight版申请地址与相关信息、注意事项。 有趣的互联网新闻 |
 | [ALL About RSS](https://t.me/aboutrss) | 9,721 | 关于 #RSS 技术的 #应用 #周边 #介绍 #方法 #教程 #指南 #讨论 #观点 #技巧 RSS = Really Simple Syndication / Rich S... |
 | [层叠 - The Cascading](https://t.me/outvivid) | 8,564 | 主要话题大概是开源业界新闻。 所有以 #today 标签的内容均为本台编辑的个人意见，可能可以代表本台观点。... |
@@ -94,24 +89,17 @@
 | [Readhub](https://t.me/readhub_cn) | 8,297 | 每天三分钟的科技新闻聚合阅读，内容主要包括商业动态、科技资讯，每天早 9 点推送当日早报。 → Buy Ads: → More: |
 | [财经快讯](https://t.me/fnnew) | 8,253 | 最新最全全球财经资讯24小时不间断直播，A股美股操盘必备，帮您第一时间掌握消息面的因素，把握大局、运筹帷幄、决胜千里 |
 | [日本 共同网 朝日新闻 日经中文网](https://t.me/jp_rss) | 7,911 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
-| [德国 德国之声 中文全文](https://t.me/dw_rss) | 7,682 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [NS新闻转报](https://t.me/SwitchNewCN) | 7,344 | 官方信息请看 |
 | [小林家的托尔](https://t.me/TooruchanNews) | 6,920 | 非资讯向的个人自媒体，发布内容和更新频率全看心情。 整合: 本频道独立运营，不属于“For Works”系列频道。... |
 | [RSS 频道收集](https://t.me/rss_channels) | 6,832 | 收集推送 RSS 的频道，把 TG 变成 RSS 阅读器！ 欢迎分享 RSS 源、频道！ 联系频道管理员： 获取即时预览可发送原文链接给： 或 轻松搭建自己的 RSS 机器人：... |
-| [FT中文网 全文 实时推送](https://t.me/ftzhongwen_rss) | 6,725 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [Yuan的记事本 分享 软件 新闻 Yuan's Notepad](https://t.me/Yuan_En) | 6,150 | 整理搬运一些奇奇怪怪有趣的事～ Organizing and carrying some strange and interesting things~ 会尽可能保留消息源出处... |
-| [俄罗斯 卫星通讯社 中文全文](https://t.me/ru_rss) | 6,073 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [韩国 中央日报 朝鲜日报](https://t.me/korea_rss) | 4,449 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [&'a ::rynco::UntitledChannel](https://t.me/rynif) | 4,364 | 西郊林密无处去，北城雾沉晚风凉。 本频道是： - 推送任何有趣的东西的地方 - 偶尔可以看纸片小姐姐的地方 - 管理员随性吐槽的地方 本频道不是： - 客观的科技新闻频道 -... |
 | [7x24投资快讯](https://t.me/golden_wind_news) | 4,322 | 24 小时投资相关的快讯 |
 | [Python潮流周刊](https://t.me/pythontrendingweekly) | 4,308 | 由豌豆花下猫主理，精心筛选国内外的 250+ 信息源，为你挑选最值得分享的文章、教程、开源项目、软件工具、播客和视频、热门话题等内容。愿景：帮助所有读者精进 Python 技术... |
-| [法国 国际广播电台 中文全文](https://t.me/rfi_rss) | 4,256 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [币圈快讯](https://t.me/btcnewsdaily) | 4,182 | 币圈快讯，掌握币圈动态 |
 | [一起偷偷观察 DIYgod](https://t.me/awesomeDIYgod) | 4,107 | 频道由 RSSHub 强力驱动，频道目录： #DIYgod的Twitter更新 #DIYgod的博客更新 #DIYgod喜欢的网易云音乐 #DIYgod的豆瓣动态 #DIYgo... |
 | [币圈日报](https://t.me/bidaily) | 3,480 | 币圈日报-每日最前沿的币圈新闻资讯 |
-| [南方周末 / Southern Weekly](https://t.me/infzm) | 3,006 | 在这里，读懂中国 一个简单的南方周末推送频道，由 weVoice 建立。 欢迎的主频道 ，一个独立自由的青少年民主派新闻媒体。 互吹: |
-| [澳大利亚 广播公司 中文全文](https://t.me/abc_rss) | 2,861 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
-| [全球主流新闻媒体中文速览](https://t.me/allzhnews) | 2,660 | 路透中文Investing.com纽约时报美国之音FT中文BBC法广德国之声澳大利亚广播公司俄罗斯卫星通讯社联合早报朝鲜日报中央日报共同网朝日新闻日经中文网半岛电视台苹果日报中... |
 | [开发者日报](https://t.me/cndevdaily) | 1,901 | 一个勤劳的机器人，只爬取热门，优质，阅读性强的内容。懒懒的主人创造了我，欢迎关注我。我的 Twitter 账号是 CNDevDaily。官网 |
 | [大咕咕咕鸡](https://t.me/dagudu) | 1,825 | 大咕咕咕鸡，微博知名博主，叙事诗人，当代严肃文学特师，月入2300，代表作有《黄浦江有话讲》《一次突如其来的性生活》等，他的文章风格独特，自成一派，值得一看。... |
 | [悦读「优质少量RSS聚合」](https://t.me/dailyrss) | 1,588 | 文章、图片、视频、音乐、播客RSS订阅聚合频道 部分支持「Tg即时预览/内嵌播放」 订阅内容主要类型为IT、科技类文章、减压向图片音频等 子频道： 物种日历 吃货研究所 友链频... |
@@ -188,13 +176,12 @@
 ### 🔒 信息安全
 
 <details open>
-<summary><strong>3 个资源</strong> · <a href="https://www.rectg.com/?c=%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8">站内查看</a></summary>
+<summary><strong>2 个资源</strong> · <a href="https://www.rectg.com/?c=%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
 | [信息安全技术频道](https://t.me/tg_InternetSecurity) | 10,903 | You can view and join right away. |
 | [AdGuard消息](https://t.me/AdGuardcn) | 3,201 | 这里可以收到所有关于广告拦截和网络安全的消息。 AdGuard官方群 |
-| [行动派公民联盟](https://t.me/citizen_united) | 1,270 | 让我们用行动支持民主，自由，平等。 分享行动派信息，如：投票，捐款，搭建/使用VPN，个人信息安全。建立互相支援的公民网络。 关键词：行动派，公民，联盟，民主，自由，平等，权利... |
 
 </details>
 
@@ -248,7 +235,7 @@
 ### 🎬 影视剧集
 
 <details open>
-<summary><strong>20 个资源</strong> · <a href="https://www.rectg.com/?c=%E5%BD%B1%E8%A7%86%E5%89%A7%E9%9B%86">站内查看</a></summary>
+<summary><strong>18 个资源</strong> · <a href="https://www.rectg.com/?c=%E5%BD%B1%E8%A7%86%E5%89%A7%E9%9B%86">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
@@ -258,7 +245,6 @@
 | [懒狗集中营-115/阿里/百度/迅雷/夸克 影视分享 阿里云盘百度网盘115网盘](https://t.me/vip115hot) | 48,007 | 建议 / 投稿 / 广告 / 合作 |
 | [Zapro Notice](https://t.me/zaproshare) | 29,740 | 软件  /  电影  /  纪录片 欢迎加入讨论群组 |
 | [TVBox](https://t.me/TVbox888) | 29,059 | Tvbox  /  猫影视TV  /  网络接口 只做一件事，解放你的电视。 配置在群组 |
-| [BBC中文 全文 实时推送](https://t.me/bbczhongwen_rss) | 24,489 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [纪录片爱好者](https://t.me/jlpahz) | 19,029 | 《纪录片爱好者》是一个专注分享高清纪录片的频道,我们将为您提供BBC、国家地理频道、Discovery、NHK、探索频道等大量高清纪录片的在线观看或下载。并且让你大大降低观看、... |
 | [國家地理雜誌 中文版](https://t.me/natgeomedia) | 14,450 | Hi 探險家，和國家地理一起探索世界吧！ 國家地理雜誌官網 Facebook Instagram Youtube |
 | [网盘(高品质)影视](https://t.me/alyp_1) | 11,244 | 频道发布一些电影、剧集、动画和纪录片 |
@@ -266,7 +252,6 @@
 | [新蛤社](https://t.me/XinHaNewsAgency) | 8,079 | 本频道所发布的部分内容不代表本社立场 新蛤社，让世界听到江学的声音！ 已列入特级碾刑民单 不经商 每日以香港记者的速度更新 Twitter/YouTube：新蛤社 频道图片投稿... |
 | [人人影视字幕文件](https://t.me/yyets_subtitles) | 7,268 | 片源可在在 rarbg.to 搜索下载。推荐使用 qBittorrent作为下载工具。可在 GitHub 搜索 trackers 并添加到软件，可提高下载速度。... |
 | [Blu-ray Project 蓝光视频工程](https://t.me/beyondHD) | 5,528 | No HDTV,No WEB-DL,No TC,Love Bluray。共享带字幕或者国语的1080p及以上的视频，转载时注重压制以及diy的质量。所有资源不设置门槛 |
-| [为也行](https://t.me/weiyexing) | 5,497 | 为所欲为也可行，人文与科技反复横跳 你失去公开表达的能力和意愿了吗？ 没有 据不完全统计，频道内容主要为： 40%：书籍  /  电影  /  数码  /  产品 30%：热点事件  /  文... |
 | [看番吧！Anime！动漫音乐日剧！高速在线播放！](https://t.me/kanfanba) | 4,291 | アニメーション業界の今が、ここにある |
 | [啰哩啰嗦分享频道](https://t.me/notonlyshare) | 4,250 | 一个克制的、理性的关注互联网科技和人文的频道，也谈谈美食和电影，发现和分享一切有趣有价值的内容 |
 | [ZUOLUOTV](https://t.me/zuoluotvofficial) | 2,952 | ZUOLUOTV TG: YouTube: zuoluo.tv/youtube 哔哩哔哩: zuoluo.tv/bilibili |
@@ -349,13 +334,12 @@
 ### ✈️ 科学上网
 
 <details open>
-<summary><strong>3 个资源</strong> · <a href="https://www.rectg.com/?c=%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91">站内查看</a></summary>
+<summary><strong>2 个资源</strong> · <a href="https://www.rectg.com/?c=%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
 | [Surge & Loon & QX 脚本收集](https://t.me/NobyDa) | 62,247 | 讨论群组： 脚本反馈： 合作 个人博客： 个人仓库 |
 | [Quantumult X News](https://t.me/QuanXNews) | 39,248 | 此频道用于发布 Quantumult 与 Quantumult X 的相关资讯 软件下载地址: 群组: |
-| [文杏馆（藏书分享）](https://t.me/BooksThatMakeYouThink) | 14,932 | 本频道书单来源于网络、翻墙用户求书口碑和好友荐书共识，频道将不定期更新符合“普世价值”和“公共知识”主题的内容，感谢大家的支持与关注 备注：书籍版权归原作者所有，频道资源限个人... |
 
 </details>
 
@@ -376,7 +360,7 @@
 ### 📚 学习阅读
 
 <details open>
-<summary><strong>22 个资源</strong> · <a href="https://www.rectg.com/?c=%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB">站内查看</a></summary>
+<summary><strong>21 个资源</strong> · <a href="https://www.rectg.com/?c=%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
@@ -391,7 +375,6 @@
 | [Find Blog发现博客](https://t.me/findblog) | 14,156 | 发现优秀的博客与创作者 发现博客，文章筛选，和博客有关的一切 一个收录优秀博客的地方 #Blog #Life #Code #Tech #Write #Design #Theme... |
 | [Leonn的博客](https://t.me/liyuans) | 13,986 | 主要内容为低价主机资源，会掺杂频道主个人兴趣的内容，如电子垃圾、游戏、生活、时事等。 本频道原创消息遵循 CC-BY-4.0 协议。... |
 | [英文学习桌](https://t.me/english_learning_discuss) | 11,387 | 学习英语，了解世界。分享学习资料，原版书籍，报纸新闻。 关键词：英文 学习 英语 语言 书籍 读书 资源 频道合集 消息搜索 推特翻译 |
-| [路透中文 全文 实时推送](https://t.me/lutouzhongwen_rss) | 11,314 | 早起读书 书友群 |
 | [校长读报](https://t.me/XiaoZhangDuBao) | 9,552 | 多读书 多看报 感谢关注 感谢赞赏 |
 | [白嫖电子书库](https://t.me/sg_rss) | 9,543 | 单纯的分享电子书 |
 | [Android Weekly Update](https://t.me/update4weekly) | 5,364 | 一份 Android 行业动态分析专栏计划 / 周报。 个人 Channel。 反馈邮箱：safari1.ink Twitter: twitter.com/update4wee... |
@@ -504,11 +487,10 @@
 ### 🌐 综合其他
 
 <details open>
-<summary><strong>19 个资源</strong> · <a href="https://www.rectg.com/?c=%E7%BB%BC%E5%90%88%E5%85%B6%E4%BB%96">站内查看</a></summary>
+<summary><strong>18 个资源</strong> · <a href="https://www.rectg.com/?c=%E7%BB%BC%E5%90%88%E5%85%B6%E4%BB%96">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
-| [Iyouport](https://t.me/iyouport) | 28,259 | iYouPort(iyp) Ⓐ Foundation 我们是一个不断生长的中文无政府主义资源库。 我们的项目名称：iYouPort ⒶInitiatives & Tactics... |
 | [某科学的一个频道](https://t.me/titan_pain) | 20,423 | 转发互联网上有趣的内容，此频道由多人维护 |
 | [扫地僧º笔记](https://t.me/lover_links) | 18,942 | 一种简洁观点 |
 | [Digital Immigrants丨Want Want Channel](https://t.me/Licensesss) | 16,536 | 合租群组 |
@@ -984,7 +966,7 @@
 ### 🌐 综合其他
 
 <details open>
-<summary><strong>46 个资源</strong> · <a href="https://www.rectg.com/?c=%E7%BB%BC%E5%90%88%E5%85%B6%E4%BB%96">站内查看</a></summary>
+<summary><strong>44 个资源</strong> · <a href="https://www.rectg.com/?c=%E7%BB%BC%E5%90%88%E5%85%B6%E4%BB%96">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
@@ -1000,7 +982,6 @@
 | [mini club](https://t.me/Orz_mini) | 6,763 | mini频道 |
 | [期货与期权 Derivatives](https://t.me/CNderivatives) | 6,427 | 期货、期权和各类金融交易品的投机与套利 股票期貨期權權證ETF 股票期货期权权证ETF |
 | [逗比据地根](https://t.me/doubi) | 6,354 | 一群逗比的大家庭！ 请遵守以下群规： - 。 ———— 言论自由是以不影响他人为前提。 ———— 逗比根据地 更新通知频道 : |
-| [流浪防区 China_irl](https://t.me/China_irl) | 5,804 | 流浪防区 China_irl 官方群，已与r/china_irl太监区割席。已割席！*太监和浪友别来错地方* 1. 讨”或“嘲讽”的一种网络暴力行为） 5.不要发布其他不宜发布... |
 | [Freetrial.store](https://t.me/FreetrialStore) | 5,706 | 售前售后请私聊 本群通知频道 自助购买链接 |
 | [中转群005 –请转移](https://t.me/Balancer996) | 5,160 | You can view and join right away. |
 | [Yummy's Small Talk](https://t.me/yummy_best) | 5,114 | 群组旧名：I'm So Lonely |
@@ -1027,7 +1008,6 @@
 | [DGEN Labs 中本街社区](https://t.me/SatoshiStreetBetsZH) | 449 | 中本街中文社区 Chinese (ZH) 股票讨论左转 群组被踢申诉 |
 | [雷神之锤](https://t.me/thorshu) | 439 | Thor 官方群已转为私群，本群仅仅是为了保护官方群原来的 username 而开，不做任何话题讨论且随时可能解散 |
 | [杰哥搜索/杰哥中文](https://t.me/MFJD99) | 413 | You can view and join right away. |
-| [S&D两位先生](https://t.me/Science_Democracy) | 388 | 自由与进步的脚步永不停息！ 这是最好的时代，也是最坏的时代；这是智慧的时代，也是愚蠢的时代 It was the best of times, it was the worst... |
 | [TenVM/ToSpeed 交流群](https://t.me/tenvmgroup) | 375 | 公告板 |
 | [ExCloud](https://t.me/excloud) | 366 | 网址： 公告群 |
 | [老毛子Padavan固件纯净交流群](https://t.me/pdcn0) | 337 | 为所有爱好路由技术玩家所建立的社区 |

@@ -199,19 +199,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/tnews365/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/xhqcankao/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/inside1024/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -230,12 +218,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/solidot/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/niuyueshibao_rss/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -313,19 +295,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/meiguozhiyin_rss/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/eco_cn/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/nyt_bilingual/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -379,12 +349,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/dw_rss/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/switchnewcn/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -403,19 +367,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/ftzhongwen_rss/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/yuan_en/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/ru_rss/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -445,12 +397,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/rfi_rss/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/btcnewsdaily/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -464,24 +410,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/bidaily/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/infzm/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/abc_rss/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/allzhnews/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -781,12 +709,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/citizen_united/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/appmew/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -961,12 +883,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/bbczhongwen_rss/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/jlpahz/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1004,12 +920,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/beyondhd/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/weiyexing/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1279,12 +1189,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/booksthatmakeyouthink/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/theblockbeats/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1352,12 +1256,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/english_learning_discuss/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/lutouzhongwen_rss/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1658,12 +1556,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/tgcn_wiki/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/iyouport/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -3265,12 +3157,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rectg.com/p/china_irl/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rectg.com/p/freetrialstore/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -3422,12 +3308,6 @@
   </url>
   <url>
     <loc>https://www.rectg.com/p/mfjd99/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.rectg.com/p/science_democracy/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
