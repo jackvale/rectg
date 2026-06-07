@@ -1,0 +1,110 @@
+---
+import '../styles/style.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  ogType?: string;
+  robots?: string;
+  jsonLd?: unknown | unknown[];
+}
+
+const SITE_URL = 'https://www.rectg.com';
+const {
+  title = 'rectg - Telegram 中文资源索引',
+  description = '收录 Telegram 中文频道、群组和机器人，支持分类浏览、关键词搜索、详情页和 Telegram 链接。',
+  canonicalPath = '/',
+  ogType = 'website',
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  jsonLd,
+} = Astro.props as Props;
+const canonicalUrl = new URL(canonicalPath, SITE_URL).href;
+const defaultJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: 'rectg',
+  url: `${SITE_URL}/`,
+  description: 'Telegram 中文频道与群组精选索引',
+};
+const structuredData = jsonLd
+  ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd])
+  : [defaultJsonLd];
+const jsonLdContent = JSON.stringify(structuredData.length === 1 ? structuredData[0] : structuredData);
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  <meta name="keywords" content="Telegram, TG群组, TG频道, 电报群, 电报导航, telegram中文, telegram频道推荐, telegram群组大全, 电报机器人" />
+  <meta name="author" content="rectg" />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content={robots} />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:site_name" content="rectg" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://www.rectg.com/og-image.png" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={canonicalUrl} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content="https://www.rectg.com/og-image.png" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="theme-color" content="#ffffff" id="theme-color-meta" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={jsonLdContent}></script>
+
+</head>
+<body>
+  <script is:inline>
+    // Prevent FOUC (Flash of Unstyled Content) by setting theme immediately
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.body.classList.add('dark');
+        } else {
+          document.body.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <noscript>
+    <div style="padding: 20px; text-align: center; background: #fff3cd; color: #856404;">
+      <strong>提示：</strong>您的浏览器禁用了 JavaScript，因此网页可能缺少某些交互功能。rectg 导航是一个收录优质 Telegram 中文频道与群组的聚合站，启用 JavaScript 可获得最佳的浏览、搜索与复制链接体验。
+    </div>
+  </noscript>
+  <slot />
+  <script>
+    // Register Service Worker
+    const browserNavigator = window.navigator;
+    if (browserNavigator && 'serviceWorker' in browserNavigator) {
+      window.addEventListener('load', () => {
+        browserNavigator.serviceWorker.register('/sw.js').catch(registrationError => {
+          console.warn('SW registration failed: ', registrationError);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import {
+  absoluteUrl,
+  categoryPath,
+  getCategoryPaths,
+  itemPath,
+  SITE_URL,
+} from '../../utils/data';
+
+export async function getStaticPaths() {
+  return getCategoryPaths();
+}
+
+const {
+  section,
+  totalItems,
+  channelCount,
+  groupCount,
+} = Astro.props;
+
+const categoryUrl = categoryPath(section.meta.id);
+const pageTitle = `${section.meta.name} Telegram 频道和群组 - rectg`;
+const pageDescription = `rectg 收录 ${totalItems} 个${section.meta.name}相关 Telegram 中文频道和群组，包含人数、简介、详情页和 Telegram 链接。`;
+const keywordText = section.meta.keywords ? `相关关键词：${section.meta.keywords}` : '按人数参考排序，适合查找同主题资源。';
+const categoryJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': absoluteUrl(categoryUrl),
+    url: absoluteUrl(categoryUrl),
+    name: pageTitle,
+    description: pageDescription,
+    inLanguage: 'zh-CN',
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: {
+      '@type': 'Thing',
+      name: `${section.meta.name} Telegram 资源`,
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: '首页',
+        item: `${SITE_URL}/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: section.meta.name,
+        item: absoluteUrl(categoryUrl),
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${absoluteUrl(categoryUrl)}#items`,
+    name: `${section.meta.name} Telegram 资源列表`,
+    numberOfItems: section.items.length,
+    itemListElement: section.items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: absoluteUrl(itemPath(item.id)),
+      name: item.title,
+    })),
+  },
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} canonicalPath={categoryUrl} jsonLd={categoryJsonLd}>
+  <div id="category-app" class="detail-page category-page">
+    <header class="detail-topbar">
+      <a class="detail-brand" href="/">rectg</a>
+      <div class="detail-top-actions">
+        <nav class="detail-topnav" aria-label="分类页导航">
+          <a href="/">目录</a>
+          <a href="https://github.com/jackvale/rectg" target="_blank" rel="noopener">源码</a>
+          <a href="https://github.com/jackvale/rectg/issues/new?template=channel_submission.md" target="_blank" rel="noopener">收录</a>
+        </nav>
+        <button id="theme-toggle" class="detail-theme-btn" type="button" aria-label="切换主题">
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="detail-container category-container">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span>/</span>
+        <span>{section.meta.name}</span>
+      </nav>
+
+      <section class="category-landing" aria-labelledby="category-title">
+        <div class="category-kicker">分类目录 / {section.meta.fullName}</div>
+        <div class="category-title-row">
+          <h1 id="category-title">{section.meta.name}</h1>
+          <span>{section.items.length} 个资源</span>
+        </div>
+        <p>{pageDescription}</p>
+        <div class="category-summary-grid" aria-label="分类统计">
+          <div>
+            <span>资源总数</span>
+            <strong>{totalItems}</strong>
+          </div>
+          <div>
+            <span>频道</span>
+            <strong>{channelCount}</strong>
+          </div>
+          <div>
+            <span>群组</span>
+            <strong>{groupCount}</strong>
+          </div>
+        </div>
+        <p class="category-keywords">{keywordText}</p>
+      </section>
+
+      <section id="content-container" class="category-results" aria-labelledby="category-resources-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="category-resources-title" class="category-title">
+              <span>{section.meta.name}资源</span>
+              <span class="category-title-meta">({section.items.length})</span>
+            </h2>
+            <p class="category-description">按人数参考排序的公开目录项，详情页保留完整资料和同分类入口。</p>
+          </div>
+        </div>
+        <div class="grid">
+          {section.items.map(item => (
+            <Card
+              id={item.id}
+              title={item.title}
+              desc={item.desc}
+              url={item.url}
+              typeName={item.typeName}
+              countStr={item.countStr}
+              category={item.categoryName || section.meta.name}
+            />
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast">已复制链接</div>
+  </div>
+
+  <script src="../../scripts/main.js"></script>
+</Layout>
+
+<style>
+  .category-page {
+    min-height: 100vh;
+    background: var(--bg-main);
+    color: var(--text-main);
+  }
+
+  .detail-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 32px;
+    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg-main) 94%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .detail-brand {
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .detail-top-actions,
+  .detail-topnav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .detail-topnav a,
+  .detail-theme-btn {
+    min-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+    font-weight: 600;
+  }
+
+  .detail-topnav a {
+    padding: 0 12px;
+  }
+
+  .detail-theme-btn {
+    width: 30px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .detail-topnav a:hover,
+  .detail-theme-btn:hover {
+    color: var(--accent-strong);
+    background: var(--accent-light);
+  }
+
+  .category-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 22px 24px 56px;
+  }
+
+  .breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.84rem;
+    font-weight: 650;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent-strong);
+  }
+
+  .breadcrumb span {
+    color: var(--text-muted);
+  }
+
+  .category-landing,
+  .category-results {
+    padding: 18px 0 0;
+    border: 1px solid var(--line);
+  }
+
+  .category-landing {
+    margin-bottom: 16px;
+    padding: 0 0 16px;
+    border-width: 0 0 1px;
+    background: transparent;
+  }
+
+  .category-results {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .category-kicker {
+    margin-bottom: 6px;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 650;
+  }
+
+  .category-title-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .category-title-row h1 {
+    color: var(--text-main);
+    font-size: 1.34rem;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  .category-title-row span {
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    font-weight: 600;
+  }
+
+  .category-landing p {
+    max-width: 760px;
+    margin-top: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .category-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, max-content));
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .category-summary-grid div {
+    min-width: 88px;
+    padding-right: 12px;
+    border-right: 1px solid var(--line);
+  }
+
+  .category-summary-grid div:last-child {
+    border-right: 0;
+  }
+
+  .category-summary-grid span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 650;
+  }
+
+  .category-summary-grid strong {
+    display: block;
+    margin-top: 3px;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .category-keywords {
+    margin-top: 14px;
+  }
+
+  .category-results .grid {
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .detail-topbar {
+      padding: 0 14px;
+    }
+
+    .detail-topnav a {
+      min-height: 32px;
+      padding: 0 8px;
+      font-size: 0.8rem;
+    }
+
+    .detail-topnav a[href*="github.com"] {
+      display: none;
+    }
+
+    .detail-theme-btn {
+      width: 32px;
+      min-height: 32px;
+    }
+
+    .category-container {
+      padding: 16px 14px 40px;
+    }
+
+    .category-landing {
+      padding-bottom: 14px;
+    }
+
+    .category-results {
+      padding: 0;
+    }
+
+    .category-title-row h1 {
+      font-size: 1.2rem;
+    }
+
+    .category-summary-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .category-summary-grid div {
+      min-width: 0;
+      padding-right: 8px;
+    }
+  }
+</style>

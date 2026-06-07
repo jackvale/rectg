@@ -1,0 +1,984 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {
+  absoluteUrl,
+  categoryPath,
+  getAvatarColorClass,
+  getItemPaths,
+  getTelegramUsername,
+  itemPath,
+  SITE_URL,
+} from '../../utils/data';
+
+export async function getStaticPaths() {
+    return getItemPaths();
+}
+
+const {
+  item,
+  categoryName,
+  categoryFullName,
+  typeName,
+  previousItem = null,
+  nextItem = null,
+  relatedItems = [],
+} = Astro.props;
+const username = getTelegramUsername(item.url);
+const avatarUrl = username ? `https://unavatar.io/telegram/${username}` : '';
+const firstLetter = item.title ? item.title.substring(0, 1).toUpperCase() : '?';
+const subscriberCount = item.countStr || '0';
+const pickText = (...values) =>
+  values
+    .map(value => (typeof value === 'string' ? value.trim() : ''))
+    .find(Boolean) || '未分类';
+const resolvedCategoryName = pickText(categoryName, categoryFullName, '未分类');
+const resolvedCategoryFullName = pickText(categoryFullName, categoryName, '未分类');
+const categoryId = item.categoryId || resolvedCategoryName;
+const categoryHref = categoryPath(categoryId);
+const colorClass = getAvatarColorClass(firstLetter);
+const pageTitle = `${item.title} - rectg`;
+const pageDescription = item.desc
+  ? item.desc.slice(0, 120)
+  : `${item.title} 的 Telegram ${typeName}详情，包含分类、人数和 Telegram 链接。`;
+const detailPath = itemPath(item.id);
+const detailUrl = absoluteUrl(detailPath);
+const detailJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': detailUrl,
+    url: detailUrl,
+    name: pageTitle,
+    description: pageDescription,
+    inLanguage: 'zh-CN',
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: '首页',
+        item: `${SITE_URL}/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: resolvedCategoryName,
+        item: absoluteUrl(categoryHref),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: item.title,
+        item: detailUrl,
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Thing',
+    '@id': `${detailUrl}#resource`,
+    name: item.title,
+    description: item.desc || pageDescription,
+    url: item.url,
+    sameAs: item.url,
+    mainEntityOfPage: detailUrl,
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: '类型', value: typeName },
+      { '@type': 'PropertyValue', name: '分类', value: resolvedCategoryName },
+      { '@type': 'PropertyValue', name: '人数', value: subscriberCount },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${detailUrl}#related`,
+    name: `${resolvedCategoryName}同分类资源`,
+    numberOfItems: relatedItems.length,
+    itemListElement: relatedItems.map((related, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: absoluteUrl(itemPath(related.id)),
+      name: related.title,
+    })),
+  },
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} canonicalPath={detailPath} ogType="article" jsonLd={detailJsonLd}>
+  <div id="detail-app" class="detail-page">
+    <header class="detail-topbar">
+      <a class="detail-brand" href="/">rectg</a>
+      <div class="detail-top-actions">
+        <nav class="detail-topnav" aria-label="详情页导航">
+          <a href="/">目录</a>
+          <a href={categoryHref}>同分类</a>
+          <a href="https://github.com/jackvale/rectg" target="_blank" rel="noopener">源码</a>
+        </nav>
+        <button id="theme-toggle" class="detail-theme-btn" type="button" aria-label="切换主题">
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="detail-container">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span>/</span>
+        <a href={categoryHref}>{resolvedCategoryName}</a>
+      </nav>
+
+      <article class="detail-panel">
+        <header class="detail-header">
+          <div class="resource-avatar" aria-hidden="true">
+            <div class={`resource-avatar-fallback ${colorClass}`}>{firstLetter}</div>
+            {avatarUrl && (
+              <img
+                src={avatarUrl}
+                alt=""
+                class="resource-avatar-image"
+                loading="eager"
+                decoding="async"
+                onerror="this.style.display='none'"
+              />
+            )}
+          </div>
+
+          <div class="header-info">
+            <div class="resource-meta-line">
+              <span>{typeName}</span>
+              <span title={resolvedCategoryFullName}>{resolvedCategoryName}</span>
+              {username && <span>@{username}</span>}
+            </div>
+            <h1 class="detail-title">{item.title}</h1>
+            <dl class="summary-list" aria-label="资源资料">
+              <div>
+                <dt>人数</dt>
+                <dd>{subscriberCount}</dd>
+              </div>
+              <div>
+                <dt>类型</dt>
+                <dd>{typeName}</dd>
+              </div>
+              <div>
+                <dt>分类</dt>
+                <dd title={resolvedCategoryFullName}>{resolvedCategoryName}</dd>
+              </div>
+            </dl>
+          </div>
+        </header>
+
+        <div class="detail-actions" aria-label="资源操作">
+          <a href={item.url} target="_blank" rel="noopener noreferrer" class="action-btn action-primary">
+            打开 Telegram
+          </a>
+          <button type="button" class="action-btn copy-btn" data-copy-url={item.url}>
+            复制
+          </button>
+          <a href={categoryHref} class="action-btn">
+            同分类
+          </a>
+          <a href="/" class="action-btn">
+            目录
+          </a>
+        </div>
+
+        <section class="detail-section resource-answer-section">
+          <h2 class="section-title">资料</h2>
+          <dl class="resource-facts">
+            <div>
+              <dt>名称</dt>
+              <dd>{item.title}</dd>
+            </div>
+            <div>
+              <dt>类型</dt>
+              <dd>{typeName}</dd>
+            </div>
+            <div>
+              <dt>分类</dt>
+              <dd>{resolvedCategoryName}</dd>
+            </div>
+            <div>
+              <dt>人数</dt>
+              <dd>{subscriberCount}</dd>
+            </div>
+            <div class="resource-fact-wide">
+              <dt>简介</dt>
+              <dd>{item.desc || '该资源暂无详细描述信息。'}</dd>
+            </div>
+            <div class="resource-fact-wide">
+              <dt>Telegram</dt>
+              <dd><a href={item.url} target="_blank" rel="noopener noreferrer">{item.url}</a></dd>
+            </div>
+          </dl>
+        </section>
+
+        {relatedItems.length > 0 && (
+          <section class="detail-section related-section">
+            <div class="section-heading-inline">
+              <h2 class="section-title">同分类目录</h2>
+              <a href={categoryHref}>查看全部</a>
+            </div>
+            <div class="related-list">
+              {relatedItems.map((related) => (
+                <a class="related-card" href={`/p/${related.id}/`} title={related.title}>
+                  <span>{related.title}</span>
+                  <small>{related.typeName} · 人数 {related.countStr || '-'}</small>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <nav class="related-nav" aria-label="同分类前后资源">
+          {previousItem ? (
+            <a href={`/p/${previousItem.id}/`} class="related-nav-link">
+              <span>上一条</span>
+              <strong>{previousItem.title}</strong>
+            </a>
+          ) : (
+            <a href={categoryHref} class="related-nav-link">
+              <span>上一条</span>
+              <strong>查看分类目录</strong>
+            </a>
+          )}
+          {nextItem ? (
+            <a href={`/p/${nextItem.id}/`} class="related-nav-link">
+              <span>下一条</span>
+              <strong>{nextItem.title}</strong>
+            </a>
+          ) : (
+            <a href={categoryHref} class="related-nav-link">
+              <span>下一条</span>
+              <strong>查看分类目录</strong>
+            </a>
+          )}
+        </nav>
+      </article>
+    </main>
+
+    <div id="copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <span>链接已复制</span>
+    </div>
+  </div>
+
+  <script is:inline>
+    const copyBtn = document.querySelector('.copy-btn');
+    const copyToast = document.getElementById('copy-toast');
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeMeta = document.getElementById('theme-color-meta');
+    let copyTimer;
+
+    function showCopyToast(message, isError = false) {
+      if (!copyToast) return;
+      
+      const span = copyToast.querySelector('span');
+      if (span) span.textContent = message;
+      
+      if (isError) {
+        copyToast.classList.add('error');
+      } else {
+        copyToast.classList.remove('error');
+      }
+      
+      copyToast.classList.add('show');
+      clearTimeout(copyTimer);
+      copyTimer = setTimeout(() => copyToast.classList.remove('show'), 2000);
+    }
+
+    async function copyText(value) {
+      const clipboard = window.navigator?.clipboard;
+      try {
+        if (clipboard?.writeText) {
+          await clipboard.writeText(value);
+          return;
+        }
+      } catch {}
+
+      const textarea = document.createElement('textarea');
+      textarea.value = value;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.top = '0';
+      textarea.style.left = '0';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      textarea.setSelectionRange(0, textarea.value.length);
+      try {
+        const copied = document.execCommand('copy');
+        if (!copied) throw new Error('copy failed');
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        const url = copyBtn.getAttribute('data-copy-url') || '';
+        if (!url) {
+          showCopyToast('链接为空', true);
+          return;
+        }
+        try {
+          await copyText(url);
+          showCopyToast('链接已复制', false);
+        } catch {
+          showCopyToast('复制失败', true);
+        }
+      });
+    }
+
+    function syncThemeMeta() {
+      if (!themeMeta) return;
+      themeMeta.setAttribute('content', document.body.classList.contains('dark') ? '#111418' : '#ffffff');
+    }
+
+    syncThemeMeta();
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        try {
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        } catch {}
+        syncThemeMeta();
+      });
+    }
+  </script>
+
+</Layout>
+
+<style>
+  .detail-page {
+    min-height: 100vh;
+    background: var(--bg-main);
+    color: var(--text-main);
+  }
+
+  .detail-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 32px;
+    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg-main) 94%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .detail-brand {
+    flex: 0 0 auto;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .detail-top-actions {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .detail-topnav {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .detail-topnav a,
+  .detail-theme-btn {
+    min-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+    font-weight: 600;
+    transition: border-color 0.16s, background-color 0.16s, color 0.16s;
+  }
+
+  .detail-topnav a {
+    padding: 0 12px;
+    white-space: nowrap;
+  }
+
+  .detail-theme-btn {
+    width: 30px;
+    flex: 0 0 30px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .detail-topnav a:hover,
+  .detail-theme-btn:hover {
+    color: var(--accent-strong);
+    background: var(--accent-light);
+  }
+
+  .detail-container {
+    width: 100%;
+    max-width: 960px;
+    display: block;
+    flex: none;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 22px 24px 56px;
+  }
+
+  .breadcrumb {
+    width: fit-content;
+    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.84rem;
+    font-weight: 650;
+  }
+
+  .breadcrumb a {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent-strong);
+  }
+
+  .breadcrumb span {
+    color: var(--text-muted);
+  }
+
+  .detail-panel {
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--bg-card);
+    box-shadow: none;
+  }
+
+  .detail-header {
+    position: static;
+    top: auto;
+    z-index: auto;
+    min-height: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 14px;
+    margin: 0;
+    padding: 0 0 18px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .resource-avatar {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--bg-panel);
+  }
+
+  .resource-avatar-fallback,
+  .resource-avatar-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .resource-avatar-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .resource-avatar-image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    object-fit: cover;
+  }
+
+  .header-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .resource-meta-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .resource-meta-line span {
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .resource-meta-line span + span::before {
+    content: "/";
+    margin-right: 6px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .detail-title {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 1.34rem;
+    font-weight: 700;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .summary-list {
+    width: fit-content;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .summary-list div {
+    min-width: 126px;
+    padding: 9px 12px;
+    border-right: 1px solid var(--line);
+  }
+
+  .summary-list div:last-child {
+    border-right: 0;
+  }
+
+  .summary-list dt {
+    margin-bottom: 2px;
+    color: var(--text-muted);
+    font-size: 0.74rem;
+    font-weight: 600;
+  }
+
+  .summary-list dd {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 650;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 16px 0 20px;
+  }
+
+  .action-btn {
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.86rem;
+    font-weight: 600;
+    transition: border-color 0.16s, background-color 0.16s, color 0.16s;
+  }
+
+  .action-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent-strong);
+  }
+
+  .action-primary {
+    border-color: var(--accent);
+    background: var(--bg-card);
+    color: var(--accent-strong);
+  }
+
+  .action-primary:hover {
+    border-color: var(--accent-strong);
+    background: var(--accent-light);
+    color: var(--accent-strong);
+  }
+
+  body.dark .action-primary {
+    color: var(--accent-strong);
+  }
+
+  .detail-section {
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+
+  .detail-section + .detail-section {
+    margin-top: 18px;
+  }
+
+  .resource-answer-section {
+    margin-top: 0;
+  }
+
+  .resource-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 10px;
+  }
+
+  .resource-facts div {
+    min-width: 0;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+  }
+
+  .resource-fact-wide {
+    grid-column: 1 / -1;
+  }
+
+  .resource-facts dt {
+    margin-bottom: 4px;
+    color: var(--text-muted);
+    font-size: 0.74rem;
+    font-weight: 600;
+  }
+
+  .resource-facts dd {
+    min-width: 0;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  .resource-facts a {
+    color: var(--accent-strong);
+  }
+
+  .section-title {
+    margin: 0 0 8px;
+    color: var(--text-main);
+    font-size: 0.96rem;
+    font-weight: 700;
+  }
+
+  .section-heading-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+
+  .section-heading-inline .section-title {
+    margin-bottom: 0;
+  }
+
+  .section-heading-inline a {
+    flex: 0 0 auto;
+    color: var(--accent-strong);
+    font-size: 0.84rem;
+    font-weight: 650;
+  }
+
+  .detail-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+  }
+
+  .detail-desc p {
+    margin: 0;
+  }
+
+  .empty-desc {
+    color: var(--text-muted);
+  }
+
+  .link-row {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .link-row span {
+    flex: 0 0 auto;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 650;
+  }
+
+  .link-row a {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--accent-strong);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .related-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .related-card,
+  .related-nav-link {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--bg-card);
+    transition: border-color 0.16s, background-color 0.16s, color 0.16s;
+  }
+
+  .related-card:hover,
+  .related-nav-link:hover {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+
+  .related-card span,
+  .related-nav-link strong {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 650;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .related-card small,
+  .related-nav-link span {
+    overflow: hidden;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .related-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+
+  .copy-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 6px;
+    background: rgba(16, 185, 129, 0.95);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 650;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(12px);
+    transition: opacity 0.16s, transform 0.16s;
+  }
+
+  .copy-toast.error {
+    border-color: rgba(239, 68, 68, 0.2);
+    background: rgba(239, 68, 68, 0.95);
+  }
+
+  .copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .detail-topbar {
+      gap: 10px;
+      padding: 0 14px;
+    }
+
+    .detail-brand {
+      font-size: 0.96rem;
+    }
+
+    .detail-top-actions {
+      gap: 6px;
+    }
+
+    .detail-topnav {
+      gap: 4px;
+    }
+
+    .detail-topnav a {
+      min-height: 32px;
+      padding: 0 8px;
+      font-size: 0.8rem;
+    }
+
+    .detail-topnav a[href*="github.com"] {
+      display: none;
+    }
+
+    .detail-theme-btn {
+      width: 32px;
+      min-height: 32px;
+      flex-basis: 32px;
+    }
+
+    .detail-container {
+      padding: 16px 14px 40px;
+    }
+
+    .breadcrumb {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .detail-panel {
+      padding: 16px;
+    }
+
+    .detail-header {
+      gap: 12px;
+      padding-bottom: 16px;
+    }
+
+    .resource-avatar {
+      width: 44px;
+      height: 44px;
+      flex-basis: 44px;
+    }
+
+    .detail-title {
+      font-size: 1.22rem;
+    }
+
+    .summary-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .summary-list div {
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .summary-list div:last-child {
+      border-bottom: 0;
+    }
+
+    .detail-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .resource-facts {
+      grid-template-columns: 1fr;
+    }
+
+    .action-btn {
+      width: 100%;
+    }
+
+    .link-row {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .link-row a {
+      max-width: 100%;
+      text-align: left;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .section-heading-inline {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .related-list,
+    .related-nav {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
