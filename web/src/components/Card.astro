@@ -28,7 +28,7 @@ const colorClass = getAvatarColorClass(firstLetter);
         <div class={`card-icon ${colorClass}`} aria-hidden="true">
             {firstLetter}
             {avatarUrl && (
-                <img src={avatarUrl} loading="lazy" alt={username} onerror="this.style.display='none'" />
+                <img src={avatarUrl} loading="lazy" decoding="async" alt={username} onerror="this.style.display='none'" />
             )}
         </div>
         <div class="card-title-wrap">

@@ -1,15 +1,6 @@
 import PinyinMatchModule from 'pinyin-match';
-import { inject } from '@vercel/analytics';
-import { injectSpeedInsights } from '@vercel/speed-insights';
 
 const PinyinMatch = PinyinMatchModule?.default || PinyinMatchModule;
-
-try {
-    inject();
-    injectSpeedInsights();
-} catch (error) {
-    console.warn('[rectg] analytics/speed-insights init failed:', error);
-}
 
 function safeGetStorage(key) {
     try {
@@ -208,6 +199,7 @@ function createCard(item, matches = {}) {
         const img = document.createElement('img');
         img.src = `https://unavatar.io/telegram/${username}`;
         img.loading = 'lazy';
+        img.decoding = 'async';
         img.alt = username;
         img.addEventListener('error', () => {
             icon.textContent = firstLetter;

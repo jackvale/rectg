@@ -3,7 +3,6 @@ const PRECACHE_URLS = [
     '/',
     '/index.html',
     '/manifest.json',
-    '/og-image.png',
     '/favicon.png'
 ];
 
