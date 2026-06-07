@@ -1,6 +1,6 @@
 <h1 align="center">rectg</h1>
 
-<p align="center">561 个 Telegram 中文资源 · 22 个主题分类</p>
+<p align="center">559 个 Telegram 中文资源 · 22 个主题分类</p>
 
 <p align="center">
   <a href="https://www.rectg.com/"><strong>在线浏览</strong></a>
@@ -12,10 +12,10 @@
 
 <table>
   <tr>
-    <td align="center"><strong>561</strong><br><sub>总收录 · 频道 / 群组 / 机器人</sub></td>
+    <td align="center"><strong>559</strong><br><sub>总收录 · 频道 / 群组 / 机器人</sub></td>
     <td align="center"><strong>22</strong><br><sub>分类 · 主题索引</sub></td>
-    <td align="center"><strong>276</strong><br><sub>频道 · Channel</sub></td>
-    <td align="center"><strong>285</strong><br><sub>群组 · Group</sub></td>
+    <td align="center"><strong>275</strong><br><sub>频道 · Channel</sub></td>
+    <td align="center"><strong>284</strong><br><sub>群组 · Group</sub></td>
   </tr>
 </table>
 
@@ -27,8 +27,8 @@
     <th>群组</th>
   </tr>
   <tr>
-    <td valign="top"><a href="#section-channel"><strong>频道</strong></a><br><a href="#section-channel-1">🆕 新发现频道</a> <sub>10</sub><br><a href="#section-channel-2">📰 新闻快讯</a> <sub>53</sub><br><a href="#section-channel-3">💻 数码科技</a> <sub>33</sub><br><a href="#section-channel-4">👨‍💻 开发运维</a> <sub>10</sub><br><a href="#section-channel-5">🔒 信息安全</a> <sub>3</sub><br><a href="#section-channel-6">🧰 软件工具</a> <sub>17</sub><br><a href="#section-channel-7">☁️ 网盘资源</a> <sub>7</sub><br><a href="#section-channel-8">🎬 影视剧集</a> <sub>20</sub><br><a href="#section-channel-9">🎵 音乐音频</a> <sub>17</sub><br><a href="#section-channel-10">🎐 动漫次元</a> <sub>13</sub><br><a href="#section-channel-11">🎮 游戏娱乐</a> <sub>7</sub><br><a href="#section-channel-12">✈️ 科学上网</a> <sub>3</sub><br><a href="#section-channel-13">🪙 加密货币</a> <sub>2</sub><br><a href="#section-channel-14">📚 学习阅读</a> <sub>22</sub><br><a href="#section-channel-15">🎨 创意设计</a> <sub>5</sub><br><a href="#section-channel-16">📡 社媒搬运</a> <sub>6</sub><br><a href="#section-channel-17">👗 生活消费</a> <sub>14</sub><br><a href="#section-channel-18">💬 闲聊交友</a> <sub>13</sub><br><a href="#section-channel-19">🗂️ 综合导航</a> <sub>2</sub><br><a href="#section-channel-20">🌐 综合其他</a> <sub>19</sub></td>
-    <td valign="top"><a href="#section-group"><strong>群组</strong></a><br><a href="#section-group-1">📰 新闻快讯</a> <sub>10</sub><br><a href="#section-group-2">💻 数码科技</a> <sub>51</sub><br><a href="#section-group-3">👨‍💻 开发运维</a> <sub>34</sub><br><a href="#section-group-4">🔒 信息安全</a> <sub>1</sub><br><a href="#section-group-5">🧰 软件工具</a> <sub>15</sub><br><a href="#section-group-6">☁️ 网盘资源</a> <sub>5</sub><br><a href="#section-group-7">🎬 影视剧集</a> <sub>13</sub><br><a href="#section-group-8">🎵 音乐音频</a> <sub>14</sub><br><a href="#section-group-9">🎐 动漫次元</a> <sub>7</sub><br><a href="#section-group-10">🎮 游戏娱乐</a> <sub>13</sub><br><a href="#section-group-11">✈️ 科学上网</a> <sub>12</sub><br><a href="#section-group-12">🪙 加密货币</a> <sub>6</sub><br><a href="#section-group-13">📚 学习阅读</a> <sub>16</sub><br><a href="#section-group-14">🎨 创意设计</a> <sub>1</sub><br><a href="#section-group-15">🏀 体育运动</a> <sub>1</sub><br><a href="#section-group-16">👗 生活消费</a> <sub>12</sub><br><a href="#section-group-17">🌍 地区社群</a> <sub>9</sub><br><a href="#section-group-18">💬 闲聊交友</a> <sub>11</sub><br><a href="#section-group-19">🗂️ 综合导航</a> <sub>8</sub><br><a href="#section-group-20">🌐 综合其他</a> <sub>46</sub></td>
+    <td valign="top"><a href="#section-channel"><strong>频道</strong></a><br><a href="#section-channel-1">🆕 新发现频道</a> <sub>10</sub><br><a href="#section-channel-2">📰 新闻快讯</a> <sub>52</sub><br><a href="#section-channel-3">💻 数码科技</a> <sub>33</sub><br><a href="#section-channel-4">👨‍💻 开发运维</a> <sub>10</sub><br><a href="#section-channel-5">🔒 信息安全</a> <sub>3</sub><br><a href="#section-channel-6">🧰 软件工具</a> <sub>17</sub><br><a href="#section-channel-7">☁️ 网盘资源</a> <sub>7</sub><br><a href="#section-channel-8">🎬 影视剧集</a> <sub>20</sub><br><a href="#section-channel-9">🎵 音乐音频</a> <sub>17</sub><br><a href="#section-channel-10">🎐 动漫次元</a> <sub>13</sub><br><a href="#section-channel-11">🎮 游戏娱乐</a> <sub>7</sub><br><a href="#section-channel-12">✈️ 科学上网</a> <sub>3</sub><br><a href="#section-channel-13">🪙 加密货币</a> <sub>2</sub><br><a href="#section-channel-14">📚 学习阅读</a> <sub>22</sub><br><a href="#section-channel-15">🎨 创意设计</a> <sub>5</sub><br><a href="#section-channel-16">📡 社媒搬运</a> <sub>6</sub><br><a href="#section-channel-17">👗 生活消费</a> <sub>14</sub><br><a href="#section-channel-18">💬 闲聊交友</a> <sub>13</sub><br><a href="#section-channel-19">🗂️ 综合导航</a> <sub>2</sub><br><a href="#section-channel-20">🌐 综合其他</a> <sub>19</sub></td>
+    <td valign="top"><a href="#section-group"><strong>群组</strong></a><br><a href="#section-group-1">📰 新闻快讯</a> <sub>9</sub><br><a href="#section-group-2">💻 数码科技</a> <sub>51</sub><br><a href="#section-group-3">👨‍💻 开发运维</a> <sub>34</sub><br><a href="#section-group-4">🔒 信息安全</a> <sub>1</sub><br><a href="#section-group-5">🧰 软件工具</a> <sub>15</sub><br><a href="#section-group-6">☁️ 网盘资源</a> <sub>5</sub><br><a href="#section-group-7">🎬 影视剧集</a> <sub>13</sub><br><a href="#section-group-8">🎵 音乐音频</a> <sub>14</sub><br><a href="#section-group-9">🎐 动漫次元</a> <sub>7</sub><br><a href="#section-group-10">🎮 游戏娱乐</a> <sub>13</sub><br><a href="#section-group-11">✈️ 科学上网</a> <sub>12</sub><br><a href="#section-group-12">🪙 加密货币</a> <sub>6</sub><br><a href="#section-group-13">📚 学习阅读</a> <sub>16</sub><br><a href="#section-group-14">🎨 创意设计</a> <sub>1</sub><br><a href="#section-group-15">🏀 体育运动</a> <sub>1</sub><br><a href="#section-group-16">👗 生活消费</a> <sub>12</sub><br><a href="#section-group-17">🌍 地区社群</a> <sub>9</sub><br><a href="#section-group-18">💬 闲聊交友</a> <sub>11</sub><br><a href="#section-group-19">🗂️ 综合导航</a> <sub>8</sub><br><a href="#section-group-20">🌐 综合其他</a> <sub>46</sub></td>
   </tr>
 </table>
 
@@ -60,7 +60,7 @@
 ### 📰 新闻快讯
 
 <details open>
-<summary><strong>53 个资源</strong> · <a href="https://www.rectg.com/?c=%E6%96%B0%E9%97%BB%E5%BF%AB%E8%AE%AF">站内查看</a></summary>
+<summary><strong>52 个资源</strong> · <a href="https://www.rectg.com/?c=%E6%96%B0%E9%97%BB%E5%BF%AB%E8%AE%AF">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
@@ -70,7 +70,6 @@
 | [电报时报](https://t.me/times001) | 85,600 | 投稿点频道左下角对话图标 |
 | [华尔街见闻 - 财经时讯 AI 实时互动](https://t.me/FinanceNewsDaily) | 51,410 | 中国领先的金融信息平台，7×24 覆盖全球股市、外汇、债券、商品动态。 频道特色 • AI 自动解读：每条新闻实时生成投资参考 • 智能问答：使用 /ask 命令深入了解任意资... |
 | [Solidot](https://t.me/solidot) | 43,434 | solidot.org 非官方 RSS 推送频道。如有侵权，立即删除。 → Buy Ads: |
-| [中国数字时代](https://t.me/cdtchinesefeed) | 42,501 | 官方名片： 官方推特账号： 404文库频道： 视频频道： 本站现已开通匿名投稿Bot 404投给CDT～ |
 | [纽约时报 全文 实时推送](https://t.me/niuyueshibao_rss) | 34,224 | 知乎日报 纽约时报 BBC中文 路透中文 美国之音 FT中文网 双语新闻 早起读书 书友群 |
 | [zaobao.sg 早报](https://t.me/zaobaosg) | 32,551 | 以睿智亲和的内容，与你共谈天下事。 下载《联合早报》App： zaobao.com.sg/products |
 | [cnBeta.COM中文业界资讯站](https://t.me/cnbeta_com) | 27,412 | cnBeta.COM中文业界资讯站是一个提供IT相关新闻资讯、技术文章和评论的观点的中文网站，报导立场公正中立，网友讨论气氛浓厚，在业界拥有独特的影响力。本频道为非。... |
@@ -538,13 +537,12 @@
 ### 📰 新闻快讯
 
 <details open>
-<summary><strong>10 个资源</strong> · <a href="https://www.rectg.com/?c=%E6%96%B0%E9%97%BB%E5%BF%AB%E8%AE%AF">站内查看</a></summary>
+<summary><strong>9 个资源</strong> · <a href="https://www.rectg.com/?c=%E6%96%B0%E9%97%BB%E5%BF%AB%E8%AE%AF">站内查看</a></summary>
 
 | 资源 | 人数 | 简介 |
 | --- | ---: | --- |
 | [搜全能搜](https://t.me/sousuoda) | 7,616 | 中文导航 搜群 热搜 看片 吃瓜 爆料 资源 电报 |
 | [火箭写书](https://t.me/woicesu) | 5,178 | 二手机场交易 欢迎各位关注 ！ 送测请私聊 这里是一个服务型的综合跨境服务提供商测试平台，为各大服务提供商提供包括国内大带宽家庭宽带测试，流媒体解锁情况测试，... |
-| [中国数字时代-讨论群](https://t.me/cdtchinese) | 3,885 | 中国数字时代： 官方名片： 官方推特账号： 本站现已开通可匿名投稿Bot 404投给CDT～ 群内容规范 |
 | [流媒体交流](https://t.me/zxc1017yyfx) | 2,679 | Gv Gmail 美区礼品卡 |
 | [捷径社区](https://t.me/shortcuts_cn) | 1,984 | 捷径社区官方群 捷径讨论｜科技新闻｜趣事分享｜友爱互助 官网 sharecuts.cn 捷径社区APP t.cn/EokAcig 关于我们 miidii.tech 微信关注公众... |
 | [天涯讨论组](https://t.me/tianyarss) | 1,867 | 群内禁止敏感话题 天涯神帖（持续更新中） 联系支持 天涯神贴 天涯讨论组 |
