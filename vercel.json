@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd site && npm install && npm run build",
-  "outputDirectory": "site/dist",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "framework": "astro"
 }
