@@ -1,0 +1,17 @@
+{
+    "name": "rectg - Telegram 中文资源目录",
+    "short_name": "rectg",
+    "description": "公开 Telegram 中文频道与群组目录",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f7f8fa",
+    "theme_color": "#229ed9",
+    "icons": [
+        {
+            "src": "/og-image.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

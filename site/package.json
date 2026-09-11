@@ -1,0 +1,21 @@
+{
+  "name": "site",
+  "type": "module",
+  "version": "0.0.4",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node build-data.js && astro dev",
+    "build": "node build-data.js && astro build",
+    "check": "node check.js && node check-css.js",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "astro": "^7.3.2",
+    "pinyin-match": "^1.2.10"
+  }
+}
